@@ -1,0 +1,5 @@
+add_test([=[TestActivations.ReLUWorksCorrectly]=]  /home/eric/tannic-nn/build/tannic-nn-tests [==[--gtest_filter=TestActivations.ReLUWorksCorrectly]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[TestActivations.ReLUWorksCorrectly]=]  PROPERTIES WORKING_DIRECTORY /home/eric/tannic-nn/build SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+add_test([=[TestActivations.SiLUWorksCorrectly]=]  /home/eric/tannic-nn/build/tannic-nn-tests [==[--gtest_filter=TestActivations.SiLUWorksCorrectly]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[TestActivations.SiLUWorksCorrectly]=]  PROPERTIES WORKING_DIRECTORY /home/eric/tannic-nn/build SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+set(  tannic-nn-tests_TESTS TestActivations.ReLUWorksCorrectly TestActivations.SiLUWorksCorrectly)

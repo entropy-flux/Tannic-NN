@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "/usr/local/cuda-12.9/targets/x86_64-linux/include",
+                "${workspaceFolder}/include",
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/include/tannic", 
+            ],
+            "defines": [
+                "BLAS",
+                "CUDA"
+            ],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c23",
+            "cppStandard": "gnu++23",
+            "intelliSenseMode": "linux-gcc-x64"
+        }
+    ],
+    "version": 4
+}

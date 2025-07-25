@@ -1,0 +1,2 @@
+/usr/bin/ar qc libtannic-nn.a "CMakeFiles/tannic-nn.dir/src/Activations.cpp.o" "CMakeFiles/tannic-nn.dir/src/cpu/actvs.cpp.o"
+/usr/bin/ranlib libtannic-nn.a

@@ -1,0 +1,5 @@
+/home/eric/tannic-nn/build/CMakeFiles/tannic-nn.dir
+/home/eric/tannic-nn/build/CMakeFiles/tannic-nn-tests.dir
+/home/eric/tannic-nn/build/CMakeFiles/test.dir
+/home/eric/tannic-nn/build/CMakeFiles/edit_cache.dir
+/home/eric/tannic-nn/build/CMakeFiles/rebuild_cache.dir
