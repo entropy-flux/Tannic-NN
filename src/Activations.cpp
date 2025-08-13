@@ -1,30 +1,28 @@
+#include <tannic/Tensor.hpp>
+#include <tannic/Callback.hpp>
+#include <tannic/runtime/tensor.h>
+#include <tannic/runtime/status.h>
+#include <tannic/runtime/streams.h> 
 #include "Activations.hpp"
-#include "cpu/cpu.hpp"
 
-namespace tannic::nn::expression {
+#include "cpu/actvs.hpp"
+#ifdef CUDA 
+#include "cuda/actvs.cuh"
+#else
+inline status relu(const tensor_t*, tensor_t*, stream_t) { throw std::runtime_error("CUDA not available"); }
+inline status silu(const tensor_t*, tensor_t*, stream_t) { throw std::runtime_error("CUDA not available"); }
+#endif  
 
-static inline tensor_t c_tensor_t(Tensor const& tensor) {
-    return tensor_t{
-        .rank = tensor.rank(),
-        .address = static_cast<void*>(tensor.bytes()),
-        .shape = tensor.shape().address(),
-        .strides = tensor.strides().address(), 
-        .dtype = tensor.dtype()
-    };
-} 
+namespace tannic::nn::expression { 
  
-void ReLU::forward(Tensor const& input, Tensor& output) const { 
-    output.initialize();
-    tensor_t src = c_tensor_t(input);
-    tensor_t dst = c_tensor_t(output); 
-    cpu::relu(&src, &dst);
+void ReLU::forward(Tensor const& input, Tensor& output) const {  
+    Callback callback(cpu::relu, cuda::relu);
+    callback(input, output);
 }
 
-void SiLU::forward(Tensor const& input, Tensor& output) const { 
-    output.initialize();
-    tensor_t src = c_tensor_t(input);
-    tensor_t dst = c_tensor_t(output); 
-    cpu::silu(&src, &dst);
+void SiLU::forward(Tensor const& input, Tensor& output) const {  
+    Callback callback(cpu::silu, cuda::silu);
+    callback(input, output);
 }
 
 }

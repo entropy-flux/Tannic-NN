@@ -1,0 +1,6 @@
+TestActivations.TestReLU 1 0.00428599
+TestActivations.TestSiLU 1 0.00407154
+TestCUDAActivations.TestCUDAReLU 1 2.03711
+TestCUDAActivations.TestCUDASiLU 1 0.420414
+TestParameters.TestParameters 1 0.00719901
+---

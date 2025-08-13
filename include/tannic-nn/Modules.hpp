@@ -19,6 +19,8 @@
 #define NN_MODULE_HPP
  
 #include <list>
+#include <memory>
+#include <tannic.hpp> 
 #include "Parameters.hpp"
 
 namespace tannic::nn {
@@ -28,26 +30,7 @@ struct Module {
     auto operator()(this Self&& self, Operands&&... operands) -> decltype(auto) {
         return std::forward<Self>(self).forward(std::forward<Operands>(operands)...);
     }
-};
- 
-struct Linear : Module {
-    Parameter weight;
-    Parameter bias;
-
-    constexpr Linear(type dtype, size_t input_features, size_t output_features)
-    :   weight(dtype, {output_features ,input_features})
-    ,   bias(dtype, {output_features})
-    {}
-    
-    Tensor forward(Tensor input) const { 
-        return matmul(input, transpose(weight, -1, -2)) + bias;
-    }
-
-    void initialize(std::string const& name) const { 
-        weight.initialize(name + ".weight");
-        bias.initialize(name + ".bias");
-    }
-};  
+}; 
   
 template <class Module>
 class List { 
@@ -67,7 +50,26 @@ public:
  
 private:
     std::list<Module> modules_{};
-}; 
+};   
+
+struct Linear : Module {
+    Parameter weight;
+    Parameter bias;
+
+    constexpr Linear(type dtype, size_t input_features, size_t output_features)
+    :   weight(dtype, {output_features ,input_features})
+    ,   bias(dtype, {output_features})
+    {}
+    
+    Tensor forward(Tensor input) const { 
+        return matmul(input, transpose(weight, -1, -2)) + bias; // TODO: Add template specialization for this.
+    }
+
+    void initialize(std::string const& name, Parameters& parameters) const {  
+        weight.initialize(name + ".weight", parameters);
+        bias.initialize(name + ".bias", parameters);
+    }
+};  
 
 } // tannic::nn
 

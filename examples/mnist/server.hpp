@@ -10,7 +10,16 @@
 #include <cstring>
 #include <vector>
 #include <cstdint>
-#include <arpa/inet.h>  
+#include <arpa/inet.h>   
+
+/*
+Tensors serialization will be added to the framework alongside with a server implementation
+in the future when more models are implemented. The idea is to create something like Triton
+but with cpu support.
+
+Meanwhile this is a simple posix blocking server working on linux just to try out and develop
+more features. 
+*/ 
 
 using namespace tannic;
 

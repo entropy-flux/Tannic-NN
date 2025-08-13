@@ -3,6 +3,7 @@ project(tannic-nn LANGUAGES CXX)
  
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/external/tannic/cmake")
 include_directories("${CMAKE_SOURCE_DIR}/external/tannic/include")
+include_directories("${CMAKE_SOURCE_DIR}/external/tannic/include/tannic")
 
 include(CheckLanguage)
 check_language(CUDA)
@@ -52,7 +53,11 @@ endif()
 add_library(tannic-nn STATIC ${SRC_FILES})
 target_include_directories(tannic-nn PUBLIC 
     include
+    "${CMAKE_SOURCE_DIR}/src"
+    "${CMAKE_SOURCE_DIR}/src/cpu"
+    "${CMAKE_SOURCE_DIR}/src/cuda"
     "${CMAKE_SOURCE_DIR}/external/tannic/include"
+    "${CMAKE_SOURCE_DIR}/external/tannic/include/tannic"
 )
   
 target_link_libraries(tannic-nn PUBLIC ${TANNIC_LIB})
@@ -91,6 +96,7 @@ if(TEST_FILES)
     target_include_directories(tannic-nn-tests PRIVATE 
         include
         "${CMAKE_SOURCE_DIR}/external/tannic/include"
+        "${CMAKE_SOURCE_DIR}/external/tannic/include/tannic"
     )
     target_link_libraries(tannic-nn-tests PRIVATE tannic-nn)
 

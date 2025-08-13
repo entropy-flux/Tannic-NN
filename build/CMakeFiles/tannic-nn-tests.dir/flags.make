@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DBLAS -DCUDA -DOPENBLAS
 
-CXX_INCLUDES = -I/home/eric/tannic-nn/external/tannic/include -I/home/eric/tannic-nn/include/tannic-nn -I/usr/include/x86_64-linux-gnu/openblas-pthread -I/home/eric/tannic-nn/include -isystem /usr/local/cuda-12.9/targets/x86_64-linux/include
+CXX_INCLUDES = -I/home/eric/tannic-nn/external/tannic/include -I/home/eric/tannic-nn/external/tannic/include/tannic -I/home/eric/tannic-nn/include/tannic-nn -I/usr/include/x86_64-linux-gnu/openblas-pthread -I/home/eric/tannic-nn/include -I/home/eric/tannic-nn/src -I/home/eric/tannic-nn/src/cpu -I/home/eric/tannic-nn/src/cuda -isystem /usr/local/cuda-12.9/targets/x86_64-linux/include
 
 CXX_FLAGS = -O3 -DNDEBUG -std=gnu++23 -DGTEST_HAS_PTHREAD=1
 

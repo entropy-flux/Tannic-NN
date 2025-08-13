@@ -1,0 +1,138 @@
+Start testing: Aug 13 16:28 -03
+----------------------------------------------------------
+1/5 Testing: TestActivations.TestReLU
+1/5 Test: TestActivations.TestReLU
+Command: "/home/eric/tannic-nn/build/tannic-nn-tests" "--gtest_filter=TestActivations.TestReLU" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build
+"TestActivations.TestReLU" start time: Aug 13 16:28 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestActivations.TestReLU
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestActivations
+[ RUN      ] TestActivations.TestReLU
+[       OK ] TestActivations.TestReLU (0 ms)
+[----------] 1 test from TestActivations (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"TestActivations.TestReLU" end time: Aug 13 16:28 -03
+"TestActivations.TestReLU" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/5 Testing: TestActivations.TestSiLU
+2/5 Test: TestActivations.TestSiLU
+Command: "/home/eric/tannic-nn/build/tannic-nn-tests" "--gtest_filter=TestActivations.TestSiLU" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build
+"TestActivations.TestSiLU" start time: Aug 13 16:28 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestActivations.TestSiLU
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestActivations
+[ RUN      ] TestActivations.TestSiLU
+[       OK ] TestActivations.TestSiLU (0 ms)
+[----------] 1 test from TestActivations (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"TestActivations.TestSiLU" end time: Aug 13 16:28 -03
+"TestActivations.TestSiLU" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/5 Testing: TestCUDAActivations.TestCUDAReLU
+3/5 Test: TestCUDAActivations.TestCUDAReLU
+Command: "/home/eric/tannic-nn/build/tannic-nn-tests" "--gtest_filter=TestCUDAActivations.TestCUDAReLU" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build
+"TestCUDAActivations.TestCUDAReLU" start time: Aug 13 16:28 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestCUDAActivations.TestCUDAReLU
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestCUDAActivations
+[ RUN      ] TestCUDAActivations.TestCUDAReLU
+[       OK ] TestCUDAActivations.TestCUDAReLU (1855 ms)
+[----------] 1 test from TestCUDAActivations (1855 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (1855 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   2.04 sec
+----------------------------------------------------------
+Test Passed.
+"TestCUDAActivations.TestCUDAReLU" end time: Aug 13 16:28 -03
+"TestCUDAActivations.TestCUDAReLU" time elapsed: 00:00:02
+----------------------------------------------------------
+
+4/5 Testing: TestCUDAActivations.TestCUDASiLU
+4/5 Test: TestCUDAActivations.TestCUDASiLU
+Command: "/home/eric/tannic-nn/build/tannic-nn-tests" "--gtest_filter=TestCUDAActivations.TestCUDASiLU" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build
+"TestCUDAActivations.TestCUDASiLU" start time: Aug 13 16:28 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestCUDAActivations.TestCUDASiLU
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestCUDAActivations
+[ RUN      ] TestCUDAActivations.TestCUDASiLU
+[       OK ] TestCUDAActivations.TestCUDASiLU (265 ms)
+[----------] 1 test from TestCUDAActivations (265 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (265 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.42 sec
+----------------------------------------------------------
+Test Passed.
+"TestCUDAActivations.TestCUDASiLU" end time: Aug 13 16:28 -03
+"TestCUDAActivations.TestCUDASiLU" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/5 Testing: TestParameters.TestParameters
+5/5 Test: TestParameters.TestParameters
+Command: "/home/eric/tannic-nn/build/tannic-nn-tests" "--gtest_filter=TestParameters.TestParameters" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build
+"TestParameters.TestParameters" start time: Aug 13 16:28 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestParameters.TestParameters
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestParameters
+[ RUN      ] TestParameters.TestParameters
+[       OK ] TestParameters.TestParameters (0 ms)
+[----------] 1 test from TestParameters (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TestParameters.TestParameters" end time: Aug 13 16:28 -03
+"TestParameters.TestParameters" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Aug 13 16:28 -03

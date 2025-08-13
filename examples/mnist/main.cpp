@@ -1,22 +1,12 @@
 #include <tannic.hpp>
-#include <tannic-nn.hpp>
- 
-#include <unistd.h>
-#include <netinet/in.h>
-#include <stdexcept>
-#include <iostream>
-#include <sstream>
-#include <string>
-#include <cstring>
-#include <vector>
-#include <cstdint>
-#include <arpa/inet.h>  
+#include <tannic-nn.hpp>  
 
 #include "examples/mnist/model.hpp"
 #include "examples/mnist/server.hpp"
 
 /*
-Copy and paste this fail in the root folder's main.cpp
+Copy and paste this file in the folder's root main.cpp and run it with main.sh
+Then run the python client to try it out.
 */
 
 using namespace tannic; 

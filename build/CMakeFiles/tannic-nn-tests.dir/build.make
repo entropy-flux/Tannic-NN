@@ -83,14 +83,75 @@ CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-activations.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-activations.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/eric/tannic-nn/tests/cpu/test-activations.cpp -o CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-activations.cpp.s
 
+CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-activations.cpp.o: CMakeFiles/tannic-nn-tests.dir/flags.make
+CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-activations.cpp.o: /home/eric/tannic-nn/tests/cuda/test-activations.cpp
+CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-activations.cpp.o: CMakeFiles/tannic-nn-tests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eric/tannic-nn/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-activations.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-activations.cpp.o -MF CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-activations.cpp.o.d -o CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-activations.cpp.o -c /home/eric/tannic-nn/tests/cuda/test-activations.cpp
+
+CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-activations.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-activations.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/eric/tannic-nn/tests/cuda/test-activations.cpp > CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-activations.cpp.i
+
+CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-activations.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-activations.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/eric/tannic-nn/tests/cuda/test-activations.cpp -o CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-activations.cpp.s
+
+CMakeFiles/tannic-nn-tests.dir/tests/test-parameters.cpp.o: CMakeFiles/tannic-nn-tests.dir/flags.make
+CMakeFiles/tannic-nn-tests.dir/tests/test-parameters.cpp.o: /home/eric/tannic-nn/tests/test-parameters.cpp
+CMakeFiles/tannic-nn-tests.dir/tests/test-parameters.cpp.o: CMakeFiles/tannic-nn-tests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eric/tannic-nn/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/tannic-nn-tests.dir/tests/test-parameters.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tannic-nn-tests.dir/tests/test-parameters.cpp.o -MF CMakeFiles/tannic-nn-tests.dir/tests/test-parameters.cpp.o.d -o CMakeFiles/tannic-nn-tests.dir/tests/test-parameters.cpp.o -c /home/eric/tannic-nn/tests/test-parameters.cpp
+
+CMakeFiles/tannic-nn-tests.dir/tests/test-parameters.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tannic-nn-tests.dir/tests/test-parameters.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/eric/tannic-nn/tests/test-parameters.cpp > CMakeFiles/tannic-nn-tests.dir/tests/test-parameters.cpp.i
+
+CMakeFiles/tannic-nn-tests.dir/tests/test-parameters.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tannic-nn-tests.dir/tests/test-parameters.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/eric/tannic-nn/tests/test-parameters.cpp -o CMakeFiles/tannic-nn-tests.dir/tests/test-parameters.cpp.s
+
 # Object files for target tannic-nn-tests
 tannic__nn__tests_OBJECTS = \
-"CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-activations.cpp.o"
+"CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-activations.cpp.o" \
+"CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-activations.cpp.o" \
+"CMakeFiles/tannic-nn-tests.dir/tests/test-parameters.cpp.o"
+
+# External object files for target tannic-nn-tests
+tannic__nn__tests_EXTERNAL_OBJECTS =
+
+CMakeFiles/tannic-nn-tests.dir/cmake_device_link.o: CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-activations.cpp.o
+CMakeFiles/tannic-nn-tests.dir/cmake_device_link.o: CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-activations.cpp.o
+CMakeFiles/tannic-nn-tests.dir/cmake_device_link.o: CMakeFiles/tannic-nn-tests.dir/tests/test-parameters.cpp.o
+CMakeFiles/tannic-nn-tests.dir/cmake_device_link.o: CMakeFiles/tannic-nn-tests.dir/build.make
+CMakeFiles/tannic-nn-tests.dir/cmake_device_link.o: libtannic-nn.a
+CMakeFiles/tannic-nn-tests.dir/cmake_device_link.o: /usr/local/cuda-12.9/targets/x86_64-linux/lib/libcudart.so
+CMakeFiles/tannic-nn-tests.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libgtest_main.a
+CMakeFiles/tannic-nn-tests.dir/cmake_device_link.o: /home/eric/tannic-nn/external/tannic/build/libtannic.a
+CMakeFiles/tannic-nn-tests.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/openblas-pthread//libopenblas.so
+CMakeFiles/tannic-nn-tests.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libgtest.a
+CMakeFiles/tannic-nn-tests.dir/cmake_device_link.o: CMakeFiles/tannic-nn-tests.dir/deviceLinkLibs.rsp
+CMakeFiles/tannic-nn-tests.dir/cmake_device_link.o: CMakeFiles/tannic-nn-tests.dir/deviceObjects1.rsp
+CMakeFiles/tannic-nn-tests.dir/cmake_device_link.o: CMakeFiles/tannic-nn-tests.dir/dlink.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/eric/tannic-nn/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CUDA device code CMakeFiles/tannic-nn-tests.dir/cmake_device_link.o"
+	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tannic-nn-tests.dir/dlink.txt --verbose=$(VERBOSE)
+
+# Rule to build all files generated by this target.
+CMakeFiles/tannic-nn-tests.dir/build: CMakeFiles/tannic-nn-tests.dir/cmake_device_link.o
+.PHONY : CMakeFiles/tannic-nn-tests.dir/build
+
+# Object files for target tannic-nn-tests
+tannic__nn__tests_OBJECTS = \
+"CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-activations.cpp.o" \
+"CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-activations.cpp.o" \
+"CMakeFiles/tannic-nn-tests.dir/tests/test-parameters.cpp.o"
 
 # External object files for target tannic-nn-tests
 tannic__nn__tests_EXTERNAL_OBJECTS =
 
 tannic-nn-tests: CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-activations.cpp.o
+tannic-nn-tests: CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-activations.cpp.o
+tannic-nn-tests: CMakeFiles/tannic-nn-tests.dir/tests/test-parameters.cpp.o
 tannic-nn-tests: CMakeFiles/tannic-nn-tests.dir/build.make
 tannic-nn-tests: libtannic-nn.a
 tannic-nn-tests: /usr/local/cuda-12.9/targets/x86_64-linux/lib/libcudart.so
@@ -98,8 +159,9 @@ tannic-nn-tests: /usr/lib/x86_64-linux-gnu/libgtest_main.a
 tannic-nn-tests: /home/eric/tannic-nn/external/tannic/build/libtannic.a
 tannic-nn-tests: /usr/lib/x86_64-linux-gnu/openblas-pthread//libopenblas.so
 tannic-nn-tests: /usr/lib/x86_64-linux-gnu/libgtest.a
+tannic-nn-tests: CMakeFiles/tannic-nn-tests.dir/cmake_device_link.o
 tannic-nn-tests: CMakeFiles/tannic-nn-tests.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/eric/tannic-nn/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable tannic-nn-tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/eric/tannic-nn/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable tannic-nn-tests"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tannic-nn-tests.dir/link.txt --verbose=$(VERBOSE)
 	/usr/bin/cmake -D TEST_TARGET=tannic-nn-tests -D TEST_EXECUTABLE=/home/eric/tannic-nn/build/tannic-nn-tests -D TEST_EXECUTOR= -D TEST_WORKING_DIR=/home/eric/tannic-nn/build -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=tannic-nn-tests_TESTS -D CTEST_FILE=/home/eric/tannic-nn/build/tannic-nn-tests[1]_tests.cmake -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_XML_OUTPUT_DIR= -P /usr/share/cmake-3.28/Modules/GoogleTestAddTests.cmake
 

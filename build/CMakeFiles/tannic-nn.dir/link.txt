@@ -1,2 +1,2 @@
-/usr/bin/ar qc libtannic-nn.a "CMakeFiles/tannic-nn.dir/src/Activations.cpp.o" "CMakeFiles/tannic-nn.dir/src/cpu/actvs.cpp.o"
+/usr/bin/ar qc libtannic-nn.a "CMakeFiles/tannic-nn.dir/src/Activations.cpp.o" "CMakeFiles/tannic-nn.dir/src/Embeddings.cpp.o" "CMakeFiles/tannic-nn.dir/src/Parameters.cpp.o" "CMakeFiles/tannic-nn.dir/src/cpu/actvs.cpp.o" "CMakeFiles/tannic-nn.dir/src/cpu/emb.cpp.o" "CMakeFiles/tannic-nn.dir/src/cuda/actvs.cu.o" "CMakeFiles/tannic-nn.dir/src/cuda/emb.cu.o" "CMakeFiles/tannic-nn.dir/src/cuda/mem.cu.o"
 /usr/bin/ranlib libtannic-nn.a

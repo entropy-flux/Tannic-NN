@@ -83,10 +83,38 @@ CMakeFiles/tannic-nn.dir/src/Activations.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tannic-nn.dir/src/Activations.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/eric/tannic-nn/src/Activations.cpp -o CMakeFiles/tannic-nn.dir/src/Activations.cpp.s
 
+CMakeFiles/tannic-nn.dir/src/Embeddings.cpp.o: CMakeFiles/tannic-nn.dir/flags.make
+CMakeFiles/tannic-nn.dir/src/Embeddings.cpp.o: /home/eric/tannic-nn/src/Embeddings.cpp
+CMakeFiles/tannic-nn.dir/src/Embeddings.cpp.o: CMakeFiles/tannic-nn.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eric/tannic-nn/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/tannic-nn.dir/src/Embeddings.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tannic-nn.dir/src/Embeddings.cpp.o -MF CMakeFiles/tannic-nn.dir/src/Embeddings.cpp.o.d -o CMakeFiles/tannic-nn.dir/src/Embeddings.cpp.o -c /home/eric/tannic-nn/src/Embeddings.cpp
+
+CMakeFiles/tannic-nn.dir/src/Embeddings.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tannic-nn.dir/src/Embeddings.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/eric/tannic-nn/src/Embeddings.cpp > CMakeFiles/tannic-nn.dir/src/Embeddings.cpp.i
+
+CMakeFiles/tannic-nn.dir/src/Embeddings.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tannic-nn.dir/src/Embeddings.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/eric/tannic-nn/src/Embeddings.cpp -o CMakeFiles/tannic-nn.dir/src/Embeddings.cpp.s
+
+CMakeFiles/tannic-nn.dir/src/Parameters.cpp.o: CMakeFiles/tannic-nn.dir/flags.make
+CMakeFiles/tannic-nn.dir/src/Parameters.cpp.o: /home/eric/tannic-nn/src/Parameters.cpp
+CMakeFiles/tannic-nn.dir/src/Parameters.cpp.o: CMakeFiles/tannic-nn.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eric/tannic-nn/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/tannic-nn.dir/src/Parameters.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tannic-nn.dir/src/Parameters.cpp.o -MF CMakeFiles/tannic-nn.dir/src/Parameters.cpp.o.d -o CMakeFiles/tannic-nn.dir/src/Parameters.cpp.o -c /home/eric/tannic-nn/src/Parameters.cpp
+
+CMakeFiles/tannic-nn.dir/src/Parameters.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tannic-nn.dir/src/Parameters.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/eric/tannic-nn/src/Parameters.cpp > CMakeFiles/tannic-nn.dir/src/Parameters.cpp.i
+
+CMakeFiles/tannic-nn.dir/src/Parameters.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tannic-nn.dir/src/Parameters.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/eric/tannic-nn/src/Parameters.cpp -o CMakeFiles/tannic-nn.dir/src/Parameters.cpp.s
+
 CMakeFiles/tannic-nn.dir/src/cpu/actvs.cpp.o: CMakeFiles/tannic-nn.dir/flags.make
 CMakeFiles/tannic-nn.dir/src/cpu/actvs.cpp.o: /home/eric/tannic-nn/src/cpu/actvs.cpp
 CMakeFiles/tannic-nn.dir/src/cpu/actvs.cpp.o: CMakeFiles/tannic-nn.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eric/tannic-nn/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/tannic-nn.dir/src/cpu/actvs.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eric/tannic-nn/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/tannic-nn.dir/src/cpu/actvs.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tannic-nn.dir/src/cpu/actvs.cpp.o -MF CMakeFiles/tannic-nn.dir/src/cpu/actvs.cpp.o.d -o CMakeFiles/tannic-nn.dir/src/cpu/actvs.cpp.o -c /home/eric/tannic-nn/src/cpu/actvs.cpp
 
 CMakeFiles/tannic-nn.dir/src/cpu/actvs.cpp.i: cmake_force
@@ -97,19 +125,90 @@ CMakeFiles/tannic-nn.dir/src/cpu/actvs.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tannic-nn.dir/src/cpu/actvs.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/eric/tannic-nn/src/cpu/actvs.cpp -o CMakeFiles/tannic-nn.dir/src/cpu/actvs.cpp.s
 
+CMakeFiles/tannic-nn.dir/src/cpu/emb.cpp.o: CMakeFiles/tannic-nn.dir/flags.make
+CMakeFiles/tannic-nn.dir/src/cpu/emb.cpp.o: /home/eric/tannic-nn/src/cpu/emb.cpp
+CMakeFiles/tannic-nn.dir/src/cpu/emb.cpp.o: CMakeFiles/tannic-nn.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eric/tannic-nn/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/tannic-nn.dir/src/cpu/emb.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tannic-nn.dir/src/cpu/emb.cpp.o -MF CMakeFiles/tannic-nn.dir/src/cpu/emb.cpp.o.d -o CMakeFiles/tannic-nn.dir/src/cpu/emb.cpp.o -c /home/eric/tannic-nn/src/cpu/emb.cpp
+
+CMakeFiles/tannic-nn.dir/src/cpu/emb.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tannic-nn.dir/src/cpu/emb.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/eric/tannic-nn/src/cpu/emb.cpp > CMakeFiles/tannic-nn.dir/src/cpu/emb.cpp.i
+
+CMakeFiles/tannic-nn.dir/src/cpu/emb.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tannic-nn.dir/src/cpu/emb.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/eric/tannic-nn/src/cpu/emb.cpp -o CMakeFiles/tannic-nn.dir/src/cpu/emb.cpp.s
+
+CMakeFiles/tannic-nn.dir/src/cuda/actvs.cu.o: CMakeFiles/tannic-nn.dir/flags.make
+CMakeFiles/tannic-nn.dir/src/cuda/actvs.cu.o: CMakeFiles/tannic-nn.dir/includes_CUDA.rsp
+CMakeFiles/tannic-nn.dir/src/cuda/actvs.cu.o: /home/eric/tannic-nn/src/cuda/actvs.cu
+CMakeFiles/tannic-nn.dir/src/cuda/actvs.cu.o: CMakeFiles/tannic-nn.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eric/tannic-nn/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CUDA object CMakeFiles/tannic-nn.dir/src/cuda/actvs.cu.o"
+	/usr/local/cuda-12.9/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT CMakeFiles/tannic-nn.dir/src/cuda/actvs.cu.o -MF CMakeFiles/tannic-nn.dir/src/cuda/actvs.cu.o.d -x cu -rdc=true -c /home/eric/tannic-nn/src/cuda/actvs.cu -o CMakeFiles/tannic-nn.dir/src/cuda/actvs.cu.o
+
+CMakeFiles/tannic-nn.dir/src/cuda/actvs.cu.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CUDA source to CMakeFiles/tannic-nn.dir/src/cuda/actvs.cu.i"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_PREPROCESSED_SOURCE
+
+CMakeFiles/tannic-nn.dir/src/cuda/actvs.cu.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CUDA source to assembly CMakeFiles/tannic-nn.dir/src/cuda/actvs.cu.s"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_ASSEMBLY_SOURCE
+
+CMakeFiles/tannic-nn.dir/src/cuda/emb.cu.o: CMakeFiles/tannic-nn.dir/flags.make
+CMakeFiles/tannic-nn.dir/src/cuda/emb.cu.o: CMakeFiles/tannic-nn.dir/includes_CUDA.rsp
+CMakeFiles/tannic-nn.dir/src/cuda/emb.cu.o: /home/eric/tannic-nn/src/cuda/emb.cu
+CMakeFiles/tannic-nn.dir/src/cuda/emb.cu.o: CMakeFiles/tannic-nn.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eric/tannic-nn/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CUDA object CMakeFiles/tannic-nn.dir/src/cuda/emb.cu.o"
+	/usr/local/cuda-12.9/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT CMakeFiles/tannic-nn.dir/src/cuda/emb.cu.o -MF CMakeFiles/tannic-nn.dir/src/cuda/emb.cu.o.d -x cu -rdc=true -c /home/eric/tannic-nn/src/cuda/emb.cu -o CMakeFiles/tannic-nn.dir/src/cuda/emb.cu.o
+
+CMakeFiles/tannic-nn.dir/src/cuda/emb.cu.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CUDA source to CMakeFiles/tannic-nn.dir/src/cuda/emb.cu.i"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_PREPROCESSED_SOURCE
+
+CMakeFiles/tannic-nn.dir/src/cuda/emb.cu.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CUDA source to assembly CMakeFiles/tannic-nn.dir/src/cuda/emb.cu.s"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_ASSEMBLY_SOURCE
+
+CMakeFiles/tannic-nn.dir/src/cuda/mem.cu.o: CMakeFiles/tannic-nn.dir/flags.make
+CMakeFiles/tannic-nn.dir/src/cuda/mem.cu.o: CMakeFiles/tannic-nn.dir/includes_CUDA.rsp
+CMakeFiles/tannic-nn.dir/src/cuda/mem.cu.o: /home/eric/tannic-nn/src/cuda/mem.cu
+CMakeFiles/tannic-nn.dir/src/cuda/mem.cu.o: CMakeFiles/tannic-nn.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eric/tannic-nn/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CUDA object CMakeFiles/tannic-nn.dir/src/cuda/mem.cu.o"
+	/usr/local/cuda-12.9/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT CMakeFiles/tannic-nn.dir/src/cuda/mem.cu.o -MF CMakeFiles/tannic-nn.dir/src/cuda/mem.cu.o.d -x cu -rdc=true -c /home/eric/tannic-nn/src/cuda/mem.cu -o CMakeFiles/tannic-nn.dir/src/cuda/mem.cu.o
+
+CMakeFiles/tannic-nn.dir/src/cuda/mem.cu.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CUDA source to CMakeFiles/tannic-nn.dir/src/cuda/mem.cu.i"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_PREPROCESSED_SOURCE
+
+CMakeFiles/tannic-nn.dir/src/cuda/mem.cu.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CUDA source to assembly CMakeFiles/tannic-nn.dir/src/cuda/mem.cu.s"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_ASSEMBLY_SOURCE
+
 # Object files for target tannic-nn
 tannic__nn_OBJECTS = \
 "CMakeFiles/tannic-nn.dir/src/Activations.cpp.o" \
-"CMakeFiles/tannic-nn.dir/src/cpu/actvs.cpp.o"
+"CMakeFiles/tannic-nn.dir/src/Embeddings.cpp.o" \
+"CMakeFiles/tannic-nn.dir/src/Parameters.cpp.o" \
+"CMakeFiles/tannic-nn.dir/src/cpu/actvs.cpp.o" \
+"CMakeFiles/tannic-nn.dir/src/cpu/emb.cpp.o" \
+"CMakeFiles/tannic-nn.dir/src/cuda/actvs.cu.o" \
+"CMakeFiles/tannic-nn.dir/src/cuda/emb.cu.o" \
+"CMakeFiles/tannic-nn.dir/src/cuda/mem.cu.o"
 
 # External object files for target tannic-nn
 tannic__nn_EXTERNAL_OBJECTS =
 
 libtannic-nn.a: CMakeFiles/tannic-nn.dir/src/Activations.cpp.o
+libtannic-nn.a: CMakeFiles/tannic-nn.dir/src/Embeddings.cpp.o
+libtannic-nn.a: CMakeFiles/tannic-nn.dir/src/Parameters.cpp.o
 libtannic-nn.a: CMakeFiles/tannic-nn.dir/src/cpu/actvs.cpp.o
+libtannic-nn.a: CMakeFiles/tannic-nn.dir/src/cpu/emb.cpp.o
+libtannic-nn.a: CMakeFiles/tannic-nn.dir/src/cuda/actvs.cu.o
+libtannic-nn.a: CMakeFiles/tannic-nn.dir/src/cuda/emb.cu.o
+libtannic-nn.a: CMakeFiles/tannic-nn.dir/src/cuda/mem.cu.o
 libtannic-nn.a: CMakeFiles/tannic-nn.dir/build.make
 libtannic-nn.a: CMakeFiles/tannic-nn.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/eric/tannic-nn/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libtannic-nn.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/eric/tannic-nn/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX static library libtannic-nn.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/tannic-nn.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tannic-nn.dir/link.txt --verbose=$(VERBOSE)
 

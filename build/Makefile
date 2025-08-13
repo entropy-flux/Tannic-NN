@@ -176,6 +176,54 @@ src/Activations.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn.dir/build.make CMakeFiles/tannic-nn.dir/src/Activations.cpp.s
 .PHONY : src/Activations.cpp.s
 
+src/Embeddings.o: src/Embeddings.cpp.o
+.PHONY : src/Embeddings.o
+
+# target to build an object file
+src/Embeddings.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn.dir/build.make CMakeFiles/tannic-nn.dir/src/Embeddings.cpp.o
+.PHONY : src/Embeddings.cpp.o
+
+src/Embeddings.i: src/Embeddings.cpp.i
+.PHONY : src/Embeddings.i
+
+# target to preprocess a source file
+src/Embeddings.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn.dir/build.make CMakeFiles/tannic-nn.dir/src/Embeddings.cpp.i
+.PHONY : src/Embeddings.cpp.i
+
+src/Embeddings.s: src/Embeddings.cpp.s
+.PHONY : src/Embeddings.s
+
+# target to generate assembly for a file
+src/Embeddings.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn.dir/build.make CMakeFiles/tannic-nn.dir/src/Embeddings.cpp.s
+.PHONY : src/Embeddings.cpp.s
+
+src/Parameters.o: src/Parameters.cpp.o
+.PHONY : src/Parameters.o
+
+# target to build an object file
+src/Parameters.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn.dir/build.make CMakeFiles/tannic-nn.dir/src/Parameters.cpp.o
+.PHONY : src/Parameters.cpp.o
+
+src/Parameters.i: src/Parameters.cpp.i
+.PHONY : src/Parameters.i
+
+# target to preprocess a source file
+src/Parameters.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn.dir/build.make CMakeFiles/tannic-nn.dir/src/Parameters.cpp.i
+.PHONY : src/Parameters.cpp.i
+
+src/Parameters.s: src/Parameters.cpp.s
+.PHONY : src/Parameters.s
+
+# target to generate assembly for a file
+src/Parameters.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn.dir/build.make CMakeFiles/tannic-nn.dir/src/Parameters.cpp.s
+.PHONY : src/Parameters.cpp.s
+
 src/cpu/actvs.o: src/cpu/actvs.cpp.o
 .PHONY : src/cpu/actvs.o
 
@@ -199,6 +247,102 @@ src/cpu/actvs.s: src/cpu/actvs.cpp.s
 src/cpu/actvs.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn.dir/build.make CMakeFiles/tannic-nn.dir/src/cpu/actvs.cpp.s
 .PHONY : src/cpu/actvs.cpp.s
+
+src/cpu/emb.o: src/cpu/emb.cpp.o
+.PHONY : src/cpu/emb.o
+
+# target to build an object file
+src/cpu/emb.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn.dir/build.make CMakeFiles/tannic-nn.dir/src/cpu/emb.cpp.o
+.PHONY : src/cpu/emb.cpp.o
+
+src/cpu/emb.i: src/cpu/emb.cpp.i
+.PHONY : src/cpu/emb.i
+
+# target to preprocess a source file
+src/cpu/emb.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn.dir/build.make CMakeFiles/tannic-nn.dir/src/cpu/emb.cpp.i
+.PHONY : src/cpu/emb.cpp.i
+
+src/cpu/emb.s: src/cpu/emb.cpp.s
+.PHONY : src/cpu/emb.s
+
+# target to generate assembly for a file
+src/cpu/emb.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn.dir/build.make CMakeFiles/tannic-nn.dir/src/cpu/emb.cpp.s
+.PHONY : src/cpu/emb.cpp.s
+
+src/cuda/actvs.o: src/cuda/actvs.cu.o
+.PHONY : src/cuda/actvs.o
+
+# target to build an object file
+src/cuda/actvs.cu.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn.dir/build.make CMakeFiles/tannic-nn.dir/src/cuda/actvs.cu.o
+.PHONY : src/cuda/actvs.cu.o
+
+src/cuda/actvs.i: src/cuda/actvs.cu.i
+.PHONY : src/cuda/actvs.i
+
+# target to preprocess a source file
+src/cuda/actvs.cu.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn.dir/build.make CMakeFiles/tannic-nn.dir/src/cuda/actvs.cu.i
+.PHONY : src/cuda/actvs.cu.i
+
+src/cuda/actvs.s: src/cuda/actvs.cu.s
+.PHONY : src/cuda/actvs.s
+
+# target to generate assembly for a file
+src/cuda/actvs.cu.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn.dir/build.make CMakeFiles/tannic-nn.dir/src/cuda/actvs.cu.s
+.PHONY : src/cuda/actvs.cu.s
+
+src/cuda/emb.o: src/cuda/emb.cu.o
+.PHONY : src/cuda/emb.o
+
+# target to build an object file
+src/cuda/emb.cu.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn.dir/build.make CMakeFiles/tannic-nn.dir/src/cuda/emb.cu.o
+.PHONY : src/cuda/emb.cu.o
+
+src/cuda/emb.i: src/cuda/emb.cu.i
+.PHONY : src/cuda/emb.i
+
+# target to preprocess a source file
+src/cuda/emb.cu.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn.dir/build.make CMakeFiles/tannic-nn.dir/src/cuda/emb.cu.i
+.PHONY : src/cuda/emb.cu.i
+
+src/cuda/emb.s: src/cuda/emb.cu.s
+.PHONY : src/cuda/emb.s
+
+# target to generate assembly for a file
+src/cuda/emb.cu.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn.dir/build.make CMakeFiles/tannic-nn.dir/src/cuda/emb.cu.s
+.PHONY : src/cuda/emb.cu.s
+
+src/cuda/mem.o: src/cuda/mem.cu.o
+.PHONY : src/cuda/mem.o
+
+# target to build an object file
+src/cuda/mem.cu.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn.dir/build.make CMakeFiles/tannic-nn.dir/src/cuda/mem.cu.o
+.PHONY : src/cuda/mem.cu.o
+
+src/cuda/mem.i: src/cuda/mem.cu.i
+.PHONY : src/cuda/mem.i
+
+# target to preprocess a source file
+src/cuda/mem.cu.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn.dir/build.make CMakeFiles/tannic-nn.dir/src/cuda/mem.cu.i
+.PHONY : src/cuda/mem.cu.i
+
+src/cuda/mem.s: src/cuda/mem.cu.s
+.PHONY : src/cuda/mem.s
+
+# target to generate assembly for a file
+src/cuda/mem.cu.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn.dir/build.make CMakeFiles/tannic-nn.dir/src/cuda/mem.cu.s
+.PHONY : src/cuda/mem.cu.s
 
 tests/cpu/test-activations.o: tests/cpu/test-activations.cpp.o
 .PHONY : tests/cpu/test-activations.o
@@ -224,6 +368,54 @@ tests/cpu/test-activations.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn-tests.dir/build.make CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-activations.cpp.s
 .PHONY : tests/cpu/test-activations.cpp.s
 
+tests/cuda/test-activations.o: tests/cuda/test-activations.cpp.o
+.PHONY : tests/cuda/test-activations.o
+
+# target to build an object file
+tests/cuda/test-activations.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn-tests.dir/build.make CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-activations.cpp.o
+.PHONY : tests/cuda/test-activations.cpp.o
+
+tests/cuda/test-activations.i: tests/cuda/test-activations.cpp.i
+.PHONY : tests/cuda/test-activations.i
+
+# target to preprocess a source file
+tests/cuda/test-activations.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn-tests.dir/build.make CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-activations.cpp.i
+.PHONY : tests/cuda/test-activations.cpp.i
+
+tests/cuda/test-activations.s: tests/cuda/test-activations.cpp.s
+.PHONY : tests/cuda/test-activations.s
+
+# target to generate assembly for a file
+tests/cuda/test-activations.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn-tests.dir/build.make CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-activations.cpp.s
+.PHONY : tests/cuda/test-activations.cpp.s
+
+tests/test-parameters.o: tests/test-parameters.cpp.o
+.PHONY : tests/test-parameters.o
+
+# target to build an object file
+tests/test-parameters.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn-tests.dir/build.make CMakeFiles/tannic-nn-tests.dir/tests/test-parameters.cpp.o
+.PHONY : tests/test-parameters.cpp.o
+
+tests/test-parameters.i: tests/test-parameters.cpp.i
+.PHONY : tests/test-parameters.i
+
+# target to preprocess a source file
+tests/test-parameters.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn-tests.dir/build.make CMakeFiles/tannic-nn-tests.dir/tests/test-parameters.cpp.i
+.PHONY : tests/test-parameters.cpp.i
+
+tests/test-parameters.s: tests/test-parameters.cpp.s
+.PHONY : tests/test-parameters.s
+
+# target to generate assembly for a file
+tests/test-parameters.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn-tests.dir/build.make CMakeFiles/tannic-nn-tests.dir/tests/test-parameters.cpp.s
+.PHONY : tests/test-parameters.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -238,12 +430,36 @@ help:
 	@echo "... src/Activations.o"
 	@echo "... src/Activations.i"
 	@echo "... src/Activations.s"
+	@echo "... src/Embeddings.o"
+	@echo "... src/Embeddings.i"
+	@echo "... src/Embeddings.s"
+	@echo "... src/Parameters.o"
+	@echo "... src/Parameters.i"
+	@echo "... src/Parameters.s"
 	@echo "... src/cpu/actvs.o"
 	@echo "... src/cpu/actvs.i"
 	@echo "... src/cpu/actvs.s"
+	@echo "... src/cpu/emb.o"
+	@echo "... src/cpu/emb.i"
+	@echo "... src/cpu/emb.s"
+	@echo "... src/cuda/actvs.o"
+	@echo "... src/cuda/actvs.i"
+	@echo "... src/cuda/actvs.s"
+	@echo "... src/cuda/emb.o"
+	@echo "... src/cuda/emb.i"
+	@echo "... src/cuda/emb.s"
+	@echo "... src/cuda/mem.o"
+	@echo "... src/cuda/mem.i"
+	@echo "... src/cuda/mem.s"
 	@echo "... tests/cpu/test-activations.o"
 	@echo "... tests/cpu/test-activations.i"
 	@echo "... tests/cpu/test-activations.s"
+	@echo "... tests/cuda/test-activations.o"
+	@echo "... tests/cuda/test-activations.i"
+	@echo "... tests/cuda/test-activations.s"
+	@echo "... tests/test-parameters.o"
+	@echo "... tests/test-parameters.i"
+	@echo "... tests/test-parameters.s"
 .PHONY : help
 
 

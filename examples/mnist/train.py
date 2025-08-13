@@ -1,3 +1,7 @@
+#install dependencies
+#pip install torchsystem
+#pip install mltracker // both are written by me :)
+
 from typing import Iterable 
 from torch import Tensor
 from torch import argmax

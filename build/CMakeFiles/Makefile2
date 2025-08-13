@@ -83,12 +83,12 @@ clean: CMakeFiles/tannic-nn-tests.dir/clean
 CMakeFiles/tannic-nn.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn.dir/build.make CMakeFiles/tannic-nn.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn.dir/build.make CMakeFiles/tannic-nn.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/eric/tannic-nn/build/CMakeFiles --progress-num=1,2,3 "Built target tannic-nn"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/eric/tannic-nn/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9 "Built target tannic-nn"
 .PHONY : CMakeFiles/tannic-nn.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/tannic-nn.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eric/tannic-nn/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eric/tannic-nn/build/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/tannic-nn.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/eric/tannic-nn/build/CMakeFiles 0
 .PHONY : CMakeFiles/tannic-nn.dir/rule
@@ -109,12 +109,12 @@ CMakeFiles/tannic-nn.dir/clean:
 CMakeFiles/tannic-nn-tests.dir/all: CMakeFiles/tannic-nn.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn-tests.dir/build.make CMakeFiles/tannic-nn-tests.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn-tests.dir/build.make CMakeFiles/tannic-nn-tests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/eric/tannic-nn/build/CMakeFiles --progress-num=4,5 "Built target tannic-nn-tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/eric/tannic-nn/build/CMakeFiles --progress-num=10,11,12,13,14 "Built target tannic-nn-tests"
 .PHONY : CMakeFiles/tannic-nn-tests.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/tannic-nn-tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eric/tannic-nn/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eric/tannic-nn/build/CMakeFiles 14
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/tannic-nn-tests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/eric/tannic-nn/build/CMakeFiles 0
 .PHONY : CMakeFiles/tannic-nn-tests.dir/rule
