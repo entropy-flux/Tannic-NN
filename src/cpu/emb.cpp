@@ -45,7 +45,7 @@ status launchEmbeddingKernel(const tensor_t* indices, const tensor_t* embedding,
     return SUCCESS;
 }
 
-} namespace cpu {
+} namespace cpu::nn {
 
 status embed(const tensor_t* src_indices, const tensor_t* embedding_matrix, tensor_t* dst) {
     if (src_indices->dtype != int64) {

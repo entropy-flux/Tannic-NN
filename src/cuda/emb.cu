@@ -59,7 +59,7 @@ status launchEmbeddingKernel(const tensor_t* indices, const tensor_t* embedding,
     return SUCCESS;
 }
 
-}  namespace cuda {
+}  namespace cuda::nn {
  
 status embed(const tensor_t* src_indices, const tensor_t* embedding_matrix, tensor_t* dst, stream_t stream) {
     if (src_indices->dtype != int64) {

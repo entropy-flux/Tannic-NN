@@ -9,7 +9,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/eric/tannic-nn/tests/cpu/test-activations.cpp" "CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-activations.cpp.o" "gcc" "CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-activations.cpp.o.d"
-  "/home/eric/tannic-nn/tests/cuda/test-activations.cpp" "CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-activations.cpp.o" "gcc" "CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-activations.cpp.o.d"
+  "/home/eric/tannic-nn/tests/cpu/test-embeddings.cpp" "CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-embeddings.cpp.o" "gcc" "CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-embeddings.cpp.o.d"
+  "/home/eric/tannic-nn/tests/cpu/test-normalization.cpp" "CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-normalization.cpp.o" "gcc" "CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-normalization.cpp.o.d"
+  "/home/eric/tannic-nn/tests/cuda/test-cuda-activations.cpp" "CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-activations.cpp.o" "gcc" "CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-activations.cpp.o.d"
+  "/home/eric/tannic-nn/tests/cuda/test-cuda-embeddings.cpp" "CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-embeddings.cpp.o" "gcc" "CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-embeddings.cpp.o.d"
+  "/home/eric/tannic-nn/tests/cuda/test-normalization.cpp" "CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-normalization.cpp.o" "gcc" "CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-normalization.cpp.o.d"
+  "/home/eric/tannic-nn/tests/test-modules.cpp" "CMakeFiles/tannic-nn-tests.dir/tests/test-modules.cpp.o" "gcc" "CMakeFiles/tannic-nn-tests.dir/tests/test-modules.cpp.o.d"
   "/home/eric/tannic-nn/tests/test-parameters.cpp" "CMakeFiles/tannic-nn-tests.dir/tests/test-parameters.cpp.o" "gcc" "CMakeFiles/tannic-nn-tests.dir/tests/test-parameters.cpp.o.d"
   )
 

@@ -173,8 +173,7 @@ def bring_to_current_epoch(classifier: Classifier, models: Models = Depends(mode
     else:
         print(f"model found on epoch {model.epoch}")
     classifier.epoch = model.epoch
-    return classifier 
- 
+    return classifier  
 
 if __name__ == '__main__': 
     repository = getallmodels('mlp')

@@ -29,7 +29,7 @@ struct Metadata {
     type dtype;
     uint8_t rank;
     std::size_t const* shape;
-    std::size_t const* strides; 
+    std::int64_t const* strides; 
 
     Metadata(std::vector<std::byte> const& bytes) {
         std::byte const* data = bytes.data();  
@@ -38,7 +38,7 @@ struct Metadata {
         dtype = dtypeof(*reinterpret_cast<const uint8_t*>(data)); data += sizeof(uint8_t);
         rank = *reinterpret_cast<const uint8_t*>(data); data += sizeof(uint8_t);
         shape = reinterpret_cast<const std::size_t*>(data); data += sizeof(std::size_t) * rank;
-        strides = reinterpret_cast<const std::size_t*>(data); 
+        strides = reinterpret_cast<const std::int64_t*>(data); 
     }  
 
     Metadata(Tensor const& tensor) {
@@ -61,7 +61,7 @@ Tensor deserialize(std::vector<std::byte> const& metadata) {
     Shape shape(structured.shape, structured.shape + structured.rank);
     Strides strides(structured.strides, structured.strides + structured.rank);
     std::shared_ptr<Buffer> buffer = std::make_shared<Buffer>(structured.nbytes);
-    return Tensor(structured.dtype, shape, strides, structured.offset, buffer);
+    return Tensor(structured.dtype, shape, strides, 0, buffer);
 } 
 
 std::vector<std::byte> serialize(Tensor const& tensor) {
@@ -76,7 +76,7 @@ std::vector<std::byte> serialize(Tensor const& tensor) {
     std::memcpy(data, &dcode, sizeof(uint8_t)); data += sizeof(uint8_t);
     std::memcpy(data, &structured.rank, sizeof(uint8_t)); data += sizeof(uint8_t);
     std::memcpy(data, structured.shape, sizeof(std::size_t) * structured.rank); data += sizeof(std::size_t) * structured.rank;
-    std::memcpy(data, structured.strides, sizeof(std::size_t) * structured.rank); data += sizeof(std::size_t) * structured.rank;
+    std::memcpy(data, structured.strides, sizeof(std::int64_t) * structured.rank); data += sizeof(std::int64_t) * structured.rank;
     std::memcpy(data, tensor.bytes(), tensor.nbytes());
     return serialized; 
 }
@@ -246,4 +246,3 @@ private:
         }
     } 
 };
-

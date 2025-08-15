@@ -80,7 +80,6 @@ constexpr auto silu(Aggregation&& aggregation) {
 }
 
 } // namespace expression
- 
 
 using expression::relu;
 using expression::silu;

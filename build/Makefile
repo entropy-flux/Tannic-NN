@@ -152,6 +152,82 @@ tannic-nn-tests/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn-tests.dir/build.make CMakeFiles/tannic-nn-tests.dir/build
 .PHONY : tannic-nn-tests/fast
 
+#=============================================================================
+# Target rules for targets named tannic-nn-main
+
+# Build rule for target.
+tannic-nn-main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tannic-nn-main
+.PHONY : tannic-nn-main
+
+# fast build rule for target.
+tannic-nn-main/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn-main.dir/build.make CMakeFiles/tannic-nn-main.dir/build
+.PHONY : tannic-nn-main/fast
+
+#=============================================================================
+# Target rules for targets named tannic
+
+# Build rule for target.
+tannic: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tannic
+.PHONY : tannic
+
+# fast build rule for target.
+tannic/fast:
+	$(MAKE) $(MAKESILENT) -f external/tannic/CMakeFiles/tannic.dir/build.make external/tannic/CMakeFiles/tannic.dir/build
+.PHONY : tannic/fast
+
+#=============================================================================
+# Target rules for targets named tests
+
+# Build rule for target.
+tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests
+.PHONY : tests
+
+# fast build rule for target.
+tests/fast:
+	$(MAKE) $(MAKESILENT) -f external/tannic/CMakeFiles/tests.dir/build.make external/tannic/CMakeFiles/tests.dir/build
+.PHONY : tests/fast
+
+#=============================================================================
+# Target rules for targets named main
+
+# Build rule for target.
+main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
+.PHONY : main
+
+# fast build rule for target.
+main/fast:
+	$(MAKE) $(MAKESILENT) -f external/tannic/CMakeFiles/main.dir/build.make external/tannic/CMakeFiles/main.dir/build
+.PHONY : main/fast
+
+main.o: main.cpp.o
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn-main.dir/build.make CMakeFiles/tannic-nn-main.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn-main.dir/build.make CMakeFiles/tannic-nn-main.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn-main.dir/build.make CMakeFiles/tannic-nn-main.dir/main.cpp.s
+.PHONY : main.cpp.s
+
 src/Activations.o: src/Activations.cpp.o
 .PHONY : src/Activations.o
 
@@ -368,29 +444,149 @@ tests/cpu/test-activations.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn-tests.dir/build.make CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-activations.cpp.s
 .PHONY : tests/cpu/test-activations.cpp.s
 
-tests/cuda/test-activations.o: tests/cuda/test-activations.cpp.o
-.PHONY : tests/cuda/test-activations.o
+tests/cpu/test-embeddings.o: tests/cpu/test-embeddings.cpp.o
+.PHONY : tests/cpu/test-embeddings.o
 
 # target to build an object file
-tests/cuda/test-activations.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn-tests.dir/build.make CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-activations.cpp.o
-.PHONY : tests/cuda/test-activations.cpp.o
+tests/cpu/test-embeddings.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn-tests.dir/build.make CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-embeddings.cpp.o
+.PHONY : tests/cpu/test-embeddings.cpp.o
 
-tests/cuda/test-activations.i: tests/cuda/test-activations.cpp.i
-.PHONY : tests/cuda/test-activations.i
+tests/cpu/test-embeddings.i: tests/cpu/test-embeddings.cpp.i
+.PHONY : tests/cpu/test-embeddings.i
 
 # target to preprocess a source file
-tests/cuda/test-activations.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn-tests.dir/build.make CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-activations.cpp.i
-.PHONY : tests/cuda/test-activations.cpp.i
+tests/cpu/test-embeddings.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn-tests.dir/build.make CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-embeddings.cpp.i
+.PHONY : tests/cpu/test-embeddings.cpp.i
 
-tests/cuda/test-activations.s: tests/cuda/test-activations.cpp.s
-.PHONY : tests/cuda/test-activations.s
+tests/cpu/test-embeddings.s: tests/cpu/test-embeddings.cpp.s
+.PHONY : tests/cpu/test-embeddings.s
 
 # target to generate assembly for a file
-tests/cuda/test-activations.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn-tests.dir/build.make CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-activations.cpp.s
-.PHONY : tests/cuda/test-activations.cpp.s
+tests/cpu/test-embeddings.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn-tests.dir/build.make CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-embeddings.cpp.s
+.PHONY : tests/cpu/test-embeddings.cpp.s
+
+tests/cpu/test-normalization.o: tests/cpu/test-normalization.cpp.o
+.PHONY : tests/cpu/test-normalization.o
+
+# target to build an object file
+tests/cpu/test-normalization.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn-tests.dir/build.make CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-normalization.cpp.o
+.PHONY : tests/cpu/test-normalization.cpp.o
+
+tests/cpu/test-normalization.i: tests/cpu/test-normalization.cpp.i
+.PHONY : tests/cpu/test-normalization.i
+
+# target to preprocess a source file
+tests/cpu/test-normalization.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn-tests.dir/build.make CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-normalization.cpp.i
+.PHONY : tests/cpu/test-normalization.cpp.i
+
+tests/cpu/test-normalization.s: tests/cpu/test-normalization.cpp.s
+.PHONY : tests/cpu/test-normalization.s
+
+# target to generate assembly for a file
+tests/cpu/test-normalization.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn-tests.dir/build.make CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-normalization.cpp.s
+.PHONY : tests/cpu/test-normalization.cpp.s
+
+tests/cuda/test-cuda-activations.o: tests/cuda/test-cuda-activations.cpp.o
+.PHONY : tests/cuda/test-cuda-activations.o
+
+# target to build an object file
+tests/cuda/test-cuda-activations.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn-tests.dir/build.make CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-activations.cpp.o
+.PHONY : tests/cuda/test-cuda-activations.cpp.o
+
+tests/cuda/test-cuda-activations.i: tests/cuda/test-cuda-activations.cpp.i
+.PHONY : tests/cuda/test-cuda-activations.i
+
+# target to preprocess a source file
+tests/cuda/test-cuda-activations.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn-tests.dir/build.make CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-activations.cpp.i
+.PHONY : tests/cuda/test-cuda-activations.cpp.i
+
+tests/cuda/test-cuda-activations.s: tests/cuda/test-cuda-activations.cpp.s
+.PHONY : tests/cuda/test-cuda-activations.s
+
+# target to generate assembly for a file
+tests/cuda/test-cuda-activations.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn-tests.dir/build.make CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-activations.cpp.s
+.PHONY : tests/cuda/test-cuda-activations.cpp.s
+
+tests/cuda/test-cuda-embeddings.o: tests/cuda/test-cuda-embeddings.cpp.o
+.PHONY : tests/cuda/test-cuda-embeddings.o
+
+# target to build an object file
+tests/cuda/test-cuda-embeddings.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn-tests.dir/build.make CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-embeddings.cpp.o
+.PHONY : tests/cuda/test-cuda-embeddings.cpp.o
+
+tests/cuda/test-cuda-embeddings.i: tests/cuda/test-cuda-embeddings.cpp.i
+.PHONY : tests/cuda/test-cuda-embeddings.i
+
+# target to preprocess a source file
+tests/cuda/test-cuda-embeddings.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn-tests.dir/build.make CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-embeddings.cpp.i
+.PHONY : tests/cuda/test-cuda-embeddings.cpp.i
+
+tests/cuda/test-cuda-embeddings.s: tests/cuda/test-cuda-embeddings.cpp.s
+.PHONY : tests/cuda/test-cuda-embeddings.s
+
+# target to generate assembly for a file
+tests/cuda/test-cuda-embeddings.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn-tests.dir/build.make CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-embeddings.cpp.s
+.PHONY : tests/cuda/test-cuda-embeddings.cpp.s
+
+tests/cuda/test-normalization.o: tests/cuda/test-normalization.cpp.o
+.PHONY : tests/cuda/test-normalization.o
+
+# target to build an object file
+tests/cuda/test-normalization.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn-tests.dir/build.make CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-normalization.cpp.o
+.PHONY : tests/cuda/test-normalization.cpp.o
+
+tests/cuda/test-normalization.i: tests/cuda/test-normalization.cpp.i
+.PHONY : tests/cuda/test-normalization.i
+
+# target to preprocess a source file
+tests/cuda/test-normalization.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn-tests.dir/build.make CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-normalization.cpp.i
+.PHONY : tests/cuda/test-normalization.cpp.i
+
+tests/cuda/test-normalization.s: tests/cuda/test-normalization.cpp.s
+.PHONY : tests/cuda/test-normalization.s
+
+# target to generate assembly for a file
+tests/cuda/test-normalization.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn-tests.dir/build.make CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-normalization.cpp.s
+.PHONY : tests/cuda/test-normalization.cpp.s
+
+tests/test-modules.o: tests/test-modules.cpp.o
+.PHONY : tests/test-modules.o
+
+# target to build an object file
+tests/test-modules.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn-tests.dir/build.make CMakeFiles/tannic-nn-tests.dir/tests/test-modules.cpp.o
+.PHONY : tests/test-modules.cpp.o
+
+tests/test-modules.i: tests/test-modules.cpp.i
+.PHONY : tests/test-modules.i
+
+# target to preprocess a source file
+tests/test-modules.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn-tests.dir/build.make CMakeFiles/tannic-nn-tests.dir/tests/test-modules.cpp.i
+.PHONY : tests/test-modules.cpp.i
+
+tests/test-modules.s: tests/test-modules.cpp.s
+.PHONY : tests/test-modules.s
+
+# target to generate assembly for a file
+tests/test-modules.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn-tests.dir/build.make CMakeFiles/tannic-nn-tests.dir/tests/test-modules.cpp.s
+.PHONY : tests/test-modules.cpp.s
 
 tests/test-parameters.o: tests/test-parameters.cpp.o
 .PHONY : tests/test-parameters.o
@@ -425,8 +621,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... main"
+	@echo "... tannic"
 	@echo "... tannic-nn"
+	@echo "... tannic-nn-main"
 	@echo "... tannic-nn-tests"
+	@echo "... tests"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 	@echo "... src/Activations.o"
 	@echo "... src/Activations.i"
 	@echo "... src/Activations.s"
@@ -454,9 +657,24 @@ help:
 	@echo "... tests/cpu/test-activations.o"
 	@echo "... tests/cpu/test-activations.i"
 	@echo "... tests/cpu/test-activations.s"
-	@echo "... tests/cuda/test-activations.o"
-	@echo "... tests/cuda/test-activations.i"
-	@echo "... tests/cuda/test-activations.s"
+	@echo "... tests/cpu/test-embeddings.o"
+	@echo "... tests/cpu/test-embeddings.i"
+	@echo "... tests/cpu/test-embeddings.s"
+	@echo "... tests/cpu/test-normalization.o"
+	@echo "... tests/cpu/test-normalization.i"
+	@echo "... tests/cpu/test-normalization.s"
+	@echo "... tests/cuda/test-cuda-activations.o"
+	@echo "... tests/cuda/test-cuda-activations.i"
+	@echo "... tests/cuda/test-cuda-activations.s"
+	@echo "... tests/cuda/test-cuda-embeddings.o"
+	@echo "... tests/cuda/test-cuda-embeddings.i"
+	@echo "... tests/cuda/test-cuda-embeddings.s"
+	@echo "... tests/cuda/test-normalization.o"
+	@echo "... tests/cuda/test-normalization.i"
+	@echo "... tests/cuda/test-normalization.s"
+	@echo "... tests/test-modules.o"
+	@echo "... tests/test-modules.i"
+	@echo "... tests/test-modules.s"
 	@echo "... tests/test-parameters.o"
 	@echo "... tests/test-parameters.i"
 	@echo "... tests/test-parameters.s"

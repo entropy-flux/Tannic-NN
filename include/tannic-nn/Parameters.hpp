@@ -24,7 +24,7 @@
 #include <unordered_map>
 #include <tannic.hpp>  
 #include <tannic/Slices.hpp>
-
+  
 namespace tannic::nn {
  
 class Parameter; 
@@ -136,15 +136,18 @@ public:
     void initialize(std::string const& name, Parameters& parameters) const { 
         auto iterator = parameters.offsets().find(name);
         if (iterator == parameters.offsets().end()) {
+            std::cout << "[Debug] Parameter with name " << name << " not found..." << std::endl;
             if (nbytes_ > parameters.nbytes() - parameters.offset()) {
                 throw std::runtime_error("Capacity exceeded.");
-            }   
-            offset_ = parameters.offset_;
+            }    
+            offset_ = parameters.offset_; 
             parameters.offsets_[name] = parameters.offset_; 
             parameters.offset_ += nbytes_;
             buffer_ptr_ = (void*)(&parameters.buffer_); 
-        } else { 
+            std::cout << "[Debug] Created parameter at offset: " << offset_ << std::endl;
+        } else {  
             offset_ = iterator->second;
+            std::cout << "[Debug] Found parameter at offset: " << offset_ << std::endl;
             buffer_ptr_ = (void*)(&parameters.buffer_); 
         } 
     }
@@ -153,20 +156,20 @@ public:
 public: 
     template<Integral Index>
     constexpr auto operator[](Index index) const {    
-        return expression::Slice<Parameter, Index>(*this, std::make_tuple(index));
+        return  tannic::expression::Slice<Parameter, Index>(*this, std::make_tuple(index));
     }
 
     constexpr auto operator[](indexing::Range range) const {  
-        return expression::Slice<Parameter, indexing::Range>(*this, std::make_tuple(range));
+        return  tannic::expression::Slice<Parameter, indexing::Range>(*this, std::make_tuple(range));
     } 
 
     template<class ... Indexes>
     constexpr auto operator[](Indexes... indexes) const { 
-        return expression::Slice<Parameter, Indexes...>(*this, std::make_tuple(indexes...));
+        return  tannic::expression::Slice<Parameter, Indexes...>(*this, std::make_tuple(indexes...));
     }  
 
     constexpr auto transpose(int first = -1, int second = -2) const { 
-        return expression::Transpose<Parameter>(*this, std::make_pair<int, int>(std::move(first), std::move(second)));
+        return  tannic::expression::Transpose<Parameter>(*this, std::make_pair<int, int>(std::move(first), std::move(second)));
     }   
      
 private:

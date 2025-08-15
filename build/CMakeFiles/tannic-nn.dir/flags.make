@@ -7,11 +7,11 @@ CUDA_DEFINES = -DBLAS -DCUDA -DOPENBLAS
 
 CUDA_INCLUDES = --options-file CMakeFiles/tannic-nn.dir/includes_CUDA.rsp
 
-CUDA_FLAGS = -O3 -DNDEBUG -std=c++20 "--generate-code=arch=compute_86,code=[compute_86,sm_86]"
+CUDA_FLAGS = -g -std=c++20 "--generate-code=arch=compute_86,code=[compute_86,sm_86]"
 
 CXX_DEFINES = -DBLAS -DCUDA -DOPENBLAS
 
 CXX_INCLUDES = -I/home/eric/tannic-nn/external/tannic/include -I/home/eric/tannic-nn/external/tannic/include/tannic -I/home/eric/tannic-nn/include/tannic-nn -I/usr/include/x86_64-linux-gnu/openblas-pthread -I/home/eric/tannic-nn/include -I/home/eric/tannic-nn/src -I/home/eric/tannic-nn/src/cpu -I/home/eric/tannic-nn/src/cuda -isystem /usr/local/cuda-12.9/targets/x86_64-linux/include
 
-CXX_FLAGS = -O3 -DNDEBUG -std=gnu++23
+CXX_FLAGS = -g -std=gnu++23
 

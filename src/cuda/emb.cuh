@@ -9,7 +9,7 @@
 
 using namespace tannic;
 
-namespace cuda {
+namespace cuda::nn {
 
 status embed(const tensor_t*, const tensor_t*, tensor_t*, stream_t); 
 
