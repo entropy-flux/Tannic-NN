@@ -37,45 +37,60 @@ int main() {
     model.initialize(parameters);
 
     Server server(8080);
-
     while (true) {
         Socket socket = server.accept();  
 
         try {
-            Header header{};
-            server.read(socket, &header, sizeof(Header));
+            while (true) {
+                Header header{};
+                if (!server.read(socket, &header, sizeof(Header))) {
+                    std::cout << "Client disconnected.\n";
+                    break; // clean exit instead of throwing
+                }
 
-            if (header.magic != magic) {
-                std::cerr << "Invalid magic! Closing connection.\n";
-                continue;  
+                if (header.magic != magic) {
+                    std::cerr << "Invalid magic! Closing connection.\n";
+                    break;
+                }
+
+                Metadata metadata{};  
+                if (!server.read(socket, &metadata, sizeof(Metadata))) {
+                    std::cout << "Client disconnected.\n";
+                    break;
+                }
+
+                Shape shape; 
+                size_t size;
+                for (uint8_t dimension = 0; dimension < metadata.rank; dimension++) {
+                    if (!server.read(socket, &size, sizeof(size_t))) {
+                        std::cout << "Client disconnected.\n";
+                        break;
+                    }
+                    shape.expand(size);
+                }
+
+                std::shared_ptr<Buffer> buffer = std::make_shared<Buffer>(metadata.nbytes);
+                if (!server.read(socket, buffer->address(), metadata.nbytes)) {
+                    std::cout << "Client disconnected.\n";
+                    break;
+                }
+
+                Tensor input(dtypeof(metadata.dcode), shape, 0, buffer);  
+                Tensor output = argmax(model(input)); 
+
+                header = headerof(output);
+                metadata = metadataof(output);
+
+                server.write(socket, &header, sizeof(Header));
+                server.write(socket, &metadata, sizeof(Metadata)); 
+                server.write(socket, output.shape().address(), output.shape().rank() * sizeof(size_t));
+                server.write(socket, output.bytes(), output.nbytes());
             }
 
-            Metadata metadata{};  
-            server.read(socket, &metadata, sizeof(Metadata));   
-            
-            Shape shape; 
-            size_t size;
-            for (uint8_t dimension = 0; dimension < metadata.rank; dimension++) {
-                server.read(socket, &size, sizeof(size_t));
-                shape.expand(size);
-            }   
-            
-            std::shared_ptr<Buffer> buffer = std::make_shared<Buffer>(metadata.nbytes);
-            server.read(socket, buffer->address(), metadata.nbytes);
-            
-            Tensor input(dtypeof(metadata.dcode), shape, 0, buffer);  
-            Tensor output = argmax(model(input)); 
-
-            header = headerof(output);
-            metadata = metadataof(output);
-
-            server.write(socket, &header, sizeof(Header));
-            server.write(socket, &metadata, sizeof(Metadata)); 
-            server.write(socket, output.shape().address(), output.shape().rank() * sizeof(size_t));
-            server.write(socket, output.bytes(), output.nbytes());
-
         } catch (const std::exception& e) {
-            std::cerr << "Client error: " << e.what() << "\n";
+            std::cerr << "Unexpected client error: " << e.what() << "\n";
         }
-    } 
+    }
+
+
 }

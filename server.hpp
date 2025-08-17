@@ -134,25 +134,39 @@ public:
         return listener_.accept();    
     }
 
-    void read(Socket& socket, void* buffer, size_t nbytes) const {
+    bool read(Socket& socket, void* buffer, size_t nbytes) const {
         size_t total = 0;
         while (total < nbytes) {
-            ssize_t n = socket.receive((char*)(buffer) + total, nbytes - total); 
-            if (n <= 0)
-                throw std::runtime_error("Socket closed or error while reading");
+            ssize_t n = socket.receive(static_cast<char*>(buffer) + total, nbytes - total);
+            if (n == 0) {
+                // graceful disconnect
+                return false;
+            }
+            if (n < 0) {
+                // real error
+                throw std::runtime_error("Error while reading from socket");
+            }
             total += n;
         }
-    } 
+        return true;
+    }
 
-    void write(Socket& socket, const void* buffer, size_t nbytes) const {  
+    bool write(Socket& socket, const void* buffer, size_t nbytes) const {  
         size_t total = 0;
         while (total < nbytes) {
-            ssize_t n = socket.send((const char*)(buffer) + total, nbytes - total);
-            if (n <= 0)
-                throw std::runtime_error("Socket closed or error while writing buffer");
+            ssize_t n = socket.send(static_cast<const char*>(buffer) + total, nbytes - total);
+            if (n == 0) {
+                // peer closed before we finished sending
+                return false;
+            }
+            if (n < 0) {
+                throw std::runtime_error("Error while writing to socket");
+            }
             total += n;
         }
-    }  
+        return true;
+    }
+
 
 private:
     int port_;
