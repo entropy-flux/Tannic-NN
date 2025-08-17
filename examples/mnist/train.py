@@ -1,6 +1,7 @@
 #install dependencies
 #pip install torchsystem
-#pip install mltracker // both are written by me :)
+#pip install mltracker 
+#pip install pytannic  // All written by me. 
 
 from typing import Iterable 
 from torch import Tensor
@@ -16,7 +17,7 @@ from torchsystem import Aggregate
 from torchsystem import Depends 
 from torchsystem.depends import Depends, Provider
 from torchsystem.services import Service, Consumer, event
-from torchsystem.compiler import Compiler  
+from torchsystem.compiler import Compiler, compile
 from torchvision.datasets.mnist import MNIST
 from torchvision.transforms import Compose, ToTensor, Normalize
 from mltracker import getallmodels
@@ -54,7 +55,6 @@ class Digits:
     def __len__(self):
         return len(self.data)
     
-
 class MLP(Module):
     def __init__(self, input_features: int, hidden_features: int, output_features: int, p: float = 0.5):
         super().__init__()
@@ -176,6 +176,7 @@ def bring_to_current_epoch(classifier: Classifier, models: Models = Depends(mode
     return classifier  
 
 if __name__ == '__main__': 
+    from pytannic.torch.modules import write
     repository = getallmodels('mlp')
     provider.override(device, lambda: 'cuda:0')
     provider.override(models, lambda: repository) 
@@ -196,3 +197,5 @@ if __name__ == '__main__':
 
     for epoch in range(40):
         train(classifier, loaders['train'])
+
+    write(classifier.model, 'mlp')  

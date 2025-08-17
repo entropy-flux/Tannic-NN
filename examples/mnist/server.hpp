@@ -1,86 +1,16 @@
-#include <tannic.hpp>
-#include <tannic-nn.hpp>
- 
+#pragma once
 #include <unistd.h>
 #include <netinet/in.h>
 #include <stdexcept>
 #include <iostream>
-#include <sstream>
-#include <string>
 #include <cstring>
-#include <vector>
-#include <cstdint>
-#include <arpa/inet.h>   
+#include <arpa/inet.h>
 
-/*
-Tensors serialization will be added to the framework alongside with a server implementation
-in the future when more models are implemented. The idea is to create something like Triton
-but with cpu support.
+namespace tannic {
 
-Meanwhile this is a simple posix blocking server working on linux just to try out and develop
-more features. 
-*/ 
-
-using namespace tannic;
-
-struct Metadata {
-    std::size_t offset;
-    std::size_t nbytes;
-    type dtype;
-    uint8_t rank;
-    std::size_t const* shape;
-    std::int64_t const* strides; 
-
-    Metadata(std::vector<std::byte> const& bytes) {
-        std::byte const* data = bytes.data();  
-        offset = *reinterpret_cast<const std::size_t*>(data); data += sizeof(std::size_t);
-        nbytes = *reinterpret_cast<const std::size_t*>(data); data += sizeof(std::size_t);
-        dtype = dtypeof(*reinterpret_cast<const uint8_t*>(data)); data += sizeof(uint8_t);
-        rank = *reinterpret_cast<const uint8_t*>(data); data += sizeof(uint8_t);
-        shape = reinterpret_cast<const std::size_t*>(data); data += sizeof(std::size_t) * rank;
-        strides = reinterpret_cast<const std::int64_t*>(data); 
-    }  
-
-    Metadata(Tensor const& tensor) {
-        offset = tensor.offset();
-        nbytes = tensor.nbytes();
-        dtype = tensor.dtype();
-        rank = tensor.rank();
-        shape = tensor.shape().address();
-        strides = tensor.strides().address();
-    }   
-};
-
-std::size_t msizeof(Metadata const& metadata) { 
-    return sizeof(metadata.offset) + sizeof(metadata.nbytes) + sizeof(uint8_t) + 
-           sizeof(metadata.rank) + (sizeof(std::size_t) * metadata.rank) * 2;
-}
-
-Tensor deserialize(std::vector<std::byte> const& metadata) { 
-    Metadata structured(metadata);
-    Shape shape(structured.shape, structured.shape + structured.rank);
-    Strides strides(structured.strides, structured.strides + structured.rank);
-    std::shared_ptr<Buffer> buffer = std::make_shared<Buffer>(structured.nbytes);
-    return Tensor(structured.dtype, shape, strides, 0, buffer);
-} 
-
-std::vector<std::byte> serialize(Tensor const& tensor) {
-    Metadata structured(tensor);
-    uint8_t msize = msizeof(structured);
-    std::array<std::byte, 5> header = {std::byte('M'), std::byte('L'), std::byte('B'), std::byte('C'), static_cast<std::byte>(msize)}; 
-    std::vector<std::byte> serialized(5 + msize + tensor.nbytes()); 
-    std::memcpy(serialized.data(), header.data(), 5); std::byte* data = serialized.data() + 5;
-    std::memcpy(data, &structured.offset, sizeof(std::size_t)); data += sizeof(std::size_t);
-    std::memcpy(data, &structured.nbytes, sizeof(std::size_t)); data += sizeof(std::size_t);
-    uint8_t dcode = dcodeof(structured.dtype);
-    std::memcpy(data, &dcode, sizeof(uint8_t)); data += sizeof(uint8_t);
-    std::memcpy(data, &structured.rank, sizeof(uint8_t)); data += sizeof(uint8_t);
-    std::memcpy(data, structured.shape, sizeof(std::size_t) * structured.rank); data += sizeof(std::size_t) * structured.rank;
-    std::memcpy(data, structured.strides, sizeof(std::int64_t) * structured.rank); data += sizeof(std::int64_t) * structured.rank;
-    std::memcpy(data, tensor.bytes(), tensor.nbytes());
-    return serialized; 
-}
-
+// Simple posix server to develop some features. A more sofisticated server
+// will be added in the future. The idea is to have something like triton but
+// with good cpu support. 
 
 class Endpoint {
 public:
@@ -115,8 +45,7 @@ private:
         sockaddr_in6 addr6_;
     };
     socklen_t length_{};
-};
-
+}; 
 
 class Socket {
 public:
@@ -187,11 +116,10 @@ private:
     }
 
     int descriptor_{-1};
-};
+}; 
  
-class Server { 
-
-public:
+class Server {   
+public: 
     Server(int port) : listener_(), port_(port) {
         listener_.reuse();
         listener_.bind(port_);
@@ -199,50 +127,33 @@ public:
         std::cout << "Listening on port " << port_ << "...\n";
     }
 
-    void run() {
-        while (true) {
-            auto client = listener_.accept(); 
-            try { 
-                std::array<std::byte, 5> header;  
-                std::array<std::byte, 4> magic =  {std::byte('M'), std::byte('L'), std::byte('B'), std::byte('C') }; 
-
-                read(client, header.data(), 5); 
- 
-                if (!std::equal(header.begin(), header.begin() + 4, magic.begin())) {
-                    std::cerr << "Invalid magic header\n";
-                    return;
-                } 
-
-                uint8_t msize = static_cast<uint8_t>(header[4]);
-                std::vector<std::byte> metadata(msize);
-                read(client, metadata.data(), msize);
-
-                Tensor request = deserialize(metadata);
-                read(client, request.bytes(), request.nbytes());
-
-                Tensor response = forward(request);  
-                std::vector<std::byte> serialized = serialize(response); 
-                client.send(serialized.data(), serialized.size());
-
-            } catch (const std::exception& exception) {
-                std::cerr << "Error: " << exception.what() << "\n";
-            }
-        }
+    Socket accept() {
+        return listener_.accept();    
     }
 
-    Tensor forward(Tensor input) const;
-
-private:
-    int port_;
-    Socket listener_;
-
-    static void read(Socket& socket, void* buffer, size_t length) {
+    void read(Socket& socket, void* buffer, size_t nbytes) const {
         size_t total = 0;
-        while (total < length) {
-            ssize_t n = socket.receive(static_cast<char*>(buffer) + total, length - total);
+        while (total < nbytes) {
+            ssize_t n = socket.receive((char*)(buffer) + total, nbytes - total); 
             if (n <= 0)
                 throw std::runtime_error("Socket closed or error while reading");
             total += n;
         }
     } 
+
+    void write(Socket& socket, const void* buffer, size_t nbytes) const {  
+        size_t total = 0;
+        while (total < nbytes) {
+            ssize_t n = socket.send((const char*)(buffer) + total, nbytes - total);
+            if (n <= 0)
+                throw std::runtime_error("Socket closed or error while writing buffer");
+            total += n;
+        }
+    }  
+
+private:
+    int port_;
+    Socket listener_;  
 };
+
+} // namespace tannic

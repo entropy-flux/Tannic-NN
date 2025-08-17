@@ -1,8 +1,13 @@
+#include <iostream>
+#include <cstdint>
+#include <cstring>
+#include <memory>
 #include <tannic.hpp>
-#include <tannic-nn.hpp>   
-#include "examples/mnist/server.hpp"  
- 
-using namespace tannic;
+#include <tannic-nn.hpp>
+#include "server.hpp" 
+#include "serialization.hpp"
+
+using namespace tannic; 
 
 struct MLP : nn::Module {
     nn::Linear input_layer; 
@@ -23,18 +28,54 @@ struct MLP : nn::Module {
         return output_layer(features); 
     }
 };
- 
-Tensor Server::forward(Tensor input) const { 
-    Tensor result = argmax(model(input)); 
-    return result;
-}
 
-constexpr MLP model(float32, 784, 512, 10); 
+constexpr MLP model(float32, 784, 512, 10);
 
-int main() {
-    nn::Parameters parameters; parameters.initialize("./examples/mnist/data/mlp");
+int main() {  
+    nn::Parameters parameters; 
+    parameters.initialize("./examples/mnist/data/mlp");
     model.initialize(parameters);
+
     Server server(8080);
-    server.run();
-    return 0;
+
+    while (true) {
+        Socket socket = server.accept();  
+
+        try {
+            Header header{};
+            server.read(socket, &header, sizeof(Header));
+
+            if (header.magic != magic) {
+                std::cerr << "Invalid magic! Closing connection.\n";
+                continue;  
+            }
+
+            Metadata metadata{};  
+            server.read(socket, &metadata, sizeof(Metadata));   
+            
+            Shape shape; 
+            size_t size;
+            for (uint8_t dimension = 0; dimension < metadata.rank; dimension++) {
+                server.read(socket, &size, sizeof(size_t));
+                shape.expand(size);
+            }   
+            
+            std::shared_ptr<Buffer> buffer = std::make_shared<Buffer>(metadata.nbytes);
+            server.read(socket, buffer->address(), metadata.nbytes);
+            
+            Tensor input(dtypeof(metadata.dcode), shape, 0, buffer);  
+            Tensor output = argmax(model(input)); 
+
+            header = headerof(output);
+            metadata = metadataof(output);
+
+            server.write(socket, &header, sizeof(Header));
+            server.write(socket, &metadata, sizeof(Metadata)); 
+            server.write(socket, output.shape().address(), output.shape().rank() * sizeof(size_t));
+            server.write(socket, output.bytes(), output.nbytes());
+
+        } catch (const std::exception& e) {
+            std::cerr << "Client error: " << e.what() << "\n";
+        }
+    } 
 }
