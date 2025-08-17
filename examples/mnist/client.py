@@ -1,5 +1,3 @@
-# I'm including this in a library named pytannic. Stay tunned. 
-
 from dataclasses import dataclass
 import struct
 from torch import dtype
@@ -150,7 +148,7 @@ class Client:
 
 MAGIC = (69 | (82 << 8) | (73 << 16) | (67 << 24)) 
 
-from torch import Tensor
+from torch import Tensor 
 
 
 def serialize(tensor: Tensor, code: int = 1) -> bytes:
@@ -177,30 +175,49 @@ def deserialize(data: bytes) -> Tensor:
     buffer = bytearray(data[offset: offset + metadata.nbytes])
     return torch.frombuffer(buffer, dtype=dtypeof(metadata.dcode)).reshape(shape)
 
-  
-if __name__ == "__main__": 
-    import torch
-    from torch import reshape
-    from torchvision.transforms import Compose, Normalize, ToTensor
-    from torchvision.datasets.mnist import MNIST
+
+from torcheval.metrics import Mean, MulticlassAccuracy
+from torch.utils.data import DataLoader
+from torch import Tensor
+import torch
+from torch import reshape
+from torchvision.transforms import Compose, Normalize, ToTensor
+from torchvision.datasets.mnist import MNIST
+
+class Metrics:
+    def __init__(self, device: str | None = None): 
+        self.accuracy = MulticlassAccuracy(num_classes=10, device=device)
+        
+    def update(self, predictions: Tensor, targets: Tensor) -> None: 
+        self.accuracy.update(predictions, targets)
+        
+    def compute(self) -> dict[str, Tensor]:
+        return { 
+            'accuracy': self.accuracy.compute()
+        }
     
+    def reset(self) -> None: 
+        self.accuracy.reset() 
+
+
+if __name__ == "__main__":  
     transform = Compose([
         ToTensor(),
         Normalize((0.1307,), (0.3081,))
     ])
- 
-    mnist = MNIST(root="./data", train=False, download=True, transform=transform)
- 
-    digit, label = mnist[0]   
-    input = reshape(digit, (1, 784)) 
-    data = serialize(input, code=1)
-
     
-
+    mnist = MNIST(root="./data", train=False, download=True, transform=transform)
+    loader = DataLoader(dataset=mnist, batch_size=256)
+    
+    metrics = Metrics(device="cpu")
+     
     with Client("127.0.0.1", 8080) as client:
-        client.send(data)
-        raw = client.receive()
-        prediction = deserialize(raw)
-        
-        print("Prediction: ", prediction, "Dtype: ", prediction.dtype) 
-        print("Digit label:", label) 
+        for batch_idx, (images, labels) in enumerate(loader): 
+            data = serialize(images.view(images.size(0), -1))
+            client.send(data) 
+            predictions = deserialize(client.receive())
+            metrics.update(predictions, labels)
+            results = metrics.compute()
+            print(f"Accuracy: {results['accuracy'].item():.4f}")
+
+        print("Done!")
