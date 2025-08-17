@@ -11,11 +11,9 @@
 #include <memory>
 #include <vector>
 #include <unordered_map>
-#include <arpa/inet.h> 
-#include <tannic.hpp>    
-#include "serialization.hpp" 
+#include <arpa/inet.h>  
 
-using namespace tannic; 
+namespace tannic {
 
 class Endpoint {
 public:
@@ -50,9 +48,7 @@ private:
         sockaddr_in6 addr6_;
     };
     socklen_t length_{};
-};
-
-
+}; 
 
 class Socket {
 public:
@@ -124,33 +120,9 @@ private:
 
     int descriptor_{-1};
 }; 
-
-class Router {
-public:
-    using Handler = void(*)(std::shared_ptr<Buffer>);
-
-    Router() = default;
-    
-    Router(std::initializer_list<std::pair<const uint8_t, Handler>> list)
-    :   handlers_(list) 
-    {}
-
-    Handler& operator[](uint8_t code) {
-        return handlers_[code]; 
-    } 
- 
-    std::unordered_map<uint8_t, Handler> const& handlers() const {
-        return handlers_;
-    }
-
-private:
-    std::unordered_map<uint8_t, Handler> handlers_;
-};
  
 class Server {   
 public: 
-    using Handler = void(*)(std::shared_ptr<Buffer>);
-
     Server(int port) : listener_(), port_(port) {
         listener_.reuse();
         listener_.bind(port_);
@@ -158,58 +130,11 @@ public:
         std::cout << "Listening on port " << port_ << "...\n";
     }
 
-    void add(Router const& router) {
-        for (auto const& [code, handler] : router.handlers()) {
-            handlers_[code] = handler;
-        }
+    Socket accept() {
+        return listener_.accept();    
     }
 
-    void run() {
-        while (true) {
-            auto client = listener_.accept(); 
-            try {   
-                Header header{};
-                read(client, &header, sizeof(Header)); 
-                if (header.magic != magic) {
-                    std::cerr << "Invalid magic! Closing connection.\n";
-                    continue;
-                }    
- 
-                std::cout << "Header received:\n"
-                        << "  magic:    0x" << std::hex << header.magic << std::dec << "\n"
-                        << "  protocol: " << static_cast<int>(header.protocol) << "\n"
-                        << "  code:     " << static_cast<int>(header.code) << "\n"
-                        << "  checksum: " << header.checksum << "\n"
-                        << "  nbytes:   " << header.nbytes << "\n";  
-
-                auto iterator = handlers_.find(header.code); 
-                if (iterator != handlers_.end()) { 
-
-                    std::shared_ptr<Buffer> buffer = std::make_shared<Buffer>(header.nbytes);    
-
-                    std::cout << "Allocator buffer of" << buffer->nbytes() << std::endl;
-
-                    read(client, buffer->address(), header.nbytes);
-
-                    iterator->second(std::move(buffer));
-                    
-                } else { 
-                    std::ostringstream stream; stream << "No handler found for code " << static_cast<int>(header.code);
-                    throw std::runtime_error(stream.str());
-                } 
- 
-            } catch (const std::exception& exception) {
-                std::cerr << "Error: " << exception.what() << "\n";
-            }
-        }
-    }  
-
-private:
-    int port_;
-    Socket listener_; 
-    std::unordered_map<uint8_t, Handler> handlers_;
-
-    static void read(Socket& socket, void* buffer, size_t nbytes) {
+    void read(Socket& socket, void* buffer, size_t nbytes) const {
         size_t total = 0;
         while (total < nbytes) {
             ssize_t n = socket.receive((char*)(buffer) + total, nbytes - total); 
@@ -218,4 +143,20 @@ private:
             total += n;
         }
     } 
+
+    void write(Socket& socket, const void* buffer, size_t nbytes) const {  
+        size_t total = 0;
+        while (total < nbytes) {
+            ssize_t n = socket.send((const char*)(buffer) + total, nbytes - total);
+            if (n <= 0)
+                throw std::runtime_error("Socket closed or error while writing buffer");
+            total += n;
+        }
+    }  
+
+private:
+    int port_;
+    Socket listener_;  
 };
+
+} // namespace tannic

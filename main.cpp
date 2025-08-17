@@ -1,35 +1,81 @@
 #include <cstdint>
 #include <iostream>
 #include <cstring>
+#include <memory>
 #include <tannic.hpp>
-#include "server.hpp"
- 
-#pragma pack(push, 1)
-struct Metadata {
-    uint8_t  dcode;    
-    size_t   offset;  
-    size_t   nbytes; 
-    uint8_t  rank;   
+#include <tannic-nn.hpp>
+#include "serialization.hpp"
+#include "server.hpp" 
+
+using namespace tannic;  
+
+struct MLP : nn::Module {
+    nn::Linear input_layer; 
+    nn::Linear output_layer;
+
+    constexpr MLP(type dtype, size_t input_features, size_t hidden_features, size_t output_features) 
+    :   input_layer(dtype, input_features, hidden_features) 
+    ,   output_layer(dtype, hidden_features, output_features)
+    {}
+
+    void initialize(nn::Parameters& parameters) const {
+        input_layer.initialize("input_layer", parameters); 
+        output_layer.initialize("output_layer", parameters);
+    }
+
+    Tensor forward(Tensor features) const {  
+        features = nn::relu(input_layer(features));  
+        return output_layer(features); 
+    }
 };
-#pragma pack(pop) 
 
-using namespace tannic;
+constexpr MLP model(float32, 784, 512, 10);
 
-void handler(std::shared_ptr<Buffer> buffer) { 
-    const Metadata* metadata = reinterpret_cast<const Metadata*>(buffer->address()); 
-    const char* payload = reinterpret_cast<const char*>(buffer->address());
- 
-    const size_t* sizes = reinterpret_cast<const size_t*>(payload + sizeof(Metadata));
-    Tensor input(dtypeof(metadata->dcode), Shape(sizes, sizes + metadata->rank), metadata->offset, std::move(buffer));
-    std::cout << input << std::endl;
-}
- 
-static Router router = {
-    { 1, handler }, 
-};
+int main() {  
+    nn::Parameters parameters; 
+    parameters.initialize("./examples/mnist/data/mlp");
+    model.initialize(parameters);
 
-int main() {
     Server server(8080);
-    server.add(router);
-    server.run();
+
+    while (true) {
+        Socket socket = server.accept();  
+
+        try {
+            Header header{};
+            server.read(socket, &header, sizeof(Header));
+
+            if (header.magic != magic) {
+                std::cerr << "Invalid magic! Closing connection.\n";
+                continue;  
+            }
+
+            Metadata metadata{};  
+            server.read(socket, &metadata, sizeof(Metadata));   
+            
+            Shape shape; 
+            size_t size;
+            for (uint8_t dimension = 0; dimension < metadata.rank; dimension++) {
+                server.read(socket, &size, sizeof(size_t));
+                shape.expand(size);
+            }   
+            
+            std::shared_ptr<Buffer> buffer = std::make_shared<Buffer>(metadata.nbytes);
+            server.read(socket, buffer->address(), metadata.nbytes);
+            
+            Tensor input(dtypeof(metadata.dcode), shape, 0, buffer);  
+            Tensor output = argmax(model(input)); 
+
+            header = headerof(output);
+            metadata = metadataof(output);
+
+            server.write(socket, &header, sizeof(Header));
+            server.write(socket, &metadata, sizeof(Metadata)); 
+            server.write(socket, output.shape().address(), output.shape().rank() * sizeof(size_t));
+            server.write(socket, output.bytes(), output.nbytes());
+
+        } catch (const std::exception& e) {
+            std::cerr << "Client error: " << e.what() << "\n";
+        }
+    } 
 }

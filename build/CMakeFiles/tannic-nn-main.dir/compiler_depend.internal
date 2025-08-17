@@ -22,6 +22,11 @@ CMakeFiles/tannic-nn-main.dir/main.cpp.o
  /home/eric/tannic-nn/external/tannic/include/tannic/Types.hpp
  /home/eric/tannic-nn/external/tannic/include/tannic/Views.hpp
  /home/eric/tannic-nn/external/tannic/include/tannic/runtime/types.h
+ /home/eric/tannic-nn/include/tannic-nn.hpp
+ /home/eric/tannic-nn/include/tannic-nn/Activations.hpp
+ /home/eric/tannic-nn/include/tannic-nn/Embeddings.hpp
+ /home/eric/tannic-nn/include/tannic-nn/Modules.hpp
+ /home/eric/tannic-nn/include/tannic-nn/Parameters.hpp
  /home/eric/tannic-nn/serialization.hpp
  /home/eric/tannic-nn/server.hpp
  /usr/include/alloca.h
@@ -71,6 +76,7 @@ CMakeFiles/tannic-nn-main.dir/main.cpp.o
  /usr/include/c++/14/bits/ios_base.h
  /usr/include/c++/14/bits/istream.tcc
  /usr/include/c++/14/bits/iterator_concepts.h
+ /usr/include/c++/14/bits/list.tcc
  /usr/include/c++/14/bits/locale_classes.h
  /usr/include/c++/14/bits/locale_classes.tcc
  /usr/include/c++/14/bits/locale_conv.h
@@ -117,6 +123,7 @@ CMakeFiles/tannic-nn-main.dir/main.cpp.o
  /usr/include/c++/14/bits/stl_iterator.h
  /usr/include/c++/14/bits/stl_iterator_base_funcs.h
  /usr/include/c++/14/bits/stl_iterator_base_types.h
+ /usr/include/c++/14/bits/stl_list.h
  /usr/include/c++/14/bits/stl_numeric.h
  /usr/include/c++/14/bits/stl_pair.h
  /usr/include/c++/14/bits/stl_raw_storage_iter.h
@@ -173,6 +180,7 @@ CMakeFiles/tannic-nn-main.dir/main.cpp.o
  /usr/include/c++/14/istream
  /usr/include/c++/14/iterator
  /usr/include/c++/14/limits
+ /usr/include/c++/14/list
  /usr/include/c++/14/locale
  /usr/include/c++/14/memory
  /usr/include/c++/14/new

@@ -21,6 +21,11 @@ CMakeFiles/tannic-nn-main.dir/main.cpp.o: /home/eric/tannic-nn/main.cpp \
   /home/eric/tannic-nn/external/tannic/include/tannic/Types.hpp \
   /home/eric/tannic-nn/external/tannic/include/tannic/Views.hpp \
   /home/eric/tannic-nn/external/tannic/include/tannic/runtime/types.h \
+  /home/eric/tannic-nn/include/tannic-nn.hpp \
+  /home/eric/tannic-nn/include/tannic-nn/Activations.hpp \
+  /home/eric/tannic-nn/include/tannic-nn/Embeddings.hpp \
+  /home/eric/tannic-nn/include/tannic-nn/Modules.hpp \
+  /home/eric/tannic-nn/include/tannic-nn/Parameters.hpp \
   /home/eric/tannic-nn/serialization.hpp \
   /home/eric/tannic-nn/server.hpp \
   /usr/include/alloca.h \
@@ -70,6 +75,7 @@ CMakeFiles/tannic-nn-main.dir/main.cpp.o: /home/eric/tannic-nn/main.cpp \
   /usr/include/c++/14/bits/ios_base.h \
   /usr/include/c++/14/bits/istream.tcc \
   /usr/include/c++/14/bits/iterator_concepts.h \
+  /usr/include/c++/14/bits/list.tcc \
   /usr/include/c++/14/bits/locale_classes.h \
   /usr/include/c++/14/bits/locale_classes.tcc \
   /usr/include/c++/14/bits/locale_conv.h \
@@ -116,6 +122,7 @@ CMakeFiles/tannic-nn-main.dir/main.cpp.o: /home/eric/tannic-nn/main.cpp \
   /usr/include/c++/14/bits/stl_iterator.h \
   /usr/include/c++/14/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/14/bits/stl_iterator_base_types.h \
+  /usr/include/c++/14/bits/stl_list.h \
   /usr/include/c++/14/bits/stl_numeric.h \
   /usr/include/c++/14/bits/stl_pair.h \
   /usr/include/c++/14/bits/stl_raw_storage_iter.h \
@@ -172,6 +179,7 @@ CMakeFiles/tannic-nn-main.dir/main.cpp.o: /home/eric/tannic-nn/main.cpp \
   /usr/include/c++/14/istream \
   /usr/include/c++/14/iterator \
   /usr/include/c++/14/limits \
+  /usr/include/c++/14/list \
   /usr/include/c++/14/locale \
   /usr/include/c++/14/memory \
   /usr/include/c++/14/new \
@@ -398,8 +406,6 @@ CMakeFiles/tannic-nn-main.dir/main.cpp.o: /home/eric/tannic-nn/main.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
@@ -442,7 +448,17 @@ CMakeFiles/tannic-nn-main.dir/main.cpp.o: /home/eric/tannic-nn/main.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/socket.h:
 
-/usr/include/c++/14/bits/stream_iterator.h:
+/usr/include/x86_64-linux-gnu/bits/time.h:
+
+/usr/include/x86_64-linux-gnu/bits/select.h:
+
+/usr/include/x86_64-linux-gnu/bits/sched.h:
+
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
+
+/usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
 
@@ -450,15 +466,17 @@ CMakeFiles/tannic-nn-main.dir/main.cpp.o: /home/eric/tannic-nn/main.cpp \
 
 /usr/include/features-time64.h:
 
+/usr/include/c++/14/bits/stl_list.h:
+
 /usr/include/c++/14/bits/stl_iterator_base_types.h:
 
 /usr/include/x86_64-linux-gnu/bits/local_lim.h:
 
 /usr/include/c++/14/bits/stl_iterator.h:
 
-/usr/include/asm-generic/errno-base.h:
-
 /usr/include/c++/14/bits/stl_algobase.h:
+
+/usr/include/asm-generic/errno-base.h:
 
 /home/eric/tannic-nn/external/tannic/include/tannic.hpp:
 
@@ -475,12 +493,6 @@ CMakeFiles/tannic-nn-main.dir/main.cpp.o: /home/eric/tannic-nn/main.cpp \
 /usr/include/c++/14/bits/refwrap.h:
 
 /usr/include/c++/14/bits/ranges_uninitialized.h:
-
-/usr/include/wchar.h:
-
-/usr/include/c++/14/bits/streambuf_iterator.h:
-
-/usr/include/c++/14/bits/ranges_cmp.h:
 
 /usr/include/c++/14/bits/ranges_base.h:
 
@@ -514,10 +526,6 @@ CMakeFiles/tannic-nn-main.dir/main.cpp.o: /home/eric/tannic-nn/main.cpp \
 
 /usr/include/c++/14/bits/locale_classes.h:
 
-/usr/include/x86_64-linux-gnu/bits/time.h:
-
-/usr/include/x86_64-linux-gnu/bits/select.h:
-
 /usr/include/c++/14/bits/nested_exception.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
@@ -529,6 +537,10 @@ CMakeFiles/tannic-nn-main.dir/main.cpp.o: /home/eric/tannic-nn/main.cpp \
 /usr/include/c++/14/bits/std_mutex.h:
 
 /usr/include/c++/14/bits/locale_facets_nonio.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix_opt.h:
+
+/usr/include/c++/14/bits/streambuf.tcc:
 
 /usr/include/c++/14/ios:
 
@@ -548,27 +560,43 @@ CMakeFiles/tannic-nn-main.dir/main.cpp.o: /home/eric/tannic-nn/main.cpp \
 
 /usr/include/linux/posix_types.h:
 
+/usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
+
+/usr/include/c++/14/bits/ios_base.h:
+
 /usr/include/c++/14/bits/invoke.h:
+
+/usr/include/x86_64-linux-gnu/bits/confname.h:
+
+/usr/include/c++/14/bits/hashtable_policy.h:
+
+/usr/include/c++/14/bits/list.tcc:
 
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
 
 /usr/include/c++/14/bits/hash_bytes.h:
 
-/usr/include/c++/14/bits/char_traits.h:
-
 /usr/include/x86_64-linux-gnu/asm/posix_types.h:
-
-/usr/include/c++/14/bits/stringfwd.h:
 
 /usr/include/stdio.h:
 
 /usr/include/c++/14/bits/exception_ptr.h:
 
-/usr/include/asm-generic/socket.h:
+/usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
 
-/usr/include/c++/14/bits/string_view.tcc:
+/usr/include/c++/14/bits/exception_defines.h:
 
-/usr/include/c++/14/streambuf:
+/home/eric/tannic-nn/external/tannic/include/tannic/Complex.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/locale.h:
+
+/usr/include/c++/14/bits/exception.h:
+
+/home/eric/tannic-nn/include/tannic-nn/Activations.hpp:
+
+/usr/include/c++/14/cctype:
+
+/usr/include/c++/14/bits/enable_special_members.h:
 
 /usr/include/x86_64-linux-gnu/bits/sockaddr.h:
 
@@ -578,27 +606,49 @@ CMakeFiles/tannic-nn-main.dir/main.cpp.o: /home/eric/tannic-nn/main.cpp \
 
 /usr/include/alloca.h:
 
+/home/eric/tannic-nn/include/tannic-nn/Parameters.hpp:
+
+/usr/include/c++/14/bits/stl_raw_storage_iter.h:
+
+/usr/include/c++/14/bits/basic_ios.h:
+
 /home/eric/tannic-nn/server.hpp:
+
+/usr/include/c++/14/array:
 
 /home/eric/tannic-nn/external/tannic/include/tannic/Transformations.hpp:
 
-/home/eric/tannic-nn/main.cpp:
+/usr/include/c++/14/bits/cxxabi_init_exception.h:
 
-/home/eric/tannic-nn/external/tannic/include/tannic/Functions.hpp:
+/usr/include/x86_64-linux-gnu/bits/syscall.h:
+
+/usr/include/c++/14/string_view:
+
+/home/eric/tannic-nn/external/tannic/include/tannic/Resources.hpp:
+
+/usr/include/locale.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
+
+/home/eric/tannic-nn/include/tannic-nn/Embeddings.hpp:
+
+/usr/include/wchar.h:
+
+/home/eric/tannic-nn/include/tannic-nn.hpp:
 
 /home/eric/tannic-nn/external/tannic/include/tannic/Traits.hpp:
 
 /home/eric/tannic-nn/external/tannic/include/tannic/Strides.hpp:
 
-/usr/include/asm-generic/posix_types.h:
+/usr/include/c++/14/bits/stl_algo.h:
 
-/usr/include/stdc-predef.h:
+/usr/include/c++/14/sstream:
 
 /home/eric/tannic-nn/external/tannic/include/tannic/runtime/types.h:
 
 /usr/include/c++/14/bits/cpp_type_traits.h:
 
-/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
+/usr/include/asm-generic/socket.h:
 
 /home/eric/tannic-nn/external/tannic/include/tannic/Views.hpp:
 
@@ -606,13 +656,9 @@ CMakeFiles/tannic-nn-main.dir/main.cpp.o: /home/eric/tannic-nn/main.cpp \
 
 /usr/include/c++/14/bits/hashtable.h:
 
-/home/eric/tannic-nn/external/tannic/include/tannic/Complex.hpp:
+/usr/include/x86_64-linux-gnu/asm/unistd.h:
 
-/usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
-
-/usr/include/c++/14/bits/exception_defines.h:
-
-/usr/include/x86_64-linux-gnu/bits/locale.h:
+/usr/include/c++/14/bits/stl_numeric.h:
 
 /usr/include/arpa/inet.h:
 
@@ -666,8 +712,6 @@ CMakeFiles/tannic-nn-main.dir/main.cpp.o: /home/eric/tannic-nn/main.cpp \
 
 /usr/include/linux/errno.h:
 
-/usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h:
-
 /usr/include/string.h:
 
 /usr/include/c++/14/bits/allocator.h:
@@ -684,6 +728,20 @@ CMakeFiles/tannic-nn-main.dir/main.cpp.o: /home/eric/tannic-nn/main.cpp \
 
 /usr/include/c++/14/new:
 
+/usr/include/c++/14/bits/stl_tempbuf.h:
+
+/home/eric/tannic-nn/external/tannic/include/tannic/Slices.hpp:
+
+/usr/include/linux/stddef.h:
+
+/usr/include/x86_64-linux-gnu/asm/bitsperlong.h:
+
+/usr/include/c++/14/numeric:
+
+/usr/include/asm-generic/posix_types.h:
+
+/usr/include/stdc-predef.h:
+
 /usr/include/c++/14/bit:
 
 /usr/include/c++/14/bits/stl_iterator_base_funcs.h:
@@ -696,10 +754,6 @@ CMakeFiles/tannic-nn-main.dir/main.cpp.o: /home/eric/tannic-nn/main.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/in.h:
 
-/usr/include/c++/14/bits/exception.h:
-
-/usr/include/c++/14/cctype:
-
 /usr/include/c++/14/algorithm:
 
 /home/eric/tannic-nn/external/tannic/include/tannic/Concepts.hpp:
@@ -711,8 +765,6 @@ CMakeFiles/tannic-nn-main.dir/main.cpp.o: /home/eric/tannic-nn/main.cpp \
 /usr/include/x86_64-linux-gnu/sys/select.h:
 
 /usr/include/x86_64-linux-gnu/asm/socket.h:
-
-/usr/include/c++/14/array:
 
 /usr/include/c++/14/backward/binders.h:
 
@@ -728,9 +780,9 @@ CMakeFiles/tannic-nn-main.dir/main.cpp.o: /home/eric/tannic-nn/main.cpp \
 
 /usr/include/c++/14/bits/align.h:
 
-/usr/include/x86_64-linux-gnu/bits/sched.h:
-
 /usr/include/x86_64-linux-gnu/asm/errno.h:
+
+/home/eric/tannic-nn/include/tannic-nn/Modules.hpp:
 
 /usr/include/c++/14/bits/cxxabi_forced.h:
 
@@ -742,23 +794,7 @@ CMakeFiles/tannic-nn-main.dir/main.cpp.o: /home/eric/tannic-nn/main.cpp \
 
 /usr/include/stdint.h:
 
-/usr/include/c++/14/bits/ios_base.h:
-
-/usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
-
 /usr/include/c++/14/bits/alloc_traits.h:
-
-/usr/include/c++/14/bits/stl_uninitialized.h:
-
-/usr/include/c++/14/bits/atomic_base.h:
-
-/usr/include/c++/14/optional:
-
-/usr/include/c++/14/bits/locale_classes.tcc:
-
-/usr/include/libintl.h:
-
-/usr/include/x86_64-linux-gnu/bits/endianness.h:
 
 /home/eric/tannic-nn/external/tannic/include/tannic/Reductions.hpp:
 
@@ -776,14 +812,6 @@ CMakeFiles/tannic-nn-main.dir/main.cpp.o: /home/eric/tannic-nn/main.cpp \
 
 /usr/include/c++/14/bits/codecvt.h:
 
-/usr/include/c++/14/bits/stl_raw_storage_iter.h:
-
-/usr/include/c++/14/bits/basic_ios.h:
-
-/usr/include/c++/14/bits/stl_numeric.h:
-
-/usr/include/x86_64-linux-gnu/asm/unistd.h:
-
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
 
 /usr/include/c++/14/bits/iterator_concepts.h:
@@ -793,6 +821,14 @@ CMakeFiles/tannic-nn-main.dir/main.cpp.o: /home/eric/tannic-nn/main.cpp \
 /usr/include/c++/14/bits/locale_facets.h:
 
 /usr/include/c++/14/bits/basic_string.h:
+
+/home/eric/tannic-nn/external/tannic/include/tannic/Functions.hpp:
+
+/home/eric/tannic-nn/main.cpp:
+
+/usr/include/c++/14/bits/ranges_cmp.h:
+
+/usr/include/c++/14/bits/streambuf_iterator.h:
 
 /usr/include/c++/14/bits/stl_vector.h:
 
@@ -820,33 +856,25 @@ CMakeFiles/tannic-nn-main.dir/main.cpp.o: /home/eric/tannic-nn/main.cpp \
 
 /usr/include/pthread.h:
 
-/home/eric/tannic-nn/external/tannic/include/tannic/Resources.hpp:
+/usr/include/c++/14/bits/stl_uninitialized.h:
 
-/usr/include/locale.h:
+/usr/include/c++/14/bits/atomic_base.h:
 
-/usr/include/c++/14/numeric:
+/usr/include/c++/14/optional:
 
-/usr/include/x86_64-linux-gnu/asm/bitsperlong.h:
+/usr/include/c++/14/bits/locale_classes.tcc:
 
-/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
+/usr/include/libintl.h:
 
-/usr/include/c++/14/bits/cxxabi_init_exception.h:
+/usr/include/x86_64-linux-gnu/bits/endianness.h:
 
-/usr/include/x86_64-linux-gnu/bits/syscall.h:
+/usr/include/c++/14/bits/stream_iterator.h:
 
-/usr/include/c++/14/string_view:
+/usr/include/c++/14/bits/string_view.tcc:
 
-/usr/include/c++/14/bits/enable_special_members.h:
+/usr/include/c++/14/streambuf:
 
-/usr/include/c++/14/bits/stl_tempbuf.h:
-
-/usr/include/linux/stddef.h:
-
-/home/eric/tannic-nn/external/tannic/include/tannic/Slices.hpp:
-
-/usr/include/c++/14/bits/stl_algo.h:
-
-/usr/include/c++/14/sstream:
+/usr/include/c++/14/bits/stringfwd.h:
 
 /usr/include/c++/14/bits/unicode.h:
 
@@ -934,6 +962,16 @@ CMakeFiles/tannic-nn-main.dir/main.cpp.o: /home/eric/tannic-nn/main.cpp \
 
 /usr/include/c++/14/format:
 
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
+
+/usr/include/c++/14/bits/postypes.h:
+
+/usr/include/c++/14/initializer_list:
+
+/usr/include/c++/14/bits/char_traits.h:
+
+/usr/include/c++/14/list:
+
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
 
 /usr/include/c++/14/bits/unicode-data.h:
@@ -994,22 +1032,8 @@ CMakeFiles/tannic-nn-main.dir/main.cpp.o: /home/eric/tannic-nn/main.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
 
-/usr/include/c++/14/bits/hashtable_policy.h:
-
-/usr/include/x86_64-linux-gnu/bits/confname.h:
-
 /usr/include/x86_64-linux-gnu/bits/floatn.h:
 
 /usr/include/x86_64-linux-gnu/bits/getopt_core.h:
 
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
-
-/usr/include/c++/14/bits/streambuf.tcc:
-
-/usr/include/x86_64-linux-gnu/bits/posix_opt.h:
-
-/usr/include/c++/14/bits/postypes.h:
-
-/usr/include/c++/14/initializer_list:
-
-/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
