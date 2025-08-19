@@ -1,1 +1,0 @@
--I"/home/eric/tannic-nn/external/tannic/include/tannic" -I"/home/eric/tannic-nn/external/tannic/src" -I"/usr/include/x86_64-linux-gnu/openblas-pthread" -I"/home/eric/tannic-nn/external/tannic/include" -isystem "/usr/local/cuda-12.9/targets/x86_64-linux/include"
