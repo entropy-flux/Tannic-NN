@@ -276,6 +276,30 @@ src/Embeddings.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn.dir/build.make CMakeFiles/tannic-nn.dir/src/Embeddings.cpp.s
 .PHONY : src/Embeddings.cpp.s
 
+src/Functional.o: src/Functional.cpp.o
+.PHONY : src/Functional.o
+
+# target to build an object file
+src/Functional.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn.dir/build.make CMakeFiles/tannic-nn.dir/src/Functional.cpp.o
+.PHONY : src/Functional.cpp.o
+
+src/Functional.i: src/Functional.cpp.i
+.PHONY : src/Functional.i
+
+# target to preprocess a source file
+src/Functional.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn.dir/build.make CMakeFiles/tannic-nn.dir/src/Functional.cpp.i
+.PHONY : src/Functional.cpp.i
+
+src/Functional.s: src/Functional.cpp.s
+.PHONY : src/Functional.s
+
+# target to generate assembly for a file
+src/Functional.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn.dir/build.make CMakeFiles/tannic-nn.dir/src/Functional.cpp.s
+.PHONY : src/Functional.cpp.s
+
 src/Parameters.o: src/Parameters.cpp.o
 .PHONY : src/Parameters.o
 
@@ -347,6 +371,30 @@ src/cpu/emb.s: src/cpu/emb.cpp.s
 src/cpu/emb.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn.dir/build.make CMakeFiles/tannic-nn.dir/src/cpu/emb.cpp.s
 .PHONY : src/cpu/emb.cpp.s
+
+src/cpu/softmax.o: src/cpu/softmax.cpp.o
+.PHONY : src/cpu/softmax.o
+
+# target to build an object file
+src/cpu/softmax.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn.dir/build.make CMakeFiles/tannic-nn.dir/src/cpu/softmax.cpp.o
+.PHONY : src/cpu/softmax.cpp.o
+
+src/cpu/softmax.i: src/cpu/softmax.cpp.i
+.PHONY : src/cpu/softmax.i
+
+# target to preprocess a source file
+src/cpu/softmax.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn.dir/build.make CMakeFiles/tannic-nn.dir/src/cpu/softmax.cpp.i
+.PHONY : src/cpu/softmax.cpp.i
+
+src/cpu/softmax.s: src/cpu/softmax.cpp.s
+.PHONY : src/cpu/softmax.s
+
+# target to generate assembly for a file
+src/cpu/softmax.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn.dir/build.make CMakeFiles/tannic-nn.dir/src/cpu/softmax.cpp.s
+.PHONY : src/cpu/softmax.cpp.s
 
 src/cuda/actvs.o: src/cuda/actvs.cu.o
 .PHONY : src/cuda/actvs.o
@@ -420,6 +468,30 @@ src/cuda/mem.cu.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn.dir/build.make CMakeFiles/tannic-nn.dir/src/cuda/mem.cu.s
 .PHONY : src/cuda/mem.cu.s
 
+src/cuda/softmax.o: src/cuda/softmax.cu.o
+.PHONY : src/cuda/softmax.o
+
+# target to build an object file
+src/cuda/softmax.cu.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn.dir/build.make CMakeFiles/tannic-nn.dir/src/cuda/softmax.cu.o
+.PHONY : src/cuda/softmax.cu.o
+
+src/cuda/softmax.i: src/cuda/softmax.cu.i
+.PHONY : src/cuda/softmax.i
+
+# target to preprocess a source file
+src/cuda/softmax.cu.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn.dir/build.make CMakeFiles/tannic-nn.dir/src/cuda/softmax.cu.i
+.PHONY : src/cuda/softmax.cu.i
+
+src/cuda/softmax.s: src/cuda/softmax.cu.s
+.PHONY : src/cuda/softmax.s
+
+# target to generate assembly for a file
+src/cuda/softmax.cu.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn.dir/build.make CMakeFiles/tannic-nn.dir/src/cuda/softmax.cu.s
+.PHONY : src/cuda/softmax.cu.s
+
 tests/cpu/test-activations.o: tests/cpu/test-activations.cpp.o
 .PHONY : tests/cpu/test-activations.o
 
@@ -492,6 +564,30 @@ tests/cpu/test-normalization.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn-tests.dir/build.make CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-normalization.cpp.s
 .PHONY : tests/cpu/test-normalization.cpp.s
 
+tests/cpu/test-softmax.o: tests/cpu/test-softmax.cpp.o
+.PHONY : tests/cpu/test-softmax.o
+
+# target to build an object file
+tests/cpu/test-softmax.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn-tests.dir/build.make CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-softmax.cpp.o
+.PHONY : tests/cpu/test-softmax.cpp.o
+
+tests/cpu/test-softmax.i: tests/cpu/test-softmax.cpp.i
+.PHONY : tests/cpu/test-softmax.i
+
+# target to preprocess a source file
+tests/cpu/test-softmax.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn-tests.dir/build.make CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-softmax.cpp.i
+.PHONY : tests/cpu/test-softmax.cpp.i
+
+tests/cpu/test-softmax.s: tests/cpu/test-softmax.cpp.s
+.PHONY : tests/cpu/test-softmax.s
+
+# target to generate assembly for a file
+tests/cpu/test-softmax.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn-tests.dir/build.make CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-softmax.cpp.s
+.PHONY : tests/cpu/test-softmax.cpp.s
+
 tests/cuda/test-cuda-activations.o: tests/cuda/test-cuda-activations.cpp.o
 .PHONY : tests/cuda/test-cuda-activations.o
 
@@ -539,6 +635,30 @@ tests/cuda/test-cuda-embeddings.s: tests/cuda/test-cuda-embeddings.cpp.s
 tests/cuda/test-cuda-embeddings.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn-tests.dir/build.make CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-embeddings.cpp.s
 .PHONY : tests/cuda/test-cuda-embeddings.cpp.s
+
+tests/cuda/test-cuda-softmax.o: tests/cuda/test-cuda-softmax.cpp.o
+.PHONY : tests/cuda/test-cuda-softmax.o
+
+# target to build an object file
+tests/cuda/test-cuda-softmax.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn-tests.dir/build.make CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-softmax.cpp.o
+.PHONY : tests/cuda/test-cuda-softmax.cpp.o
+
+tests/cuda/test-cuda-softmax.i: tests/cuda/test-cuda-softmax.cpp.i
+.PHONY : tests/cuda/test-cuda-softmax.i
+
+# target to preprocess a source file
+tests/cuda/test-cuda-softmax.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn-tests.dir/build.make CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-softmax.cpp.i
+.PHONY : tests/cuda/test-cuda-softmax.cpp.i
+
+tests/cuda/test-cuda-softmax.s: tests/cuda/test-cuda-softmax.cpp.s
+.PHONY : tests/cuda/test-cuda-softmax.s
+
+# target to generate assembly for a file
+tests/cuda/test-cuda-softmax.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn-tests.dir/build.make CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-softmax.cpp.s
+.PHONY : tests/cuda/test-cuda-softmax.cpp.s
 
 tests/cuda/test-normalization.o: tests/cuda/test-normalization.cpp.o
 .PHONY : tests/cuda/test-normalization.o
@@ -636,6 +756,9 @@ help:
 	@echo "... src/Embeddings.o"
 	@echo "... src/Embeddings.i"
 	@echo "... src/Embeddings.s"
+	@echo "... src/Functional.o"
+	@echo "... src/Functional.i"
+	@echo "... src/Functional.s"
 	@echo "... src/Parameters.o"
 	@echo "... src/Parameters.i"
 	@echo "... src/Parameters.s"
@@ -645,6 +768,9 @@ help:
 	@echo "... src/cpu/emb.o"
 	@echo "... src/cpu/emb.i"
 	@echo "... src/cpu/emb.s"
+	@echo "... src/cpu/softmax.o"
+	@echo "... src/cpu/softmax.i"
+	@echo "... src/cpu/softmax.s"
 	@echo "... src/cuda/actvs.o"
 	@echo "... src/cuda/actvs.i"
 	@echo "... src/cuda/actvs.s"
@@ -654,6 +780,9 @@ help:
 	@echo "... src/cuda/mem.o"
 	@echo "... src/cuda/mem.i"
 	@echo "... src/cuda/mem.s"
+	@echo "... src/cuda/softmax.o"
+	@echo "... src/cuda/softmax.i"
+	@echo "... src/cuda/softmax.s"
 	@echo "... tests/cpu/test-activations.o"
 	@echo "... tests/cpu/test-activations.i"
 	@echo "... tests/cpu/test-activations.s"
@@ -663,12 +792,18 @@ help:
 	@echo "... tests/cpu/test-normalization.o"
 	@echo "... tests/cpu/test-normalization.i"
 	@echo "... tests/cpu/test-normalization.s"
+	@echo "... tests/cpu/test-softmax.o"
+	@echo "... tests/cpu/test-softmax.i"
+	@echo "... tests/cpu/test-softmax.s"
 	@echo "... tests/cuda/test-cuda-activations.o"
 	@echo "... tests/cuda/test-cuda-activations.i"
 	@echo "... tests/cuda/test-cuda-activations.s"
 	@echo "... tests/cuda/test-cuda-embeddings.o"
 	@echo "... tests/cuda/test-cuda-embeddings.i"
 	@echo "... tests/cuda/test-cuda-embeddings.s"
+	@echo "... tests/cuda/test-cuda-softmax.o"
+	@echo "... tests/cuda/test-cuda-softmax.i"
+	@echo "... tests/cuda/test-cuda-softmax.s"
 	@echo "... tests/cuda/test-normalization.o"
 	@echo "... tests/cuda/test-normalization.i"
 	@echo "... tests/cuda/test-normalization.s"

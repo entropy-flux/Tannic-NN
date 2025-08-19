@@ -106,12 +106,12 @@ external/tannic/clean: external/tannic/CMakeFiles/main.dir/clean
 CMakeFiles/tannic-nn.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn.dir/build.make CMakeFiles/tannic-nn.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn.dir/build.make CMakeFiles/tannic-nn.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/eric/tannic-nn/build/CMakeFiles --progress-num=36,37,38,39,40,41,42,43,44 "Built target tannic-nn"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/eric/tannic-nn/build/CMakeFiles --progress-num=36,37,38,39,40,41,42,43,44,45,46,47 "Built target tannic-nn"
 .PHONY : CMakeFiles/tannic-nn.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/tannic-nn.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eric/tannic-nn/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eric/tannic-nn/build/CMakeFiles 12
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/tannic-nn.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/eric/tannic-nn/build/CMakeFiles 0
 .PHONY : CMakeFiles/tannic-nn.dir/rule
@@ -132,12 +132,12 @@ CMakeFiles/tannic-nn.dir/clean:
 CMakeFiles/tannic-nn-tests.dir/all: CMakeFiles/tannic-nn.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn-tests.dir/build.make CMakeFiles/tannic-nn-tests.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn-tests.dir/build.make CMakeFiles/tannic-nn-tests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/eric/tannic-nn/build/CMakeFiles --progress-num=48,49,50,51,52,53,54,55,56,57 "Built target tannic-nn-tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/eric/tannic-nn/build/CMakeFiles --progress-num=51,52,53,54,55,56,57,58,59,60,61,62 "Built target tannic-nn-tests"
 .PHONY : CMakeFiles/tannic-nn-tests.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/tannic-nn-tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eric/tannic-nn/build/CMakeFiles 19
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eric/tannic-nn/build/CMakeFiles 24
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/tannic-nn-tests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/eric/tannic-nn/build/CMakeFiles 0
 .PHONY : CMakeFiles/tannic-nn-tests.dir/rule
@@ -158,12 +158,12 @@ CMakeFiles/tannic-nn-tests.dir/clean:
 CMakeFiles/tannic-nn-main.dir/all: CMakeFiles/tannic-nn.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn-main.dir/build.make CMakeFiles/tannic-nn-main.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tannic-nn-main.dir/build.make CMakeFiles/tannic-nn-main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/eric/tannic-nn/build/CMakeFiles --progress-num=45,46,47 "Built target tannic-nn-main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/eric/tannic-nn/build/CMakeFiles --progress-num=48,49,50 "Built target tannic-nn-main"
 .PHONY : CMakeFiles/tannic-nn-main.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/tannic-nn-main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eric/tannic-nn/build/CMakeFiles 12
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eric/tannic-nn/build/CMakeFiles 15
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/tannic-nn-main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/eric/tannic-nn/build/CMakeFiles 0
 .PHONY : CMakeFiles/tannic-nn-main.dir/rule
@@ -210,7 +210,7 @@ external/tannic/CMakeFiles/tannic.dir/clean:
 external/tannic/CMakeFiles/tests.dir/all: external/tannic/CMakeFiles/tannic.dir/all
 	$(MAKE) $(MAKESILENT) -f external/tannic/CMakeFiles/tests.dir/build.make external/tannic/CMakeFiles/tests.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/tannic/CMakeFiles/tests.dir/build.make external/tannic/CMakeFiles/tests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/eric/tannic-nn/build/CMakeFiles --progress-num=58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80 "Built target tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/eric/tannic-nn/build/CMakeFiles --progress-num=63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85 "Built target tests"
 .PHONY : external/tannic/CMakeFiles/tests.dir/all
 
 # Build rule for subdir invocation for target.

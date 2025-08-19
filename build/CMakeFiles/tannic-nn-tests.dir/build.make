@@ -111,10 +111,24 @@ CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-normalization.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-normalization.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/eric/tannic-nn/tests/cpu/test-normalization.cpp -o CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-normalization.cpp.s
 
+CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-softmax.cpp.o: CMakeFiles/tannic-nn-tests.dir/flags.make
+CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-softmax.cpp.o: /home/eric/tannic-nn/tests/cpu/test-softmax.cpp
+CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-softmax.cpp.o: CMakeFiles/tannic-nn-tests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eric/tannic-nn/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-softmax.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-softmax.cpp.o -MF CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-softmax.cpp.o.d -o CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-softmax.cpp.o -c /home/eric/tannic-nn/tests/cpu/test-softmax.cpp
+
+CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-softmax.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-softmax.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/eric/tannic-nn/tests/cpu/test-softmax.cpp > CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-softmax.cpp.i
+
+CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-softmax.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-softmax.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/eric/tannic-nn/tests/cpu/test-softmax.cpp -o CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-softmax.cpp.s
+
 CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-activations.cpp.o: CMakeFiles/tannic-nn-tests.dir/flags.make
 CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-activations.cpp.o: /home/eric/tannic-nn/tests/cuda/test-cuda-activations.cpp
 CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-activations.cpp.o: CMakeFiles/tannic-nn-tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eric/tannic-nn/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-activations.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eric/tannic-nn/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-activations.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-activations.cpp.o -MF CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-activations.cpp.o.d -o CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-activations.cpp.o -c /home/eric/tannic-nn/tests/cuda/test-cuda-activations.cpp
 
 CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-activations.cpp.i: cmake_force
@@ -128,7 +142,7 @@ CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-activations.cpp.s: cmake_for
 CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-embeddings.cpp.o: CMakeFiles/tannic-nn-tests.dir/flags.make
 CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-embeddings.cpp.o: /home/eric/tannic-nn/tests/cuda/test-cuda-embeddings.cpp
 CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-embeddings.cpp.o: CMakeFiles/tannic-nn-tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eric/tannic-nn/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-embeddings.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eric/tannic-nn/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-embeddings.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-embeddings.cpp.o -MF CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-embeddings.cpp.o.d -o CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-embeddings.cpp.o -c /home/eric/tannic-nn/tests/cuda/test-cuda-embeddings.cpp
 
 CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-embeddings.cpp.i: cmake_force
@@ -139,10 +153,24 @@ CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-embeddings.cpp.s: cmake_forc
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-embeddings.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/eric/tannic-nn/tests/cuda/test-cuda-embeddings.cpp -o CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-embeddings.cpp.s
 
+CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-softmax.cpp.o: CMakeFiles/tannic-nn-tests.dir/flags.make
+CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-softmax.cpp.o: /home/eric/tannic-nn/tests/cuda/test-cuda-softmax.cpp
+CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-softmax.cpp.o: CMakeFiles/tannic-nn-tests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eric/tannic-nn/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-softmax.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-softmax.cpp.o -MF CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-softmax.cpp.o.d -o CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-softmax.cpp.o -c /home/eric/tannic-nn/tests/cuda/test-cuda-softmax.cpp
+
+CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-softmax.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-softmax.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/eric/tannic-nn/tests/cuda/test-cuda-softmax.cpp > CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-softmax.cpp.i
+
+CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-softmax.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-softmax.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/eric/tannic-nn/tests/cuda/test-cuda-softmax.cpp -o CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-softmax.cpp.s
+
 CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-normalization.cpp.o: CMakeFiles/tannic-nn-tests.dir/flags.make
 CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-normalization.cpp.o: /home/eric/tannic-nn/tests/cuda/test-normalization.cpp
 CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-normalization.cpp.o: CMakeFiles/tannic-nn-tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eric/tannic-nn/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-normalization.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eric/tannic-nn/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-normalization.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-normalization.cpp.o -MF CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-normalization.cpp.o.d -o CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-normalization.cpp.o -c /home/eric/tannic-nn/tests/cuda/test-normalization.cpp
 
 CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-normalization.cpp.i: cmake_force
@@ -156,7 +184,7 @@ CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-normalization.cpp.s: cmake_force
 CMakeFiles/tannic-nn-tests.dir/tests/test-modules.cpp.o: CMakeFiles/tannic-nn-tests.dir/flags.make
 CMakeFiles/tannic-nn-tests.dir/tests/test-modules.cpp.o: /home/eric/tannic-nn/tests/test-modules.cpp
 CMakeFiles/tannic-nn-tests.dir/tests/test-modules.cpp.o: CMakeFiles/tannic-nn-tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eric/tannic-nn/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/tannic-nn-tests.dir/tests/test-modules.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eric/tannic-nn/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/tannic-nn-tests.dir/tests/test-modules.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tannic-nn-tests.dir/tests/test-modules.cpp.o -MF CMakeFiles/tannic-nn-tests.dir/tests/test-modules.cpp.o.d -o CMakeFiles/tannic-nn-tests.dir/tests/test-modules.cpp.o -c /home/eric/tannic-nn/tests/test-modules.cpp
 
 CMakeFiles/tannic-nn-tests.dir/tests/test-modules.cpp.i: cmake_force
@@ -170,7 +198,7 @@ CMakeFiles/tannic-nn-tests.dir/tests/test-modules.cpp.s: cmake_force
 CMakeFiles/tannic-nn-tests.dir/tests/test-parameters.cpp.o: CMakeFiles/tannic-nn-tests.dir/flags.make
 CMakeFiles/tannic-nn-tests.dir/tests/test-parameters.cpp.o: /home/eric/tannic-nn/tests/test-parameters.cpp
 CMakeFiles/tannic-nn-tests.dir/tests/test-parameters.cpp.o: CMakeFiles/tannic-nn-tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eric/tannic-nn/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/tannic-nn-tests.dir/tests/test-parameters.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eric/tannic-nn/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/tannic-nn-tests.dir/tests/test-parameters.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tannic-nn-tests.dir/tests/test-parameters.cpp.o -MF CMakeFiles/tannic-nn-tests.dir/tests/test-parameters.cpp.o.d -o CMakeFiles/tannic-nn-tests.dir/tests/test-parameters.cpp.o -c /home/eric/tannic-nn/tests/test-parameters.cpp
 
 CMakeFiles/tannic-nn-tests.dir/tests/test-parameters.cpp.i: cmake_force
@@ -186,8 +214,10 @@ tannic__nn__tests_OBJECTS = \
 "CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-activations.cpp.o" \
 "CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-embeddings.cpp.o" \
 "CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-normalization.cpp.o" \
+"CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-softmax.cpp.o" \
 "CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-activations.cpp.o" \
 "CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-embeddings.cpp.o" \
+"CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-softmax.cpp.o" \
 "CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-normalization.cpp.o" \
 "CMakeFiles/tannic-nn-tests.dir/tests/test-modules.cpp.o" \
 "CMakeFiles/tannic-nn-tests.dir/tests/test-parameters.cpp.o"
@@ -198,8 +228,10 @@ tannic__nn__tests_EXTERNAL_OBJECTS =
 CMakeFiles/tannic-nn-tests.dir/cmake_device_link.o: CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-activations.cpp.o
 CMakeFiles/tannic-nn-tests.dir/cmake_device_link.o: CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-embeddings.cpp.o
 CMakeFiles/tannic-nn-tests.dir/cmake_device_link.o: CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-normalization.cpp.o
+CMakeFiles/tannic-nn-tests.dir/cmake_device_link.o: CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-softmax.cpp.o
 CMakeFiles/tannic-nn-tests.dir/cmake_device_link.o: CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-activations.cpp.o
 CMakeFiles/tannic-nn-tests.dir/cmake_device_link.o: CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-embeddings.cpp.o
+CMakeFiles/tannic-nn-tests.dir/cmake_device_link.o: CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-softmax.cpp.o
 CMakeFiles/tannic-nn-tests.dir/cmake_device_link.o: CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-normalization.cpp.o
 CMakeFiles/tannic-nn-tests.dir/cmake_device_link.o: CMakeFiles/tannic-nn-tests.dir/tests/test-modules.cpp.o
 CMakeFiles/tannic-nn-tests.dir/cmake_device_link.o: CMakeFiles/tannic-nn-tests.dir/tests/test-parameters.cpp.o
@@ -213,7 +245,7 @@ CMakeFiles/tannic-nn-tests.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/li
 CMakeFiles/tannic-nn-tests.dir/cmake_device_link.o: CMakeFiles/tannic-nn-tests.dir/deviceLinkLibs.rsp
 CMakeFiles/tannic-nn-tests.dir/cmake_device_link.o: CMakeFiles/tannic-nn-tests.dir/deviceObjects1.rsp
 CMakeFiles/tannic-nn-tests.dir/cmake_device_link.o: CMakeFiles/tannic-nn-tests.dir/dlink.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/eric/tannic-nn/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CUDA device code CMakeFiles/tannic-nn-tests.dir/cmake_device_link.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/eric/tannic-nn/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CUDA device code CMakeFiles/tannic-nn-tests.dir/cmake_device_link.o"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tannic-nn-tests.dir/dlink.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -225,8 +257,10 @@ tannic__nn__tests_OBJECTS = \
 "CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-activations.cpp.o" \
 "CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-embeddings.cpp.o" \
 "CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-normalization.cpp.o" \
+"CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-softmax.cpp.o" \
 "CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-activations.cpp.o" \
 "CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-embeddings.cpp.o" \
+"CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-softmax.cpp.o" \
 "CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-normalization.cpp.o" \
 "CMakeFiles/tannic-nn-tests.dir/tests/test-modules.cpp.o" \
 "CMakeFiles/tannic-nn-tests.dir/tests/test-parameters.cpp.o"
@@ -237,8 +271,10 @@ tannic__nn__tests_EXTERNAL_OBJECTS =
 tannic-nn-tests: CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-activations.cpp.o
 tannic-nn-tests: CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-embeddings.cpp.o
 tannic-nn-tests: CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-normalization.cpp.o
+tannic-nn-tests: CMakeFiles/tannic-nn-tests.dir/tests/cpu/test-softmax.cpp.o
 tannic-nn-tests: CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-activations.cpp.o
 tannic-nn-tests: CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-embeddings.cpp.o
+tannic-nn-tests: CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-cuda-softmax.cpp.o
 tannic-nn-tests: CMakeFiles/tannic-nn-tests.dir/tests/cuda/test-normalization.cpp.o
 tannic-nn-tests: CMakeFiles/tannic-nn-tests.dir/tests/test-modules.cpp.o
 tannic-nn-tests: CMakeFiles/tannic-nn-tests.dir/tests/test-parameters.cpp.o
@@ -251,7 +287,7 @@ tannic-nn-tests: /usr/lib/x86_64-linux-gnu/openblas-pthread//libopenblas.so
 tannic-nn-tests: /usr/lib/x86_64-linux-gnu/libgtest.a
 tannic-nn-tests: CMakeFiles/tannic-nn-tests.dir/cmake_device_link.o
 tannic-nn-tests: CMakeFiles/tannic-nn-tests.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/eric/tannic-nn/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable tannic-nn-tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/eric/tannic-nn/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable tannic-nn-tests"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tannic-nn-tests.dir/link.txt --verbose=$(VERBOSE)
 	/usr/bin/cmake -D TEST_TARGET=tannic-nn-tests -D TEST_EXECUTABLE=/home/eric/tannic-nn/build/tannic-nn-tests -D TEST_EXECUTOR= -D TEST_WORKING_DIR=/home/eric/tannic-nn/build -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=tannic-nn-tests_TESTS -D CTEST_FILE=/home/eric/tannic-nn/build/tannic-nn-tests[1]_tests.cmake -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_XML_OUTPUT_DIR= -P /usr/share/cmake-3.28/Modules/GoogleTestAddTests.cmake
 

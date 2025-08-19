@@ -24,8 +24,12 @@
 #include <unordered_map>
 #include <tannic.hpp>  
 #include <tannic/Slices.hpp>
+#include <tannic/Views.hpp>
   
 namespace tannic::nn {
+
+using tannic::expression::Slice;
+using tannic::expression::Transpose;
  
 class Parameter; 
 
@@ -156,20 +160,20 @@ public:
 public: 
     template<Integral Index>
     constexpr auto operator[](Index index) const {    
-        return  tannic::expression::Slice<Parameter, Index>(*this, std::make_tuple(index));
+        return Slice<Parameter, Index>(*this, std::make_tuple(index));
     }
 
     constexpr auto operator[](indexing::Range range) const {  
-        return  tannic::expression::Slice<Parameter, indexing::Range>(*this, std::make_tuple(range));
+        return Slice<Parameter, indexing::Range>(*this, std::make_tuple(range));
     } 
 
     template<class ... Indexes>
     constexpr auto operator[](Indexes... indexes) const { 
-        return  tannic::expression::Slice<Parameter, Indexes...>(*this, std::make_tuple(indexes...));
+        return Slice<Parameter, Indexes...>(*this, std::make_tuple(indexes...));
     }  
 
     constexpr auto transpose(int first = -1, int second = -2) const { 
-        return  tannic::expression::Transpose<Parameter>(*this, std::make_pair<int, int>(std::move(first), std::move(second)));
+        return Transpose<Parameter>(*this, std::make_pair<int, int>(std::move(first), std::move(second)));
     }   
      
 private:

@@ -177,6 +177,7 @@ def bring_to_current_epoch(classifier: Classifier, models: Models = Depends(mode
 
 if __name__ == '__main__': 
     from pytannic.torch.modules import write
+    
     repository = getallmodels('mlp')
     provider.override(device, lambda: 'cuda:0')
     provider.override(models, lambda: repository) 
