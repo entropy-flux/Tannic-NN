@@ -1,5 +1,0 @@
-if(EXISTS "/home/eric/tannic-nn/build/tannic-nn-tests[1]_tests.cmake")
-  include("/home/eric/tannic-nn/build/tannic-nn-tests[1]_tests.cmake")
-else()
-  add_test(tannic-nn-tests_NOT_BUILT tannic-nn-tests_NOT_BUILT)
-endif()
