@@ -3,94 +3,47 @@
 #include <cstring>
 #include <memory>
 #include <tannic.hpp>
-#include <tannic-nn.hpp>
-#include "serialization.hpp"
-#include "server.hpp" 
+#include <tannic-nn.hpp>  
+#include <tannic-nn/Normalization.hpp>
 
-using namespace tannic;  
-
-struct MLP : nn::Module {
-    nn::Linear input_layer; 
-    nn::Linear output_layer;
-
-    constexpr MLP(type dtype, size_t input_features, size_t hidden_features, size_t output_features) 
-    :   input_layer(dtype, input_features, hidden_features) 
-    ,   output_layer(dtype, hidden_features, output_features)
-    {}
-
-    void initialize(nn::Parameters& parameters) const {
-        input_layer.initialize("input_layer", parameters); 
-        output_layer.initialize("output_layer", parameters);
-    }
-
-    Tensor forward(Tensor features) const {  
-        features = nn::relu(input_layer(features));  
-        return output_layer(features); 
-    }
-};
-
-constexpr MLP model(float32, 784, 512, 10);
+using namespace tannic;    
 
 int main() {  
-    nn::Parameters parameters; 
-    parameters.initialize("./examples/mnist/data/mlp");
-    model.initialize(parameters);
-
-    Server server(8080);
-    while (true) {
-        Socket socket = server.accept();  
-
-        try {
-            while (true) {
-                Header header{};
-                if (!server.read(socket, &header, sizeof(Header))) {
-                    std::cout << "Client disconnected.\n";
-                    break; // clean exit instead of throwing
-                }
-
-                if (header.magic != magic) {
-                    std::cerr << "Invalid magic! Closing connection.\n";
-                    break;
-                }
-
-                Metadata metadata{};  
-                if (!server.read(socket, &metadata, sizeof(Metadata))) {
-                    std::cout << "Client disconnected.\n";
-                    break;
-                }
-
-                Shape shape; 
-                size_t size;
-                for (uint8_t dimension = 0; dimension < metadata.rank; dimension++) {
-                    if (!server.read(socket, &size, sizeof(size_t))) {
-                        std::cout << "Client disconnected.\n";
-                        break;
-                    }
-                    shape.expand(size);
-                }
-
-                std::shared_ptr<Buffer> buffer = std::make_shared<Buffer>(metadata.nbytes);
-                if (!server.read(socket, buffer->address(), metadata.nbytes)) {
-                    std::cout << "Client disconnected.\n";
-                    break;
-                }
-
-                Tensor input(dtypeof(metadata.dcode), shape, 0, buffer);  
-                Tensor output = argmax(model(input)); 
-
-                header = headerof(output);
-                metadata = metadataof(output);
-
-                server.write(socket, &header, sizeof(Header));
-                server.write(socket, &metadata, sizeof(Metadata)); 
-                server.write(socket, output.shape().address(), output.shape().rank() * sizeof(size_t));
-                server.write(socket, output.bytes(), output.nbytes());
-            }
-
-        } catch (const std::exception& e) {
-            std::cerr << "Unexpected client error: " << e.what() << "\n";
-        }
-    }
+    nn::Parameters parameters; parameters.initialize(1024); 
 
 
+/*
+import torch
+import torch.nn as nn
+ 
+x = torch.tensor([[1.0, 2.0, 3.0],
+                  [4.0, 5.0, 6.0]])
+ 
+layer_norm = nn.LayerNorm(normalized_shape=3)
+ 
+layer_norm.weight.data = torch.tensor([0.5, 1.0, 1.5])
+layer_norm.bias.data   = torch.tensor([0.0, 0.1, 0.2])
+ 
+output = layer_norm(x)
+
+print("Input:\n", x)
+print("Weight:\n", layer_norm.weight)
+print("Bias:\n", layer_norm.bias)
+print("Output:\n", output)*/
+
+    nn::LayerNorm norm(float32, 3); norm.initialize("norm", parameters); 
+    norm.weight[0] = 0.5f;
+    norm.weight[1] = 1.0f;
+    norm.weight[2] = 1.5f;
+
+    norm.bias[0] = 0.0f;
+    norm.bias[1] = 0.1f;
+    norm.bias[2] = 0.2f;
+
+    Tensor X = {
+        {1.0f, 2.0f, 3.0f},
+        {4.0f, 5.0f, 6.0f}
+    };
+ 
+    std::cout << norm(X);
 }

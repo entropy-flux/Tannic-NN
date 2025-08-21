@@ -76,6 +76,14 @@ struct SiLU {
     } 
 };
 
+struct GELU {
+    template<class A>
+    auto operator()(A&& x) const noexcept {
+        const double c = std::sqrt(2.0 / M_PI);
+        return static_cast<A>(0.5 * x * (1.0 + std::tanh(c * (x + 0.044715 * x * x * x))));
+    }
+};
+
 constexpr static inline int index(type type) {
     return static_cast<int>(type);
 }   
@@ -104,6 +112,15 @@ constexpr auto dispatchSiLUKernel = []() {
     return table;
 }();
 
+constexpr auto dispatchGELUKernel = []() { 
+    std::array<Kernel, index(TYPES)> table; 
+    table.fill(launchDefaultKernel);
+    table[index(float32)] = launchActvKernel<float, float, GELU>;
+    table[index(float64)] = launchActvKernel<double, double, GELU>;
+    return table;
+}();
+
+
 } namespace cpu {
  
 status relu(const tensor_t* src, tensor_t* dst) {    
@@ -112,6 +129,10 @@ status relu(const tensor_t* src, tensor_t* dst) {
 
 status silu(const tensor_t* src, tensor_t* dst) { 
     return dispatchSiLUKernel[index(src->dtype)](src, dst); 
+};
+
+status gelu(const tensor_t* src, tensor_t* dst) { 
+    return dispatchGELUKernel[index(src->dtype)](src, dst); 
 };
   
 } // namespace cpu 

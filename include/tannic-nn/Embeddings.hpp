@@ -23,9 +23,9 @@
 #include "Parameters.hpp"
 #include "Modules.hpp"
 
-using tannic::expression::Slice;
-
 namespace tannic::nn {
+
+using tannic::expression::Slice;
 
 class Embedding : public Module {
 public: 

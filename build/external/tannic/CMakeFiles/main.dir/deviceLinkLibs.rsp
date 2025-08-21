@@ -1,0 +1,1 @@
+  -L"/usr/local/cuda-12.9/targets/x86_64-linux/lib/stubs"  -L"/usr/local/cuda-12.9/targets/x86_64-linux/lib"   libtannic.a "/usr/local/cuda-12.9/targets/x86_64-linux/lib/libcudart_static.a" "/usr/lib/x86_64-linux-gnu/librt.a" -ldl -lpthread -lrt -lcudadevrt -lcudart_static 

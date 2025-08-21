@@ -26,32 +26,54 @@
 
 namespace tannic::nn { 
  
-class RMS : public Module {
-public:
-    constexpr RMS(type dtype, size_t dimension, float epsilon) 
-    :   weight_(dtype, {dimension}) 
-    ,   epsilon_(epsilon){}  
+struct RMS : public Module { 
+    Parameter weight;
+    float epsilon;
 
-    Tensor forward(Tensor const& input) const {
-        // TODO: Create proper fused kernel.
-        return weight_ * norm(input);
+    constexpr RMS(type dtype, size_t dimension, float epsilon) 
+    :   weight(dtype, {dimension}) 
+    ,   epsilon(epsilon){}  
+
+    Tensor forward(Tensor const& input) const { 
+        auto norm = input * rsqrt(mean(input*input, -1, true), epsilon);
+        return weight * norm;
     }
 
     void initialize(std::string const& name, Parameters& parameters) const {
-        weight_.initialize(name, parameters);
+        weight.initialize(name, parameters);
+    }
+}; 
+
+struct LayerNorm : public Module {
+    Parameter weight;
+    Parameter bias;
+    float epsilon;
+    Shape shape; 
+ 
+    constexpr LayerNorm(type dtype, Shape shape, float epsilon = 1e-5f)
+    :   weight(dtype, shape)
+    ,   bias(dtype, shape)
+    ,   epsilon(epsilon)
+    ,   shape(shape) { 
     }
 
-    Parameter const& weight() const {
-        return weight_;
+    constexpr LayerNorm(type dtype, size_t dimension, float epsilon = 1e-5f)
+    :   LayerNorm(dtype, Shape(dimension), epsilon) { 
+    } 
+
+    Tensor forward(Tensor const& input) const { 
+        auto mu = mean(input, -shape.rank(), true); 
+        auto centered = input - mu;           
+        auto squared = centered * centered;  
+        auto variance = mean(squared, -shape.rank(), true);  
+        auto normalized = centered * rsqrt(variance, epsilon);    
+        return normalized * weight + bias; 
     }
 
-private: 
-    Tensor norm(Tensor const& input) const {
-        return input * rsqrt(mean(input*input, -1, true), epsilon_);
+    void initialize(std::string const& name, Parameters& parameters) const {
+        weight.initialize(name + ".weight", parameters);
+        bias.initialize(name + ".bias", parameters);
     }
-
-    Parameter weight_; 
-    float epsilon_;
 };
 
 } // tannic::nn

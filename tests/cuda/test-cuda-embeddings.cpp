@@ -9,22 +9,22 @@ constexpr nn::Embedding W(float32 ,4, 4);
 TEST(EmbeddingCUDATest, TestCUDAEmbeddings) {
     nn::Parameters parameters; parameters.initialize(1024, Device());   
     W.initialize("test_embed", parameters);  
-    W.weight()[0,0] = 1;
-    W.weight()[0,1] = 2; 
-    W.weight()[0,2] = 3; 
-    W.weight()[0,3] = 4; 
-    W.weight()[1,0] = 5;
-    W.weight()[1,1] = 6; 
-    W.weight()[1,2] = 7; 
-    W.weight()[1,3] = 8;  
-    W.weight()[2,0] = 1;
-    W.weight()[2,1] = 2; 
-    W.weight()[2,2] = 3; 
-    W.weight()[2,3] = 4; 
-    W.weight()[3,0] = 5;
-    W.weight()[3,1] = 6; 
-    W.weight()[3,2] = 7; 
-    W.weight()[3,3] = 8;  
+    W[0,0] = 1;
+    W[0,1] = 2; 
+    W[0,2] = 3; 
+    W[0,3] = 4; 
+    W[1,0] = 5;
+    W[1,1] = 6; 
+    W[1,2] = 7; 
+    W[1,3] = 8;  
+    W[2,0] = 1;
+    W[2,1] = 2; 
+    W[2,2] = 3; 
+    W[2,3] = 4; 
+    W[3,0] = 5;
+    W[3,1] = 6; 
+    W[3,2] = 7; 
+    W[3,3] = 8;  
 
     Tensor X = W(0, 3);
 

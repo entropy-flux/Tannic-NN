@@ -1,0 +1,3187 @@
+Start testing: Aug 21 02:48 -03
+----------------------------------------------------------
+1/116 Testing: TestActivations.TestReLU
+1/116 Test: TestActivations.TestReLU
+Command: "/home/eric/tannic-nn/build/tannic-nn-tests" "--gtest_filter=TestActivations.TestReLU" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build
+"TestActivations.TestReLU" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestActivations.TestReLU
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestActivations
+[ RUN      ] TestActivations.TestReLU
+[       OK ] TestActivations.TestReLU (0 ms)
+[----------] 1 test from TestActivations (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TestActivations.TestReLU" end time: Aug 21 02:48 -03
+"TestActivations.TestReLU" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/116 Testing: TestActivations.TestSiLU
+2/116 Test: TestActivations.TestSiLU
+Command: "/home/eric/tannic-nn/build/tannic-nn-tests" "--gtest_filter=TestActivations.TestSiLU" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build
+"TestActivations.TestSiLU" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestActivations.TestSiLU
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestActivations
+[ RUN      ] TestActivations.TestSiLU
+[       OK ] TestActivations.TestSiLU (0 ms)
+[----------] 1 test from TestActivations (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TestActivations.TestSiLU" end time: Aug 21 02:48 -03
+"TestActivations.TestSiLU" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/116 Testing: TestActivations.TestGELU
+3/116 Test: TestActivations.TestGELU
+Command: "/home/eric/tannic-nn/build/tannic-nn-tests" "--gtest_filter=TestActivations.TestGELU" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build
+"TestActivations.TestGELU" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestActivations.TestGELU
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestActivations
+[ RUN      ] TestActivations.TestGELU
+[       OK ] TestActivations.TestGELU (0 ms)
+[----------] 1 test from TestActivations (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TestActivations.TestGELU" end time: Aug 21 02:48 -03
+"TestActivations.TestGELU" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/116 Testing: EmbeddingTest.TestEmbeddings
+4/116 Test: EmbeddingTest.TestEmbeddings
+Command: "/home/eric/tannic-nn/build/tannic-nn-tests" "--gtest_filter=EmbeddingTest.TestEmbeddings" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build
+"EmbeddingTest.TestEmbeddings" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = EmbeddingTest.TestEmbeddings
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from EmbeddingTest
+[ RUN      ] EmbeddingTest.TestEmbeddings
+[DEBUG] Initializing Parameters with nbytes=1024
+[DEBUG] Buffer allocated. offsets_ cleared.
+[Debug] Parameter with name test_embed not found...
+[Debug] Created parameter at offset: 0
+[       OK ] EmbeddingTest.TestEmbeddings (0 ms)
+[----------] 1 test from EmbeddingTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"EmbeddingTest.TestEmbeddings" end time: Aug 21 02:48 -03
+"EmbeddingTest.TestEmbeddings" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/116 Testing: TestNormalization.TestRMS
+5/116 Test: TestNormalization.TestRMS
+Command: "/home/eric/tannic-nn/build/tannic-nn-tests" "--gtest_filter=TestNormalization.TestRMS" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build
+"TestNormalization.TestRMS" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestNormalization.TestRMS
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestNormalization
+[ RUN      ] TestNormalization.TestRMS
+[DEBUG] Initializing Parameters with nbytes=40
+[DEBUG] Buffer allocated. offsets_ cleared.
+[Debug] Parameter with name rms_norm not found...
+[Debug] Created parameter at offset: 0
+[       OK ] TestNormalization.TestRMS (0 ms)
+[----------] 1 test from TestNormalization (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TestNormalization.TestRMS" end time: Aug 21 02:48 -03
+"TestNormalization.TestRMS" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/116 Testing: TestNormalization.TestLayerNorm
+6/116 Test: TestNormalization.TestLayerNorm
+Command: "/home/eric/tannic-nn/build/tannic-nn-tests" "--gtest_filter=TestNormalization.TestLayerNorm" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build
+"TestNormalization.TestLayerNorm" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestNormalization.TestLayerNorm
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestNormalization
+[ RUN      ] TestNormalization.TestLayerNorm
+[DEBUG] Initializing Parameters with nbytes=40
+[DEBUG] Buffer allocated. offsets_ cleared.
+[Debug] Parameter with name layer_norm.weight not found...
+[Debug] Created parameter at offset: 0
+[Debug] Parameter with name layer_norm.bias not found...
+[Debug] Created parameter at offset: 12
+[       OK ] TestNormalization.TestLayerNorm (0 ms)
+[----------] 1 test from TestNormalization (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TestNormalization.TestLayerNorm" end time: Aug 21 02:48 -03
+"TestNormalization.TestLayerNorm" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/116 Testing: TestCPUOperationsSoftmax.Softmax1D
+7/116 Test: TestCPUOperationsSoftmax.Softmax1D
+Command: "/home/eric/tannic-nn/build/tannic-nn-tests" "--gtest_filter=TestCPUOperationsSoftmax.Softmax1D" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build
+"TestCPUOperationsSoftmax.Softmax1D" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestCPUOperationsSoftmax.Softmax1D
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestCPUOperationsSoftmax
+[ RUN      ] TestCPUOperationsSoftmax.Softmax1D
+[       OK ] TestCPUOperationsSoftmax.Softmax1D (0 ms)
+[----------] 1 test from TestCPUOperationsSoftmax (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TestCPUOperationsSoftmax.Softmax1D" end time: Aug 21 02:48 -03
+"TestCPUOperationsSoftmax.Softmax1D" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/116 Testing: TestCPUOperationsSoftmax.Softmax2DDim1
+8/116 Test: TestCPUOperationsSoftmax.Softmax2DDim1
+Command: "/home/eric/tannic-nn/build/tannic-nn-tests" "--gtest_filter=TestCPUOperationsSoftmax.Softmax2DDim1" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build
+"TestCPUOperationsSoftmax.Softmax2DDim1" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestCPUOperationsSoftmax.Softmax2DDim1
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestCPUOperationsSoftmax
+[ RUN      ] TestCPUOperationsSoftmax.Softmax2DDim1
+[       OK ] TestCPUOperationsSoftmax.Softmax2DDim1 (0 ms)
+[----------] 1 test from TestCPUOperationsSoftmax (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TestCPUOperationsSoftmax.Softmax2DDim1" end time: Aug 21 02:48 -03
+"TestCPUOperationsSoftmax.Softmax2DDim1" time elapsed: 00:00:00
+----------------------------------------------------------
+
+9/116 Testing: TestCPUOperationsSoftmax.Softmax2DDim0
+9/116 Test: TestCPUOperationsSoftmax.Softmax2DDim0
+Command: "/home/eric/tannic-nn/build/tannic-nn-tests" "--gtest_filter=TestCPUOperationsSoftmax.Softmax2DDim0" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build
+"TestCPUOperationsSoftmax.Softmax2DDim0" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestCPUOperationsSoftmax.Softmax2DDim0
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestCPUOperationsSoftmax
+[ RUN      ] TestCPUOperationsSoftmax.Softmax2DDim0
+[       OK ] TestCPUOperationsSoftmax.Softmax2DDim0 (0 ms)
+[----------] 1 test from TestCPUOperationsSoftmax (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TestCPUOperationsSoftmax.Softmax2DDim0" end time: Aug 21 02:48 -03
+"TestCPUOperationsSoftmax.Softmax2DDim0" time elapsed: 00:00:00
+----------------------------------------------------------
+
+10/116 Testing: TestCPUOperationsSoftmax.Softmax3DDim2
+10/116 Test: TestCPUOperationsSoftmax.Softmax3DDim2
+Command: "/home/eric/tannic-nn/build/tannic-nn-tests" "--gtest_filter=TestCPUOperationsSoftmax.Softmax3DDim2" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build
+"TestCPUOperationsSoftmax.Softmax3DDim2" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestCPUOperationsSoftmax.Softmax3DDim2
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestCPUOperationsSoftmax
+[ RUN      ] TestCPUOperationsSoftmax.Softmax3DDim2
+[       OK ] TestCPUOperationsSoftmax.Softmax3DDim2 (0 ms)
+[----------] 1 test from TestCPUOperationsSoftmax (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TestCPUOperationsSoftmax.Softmax3DDim2" end time: Aug 21 02:48 -03
+"TestCPUOperationsSoftmax.Softmax3DDim2" time elapsed: 00:00:00
+----------------------------------------------------------
+
+11/116 Testing: TestCUDAActivations.TestCUDAReLU
+11/116 Test: TestCUDAActivations.TestCUDAReLU
+Command: "/home/eric/tannic-nn/build/tannic-nn-tests" "--gtest_filter=TestCUDAActivations.TestCUDAReLU" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build
+"TestCUDAActivations.TestCUDAReLU" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestCUDAActivations.TestCUDAReLU
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestCUDAActivations
+[ RUN      ] TestCUDAActivations.TestCUDAReLU
+[       OK ] TestCUDAActivations.TestCUDAReLU (1840 ms)
+[----------] 1 test from TestCUDAActivations (1840 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (1840 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   1.96 sec
+----------------------------------------------------------
+Test Passed.
+"TestCUDAActivations.TestCUDAReLU" end time: Aug 21 02:48 -03
+"TestCUDAActivations.TestCUDAReLU" time elapsed: 00:00:01
+----------------------------------------------------------
+
+12/116 Testing: TestCUDAActivations.TestCUDASiLU
+12/116 Test: TestCUDAActivations.TestCUDASiLU
+Command: "/home/eric/tannic-nn/build/tannic-nn-tests" "--gtest_filter=TestCUDAActivations.TestCUDASiLU" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build
+"TestCUDAActivations.TestCUDASiLU" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestCUDAActivations.TestCUDASiLU
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestCUDAActivations
+[ RUN      ] TestCUDAActivations.TestCUDASiLU
+[       OK ] TestCUDAActivations.TestCUDASiLU (221 ms)
+[----------] 1 test from TestCUDAActivations (221 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (222 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.33 sec
+----------------------------------------------------------
+Test Passed.
+"TestCUDAActivations.TestCUDASiLU" end time: Aug 21 02:48 -03
+"TestCUDAActivations.TestCUDASiLU" time elapsed: 00:00:00
+----------------------------------------------------------
+
+13/116 Testing: TestCUDAActivations.TestCUDAGELU
+13/116 Test: TestCUDAActivations.TestCUDAGELU
+Command: "/home/eric/tannic-nn/build/tannic-nn-tests" "--gtest_filter=TestCUDAActivations.TestCUDAGELU" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build
+"TestCUDAActivations.TestCUDAGELU" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestCUDAActivations.TestCUDAGELU
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestCUDAActivations
+[ RUN      ] TestCUDAActivations.TestCUDAGELU
+[       OK ] TestCUDAActivations.TestCUDAGELU (220 ms)
+[----------] 1 test from TestCUDAActivations (220 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (220 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.35 sec
+----------------------------------------------------------
+Test Passed.
+"TestCUDAActivations.TestCUDAGELU" end time: Aug 21 02:48 -03
+"TestCUDAActivations.TestCUDAGELU" time elapsed: 00:00:00
+----------------------------------------------------------
+
+14/116 Testing: EmbeddingCUDATest.TestCUDAEmbeddings
+14/116 Test: EmbeddingCUDATest.TestCUDAEmbeddings
+Command: "/home/eric/tannic-nn/build/tannic-nn-tests" "--gtest_filter=EmbeddingCUDATest.TestCUDAEmbeddings" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build
+"EmbeddingCUDATest.TestCUDAEmbeddings" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = EmbeddingCUDATest.TestCUDAEmbeddings
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from EmbeddingCUDATest
+[ RUN      ] EmbeddingCUDATest.TestCUDAEmbeddings
+[DEBUG] Initializing Parameters with nbytes=1024
+[DEBUG] Buffer allocated. offsets_ cleared.
+[Debug] Parameter with name test_embed not found...
+[Debug] Created parameter at offset: 0
+[       OK ] EmbeddingCUDATest.TestCUDAEmbeddings (203 ms)
+[----------] 1 test from EmbeddingCUDATest (203 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (203 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.33 sec
+----------------------------------------------------------
+Test Passed.
+"EmbeddingCUDATest.TestCUDAEmbeddings" end time: Aug 21 02:48 -03
+"EmbeddingCUDATest.TestCUDAEmbeddings" time elapsed: 00:00:00
+----------------------------------------------------------
+
+15/116 Testing: TestCUDAOperationsSoftmax.Softmax1D
+15/116 Test: TestCUDAOperationsSoftmax.Softmax1D
+Command: "/home/eric/tannic-nn/build/tannic-nn-tests" "--gtest_filter=TestCUDAOperationsSoftmax.Softmax1D" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build
+"TestCUDAOperationsSoftmax.Softmax1D" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestCUDAOperationsSoftmax.Softmax1D
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestCUDAOperationsSoftmax
+[ RUN      ] TestCUDAOperationsSoftmax.Softmax1D
+[       OK ] TestCUDAOperationsSoftmax.Softmax1D (202 ms)
+[----------] 1 test from TestCUDAOperationsSoftmax (202 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (202 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.33 sec
+----------------------------------------------------------
+Test Passed.
+"TestCUDAOperationsSoftmax.Softmax1D" end time: Aug 21 02:48 -03
+"TestCUDAOperationsSoftmax.Softmax1D" time elapsed: 00:00:00
+----------------------------------------------------------
+
+16/116 Testing: TestCUDAOperationsSoftmax.Softmax2DDim1
+16/116 Test: TestCUDAOperationsSoftmax.Softmax2DDim1
+Command: "/home/eric/tannic-nn/build/tannic-nn-tests" "--gtest_filter=TestCUDAOperationsSoftmax.Softmax2DDim1" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build
+"TestCUDAOperationsSoftmax.Softmax2DDim1" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestCUDAOperationsSoftmax.Softmax2DDim1
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestCUDAOperationsSoftmax
+[ RUN      ] TestCUDAOperationsSoftmax.Softmax2DDim1
+[       OK ] TestCUDAOperationsSoftmax.Softmax2DDim1 (223 ms)
+[----------] 1 test from TestCUDAOperationsSoftmax (223 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (223 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.34 sec
+----------------------------------------------------------
+Test Passed.
+"TestCUDAOperationsSoftmax.Softmax2DDim1" end time: Aug 21 02:48 -03
+"TestCUDAOperationsSoftmax.Softmax2DDim1" time elapsed: 00:00:00
+----------------------------------------------------------
+
+17/116 Testing: TestCUDAOperationsSoftmax.Softmax2DDim0
+17/116 Test: TestCUDAOperationsSoftmax.Softmax2DDim0
+Command: "/home/eric/tannic-nn/build/tannic-nn-tests" "--gtest_filter=TestCUDAOperationsSoftmax.Softmax2DDim0" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build
+"TestCUDAOperationsSoftmax.Softmax2DDim0" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestCUDAOperationsSoftmax.Softmax2DDim0
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestCUDAOperationsSoftmax
+[ RUN      ] TestCUDAOperationsSoftmax.Softmax2DDim0
+[       OK ] TestCUDAOperationsSoftmax.Softmax2DDim0 (222 ms)
+[----------] 1 test from TestCUDAOperationsSoftmax (222 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (223 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.34 sec
+----------------------------------------------------------
+Test Passed.
+"TestCUDAOperationsSoftmax.Softmax2DDim0" end time: Aug 21 02:48 -03
+"TestCUDAOperationsSoftmax.Softmax2DDim0" time elapsed: 00:00:00
+----------------------------------------------------------
+
+18/116 Testing: TestCUDAOperationsSoftmax.Softmax3DDim2
+18/116 Test: TestCUDAOperationsSoftmax.Softmax3DDim2
+Command: "/home/eric/tannic-nn/build/tannic-nn-tests" "--gtest_filter=TestCUDAOperationsSoftmax.Softmax3DDim2" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build
+"TestCUDAOperationsSoftmax.Softmax3DDim2" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestCUDAOperationsSoftmax.Softmax3DDim2
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestCUDAOperationsSoftmax
+[ RUN      ] TestCUDAOperationsSoftmax.Softmax3DDim2
+[       OK ] TestCUDAOperationsSoftmax.Softmax3DDim2 (205 ms)
+[----------] 1 test from TestCUDAOperationsSoftmax (205 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (205 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.37 sec
+----------------------------------------------------------
+Test Passed.
+"TestCUDAOperationsSoftmax.Softmax3DDim2" end time: Aug 21 02:48 -03
+"TestCUDAOperationsSoftmax.Softmax3DDim2" time elapsed: 00:00:00
+----------------------------------------------------------
+
+19/116 Testing: TestCUDANormalization.TestRMS_CUDA
+19/116 Test: TestCUDANormalization.TestRMS_CUDA
+Command: "/home/eric/tannic-nn/build/tannic-nn-tests" "--gtest_filter=TestCUDANormalization.TestRMS_CUDA" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build
+"TestCUDANormalization.TestRMS_CUDA" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestCUDANormalization.TestRMS_CUDA
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestCUDANormalization
+[ RUN      ] TestCUDANormalization.TestRMS_CUDA
+[DEBUG] Initializing Parameters with nbytes=40
+[DEBUG] Buffer allocated. offsets_ cleared.
+[Debug] Parameter with name rms_norm not found...
+[Debug] Created parameter at offset: 0
+[       OK ] TestCUDANormalization.TestRMS_CUDA (230 ms)
+[----------] 1 test from TestCUDANormalization (230 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (230 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.35 sec
+----------------------------------------------------------
+Test Passed.
+"TestCUDANormalization.TestRMS_CUDA" end time: Aug 21 02:48 -03
+"TestCUDANormalization.TestRMS_CUDA" time elapsed: 00:00:00
+----------------------------------------------------------
+
+20/116 Testing: TestCUDALayerNorm.TestLayerNorm_CUDA
+20/116 Test: TestCUDALayerNorm.TestLayerNorm_CUDA
+Command: "/home/eric/tannic-nn/build/tannic-nn-tests" "--gtest_filter=TestCUDALayerNorm.TestLayerNorm_CUDA" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build
+"TestCUDALayerNorm.TestLayerNorm_CUDA" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestCUDALayerNorm.TestLayerNorm_CUDA
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestCUDALayerNorm
+[ RUN      ] TestCUDALayerNorm.TestLayerNorm_CUDA
+[DEBUG] Initializing Parameters with nbytes=40
+[DEBUG] Buffer allocated. offsets_ cleared.
+[Debug] Parameter with name layer_norm.weight not found...
+[Debug] Created parameter at offset: 0
+[Debug] Parameter with name layer_norm.bias not found...
+[Debug] Created parameter at offset: 12
+[       OK ] TestCUDALayerNorm.TestLayerNorm_CUDA (224 ms)
+[----------] 1 test from TestCUDALayerNorm (224 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (224 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.33 sec
+----------------------------------------------------------
+Test Passed.
+"TestCUDALayerNorm.TestLayerNorm_CUDA" end time: Aug 21 02:48 -03
+"TestCUDALayerNorm.TestLayerNorm_CUDA" time elapsed: 00:00:00
+----------------------------------------------------------
+
+21/116 Testing: TestMLP.TestForward
+21/116 Test: TestMLP.TestForward
+Command: "/home/eric/tannic-nn/build/tannic-nn-tests" "--gtest_filter=TestMLP.TestForward" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build
+"TestMLP.TestForward" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestMLP.TestForward
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestMLP
+[ RUN      ] TestMLP.TestForward
+[DEBUG] Initializing Parameters with nbytes=128
+[DEBUG] Buffer allocated. offsets_ cleared.
+[Debug] Parameter with name input_layer.weight not found...
+[Debug] Created parameter at offset: 0
+[Debug] Parameter with name input_layer.bias not found...
+[Debug] Created parameter at offset: 60
+[Debug] Parameter with name output_layer.weight not found...
+[Debug] Created parameter at offset: 80
+[Debug] Parameter with name output_layer.bias not found...
+[Debug] Created parameter at offset: 120
+[       OK ] TestMLP.TestForward (0 ms)
+[----------] 1 test from TestMLP (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TestMLP.TestForward" end time: Aug 21 02:48 -03
+"TestMLP.TestForward" time elapsed: 00:00:00
+----------------------------------------------------------
+
+22/116 Testing: TestParameters.TestParameters
+22/116 Test: TestParameters.TestParameters
+Command: "/home/eric/tannic-nn/build/tannic-nn-tests" "--gtest_filter=TestParameters.TestParameters" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build
+"TestParameters.TestParameters" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestParameters.TestParameters
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestParameters
+[ RUN      ] TestParameters.TestParameters
+[DEBUG] Initializing Parameters with nbytes=128
+[DEBUG] Buffer allocated. offsets_ cleared.
+[Debug] Parameter with name my-weight not found...
+[Debug] Created parameter at offset: 0
+[Debug] Parameter with name my-other-weight not found...
+[Debug] Created parameter at offset: 64
+[       OK ] TestParameters.TestParameters (0 ms)
+[----------] 1 test from TestParameters (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TestParameters.TestParameters" end time: Aug 21 02:48 -03
+"TestParameters.TestParameters" time elapsed: 00:00:00
+----------------------------------------------------------
+
+23/116 Testing: ComplexTests.ComplexificationAndRealification
+23/116 Test: ComplexTests.ComplexificationAndRealification
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=ComplexTests.ComplexificationAndRealification" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"ComplexTests.ComplexificationAndRealification" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = ComplexTests.ComplexificationAndRealification
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ComplexTests
+[ RUN      ] ComplexTests.ComplexificationAndRealification
+[       OK ] ComplexTests.ComplexificationAndRealification (0 ms)
+[----------] 1 test from ComplexTests (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"ComplexTests.ComplexificationAndRealification" end time: Aug 21 02:48 -03
+"ComplexTests.ComplexificationAndRealification" time elapsed: 00:00:00
+----------------------------------------------------------
+
+24/116 Testing: ComplexTests.HostPolarConversionManual
+24/116 Test: ComplexTests.HostPolarConversionManual
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=ComplexTests.HostPolarConversionManual" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"ComplexTests.HostPolarConversionManual" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = ComplexTests.HostPolarConversionManual
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ComplexTests
+[ RUN      ] ComplexTests.HostPolarConversionManual
+[       OK ] ComplexTests.HostPolarConversionManual (0 ms)
+[----------] 1 test from ComplexTests (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"ComplexTests.HostPolarConversionManual" end time: Aug 21 02:48 -03
+"ComplexTests.HostPolarConversionManual" time elapsed: 00:00:00
+----------------------------------------------------------
+
+25/116 Testing: TestConcat.ConcatDim0
+25/116 Test: TestConcat.ConcatDim0
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestConcat.ConcatDim0" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestConcat.ConcatDim0" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestConcat.ConcatDim0
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestConcat
+[ RUN      ] TestConcat.ConcatDim0
+[       OK ] TestConcat.ConcatDim0 (0 ms)
+[----------] 1 test from TestConcat (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TestConcat.ConcatDim0" end time: Aug 21 02:48 -03
+"TestConcat.ConcatDim0" time elapsed: 00:00:00
+----------------------------------------------------------
+
+26/116 Testing: TestConcat.ConcatDim1
+26/116 Test: TestConcat.ConcatDim1
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestConcat.ConcatDim1" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestConcat.ConcatDim1" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestConcat.ConcatDim1
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestConcat
+[ RUN      ] TestConcat.ConcatDim1
+[       OK ] TestConcat.ConcatDim1 (0 ms)
+[----------] 1 test from TestConcat (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TestConcat.ConcatDim1" end time: Aug 21 02:48 -03
+"TestConcat.ConcatDim1" time elapsed: 00:00:00
+----------------------------------------------------------
+
+27/116 Testing: TestFunctions.Log
+27/116 Test: TestFunctions.Log
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestFunctions.Log" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestFunctions.Log" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestFunctions.Log
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestFunctions
+[ RUN      ] TestFunctions.Log
+[       OK ] TestFunctions.Log (0 ms)
+[----------] 1 test from TestFunctions (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (1 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TestFunctions.Log" end time: Aug 21 02:48 -03
+"TestFunctions.Log" time elapsed: 00:00:00
+----------------------------------------------------------
+
+28/116 Testing: TestFunctions.Exp
+28/116 Test: TestFunctions.Exp
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestFunctions.Exp" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestFunctions.Exp" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestFunctions.Exp
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestFunctions
+[ RUN      ] TestFunctions.Exp
+[       OK ] TestFunctions.Exp (0 ms)
+[----------] 1 test from TestFunctions (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TestFunctions.Exp" end time: Aug 21 02:48 -03
+"TestFunctions.Exp" time elapsed: 00:00:00
+----------------------------------------------------------
+
+29/116 Testing: TestFunctions.Sqrt
+29/116 Test: TestFunctions.Sqrt
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestFunctions.Sqrt" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestFunctions.Sqrt" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestFunctions.Sqrt
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestFunctions
+[ RUN      ] TestFunctions.Sqrt
+[       OK ] TestFunctions.Sqrt (0 ms)
+[----------] 1 test from TestFunctions (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TestFunctions.Sqrt" end time: Aug 21 02:48 -03
+"TestFunctions.Sqrt" time elapsed: 00:00:00
+----------------------------------------------------------
+
+30/116 Testing: TestFunctions.Rsqrt
+30/116 Test: TestFunctions.Rsqrt
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestFunctions.Rsqrt" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestFunctions.Rsqrt" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestFunctions.Rsqrt
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestFunctions
+[ RUN      ] TestFunctions.Rsqrt
+[       OK ] TestFunctions.Rsqrt (0 ms)
+[----------] 1 test from TestFunctions (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TestFunctions.Rsqrt" end time: Aug 21 02:48 -03
+"TestFunctions.Rsqrt" time elapsed: 00:00:00
+----------------------------------------------------------
+
+31/116 Testing: TestFunctions.Abs
+31/116 Test: TestFunctions.Abs
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestFunctions.Abs" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestFunctions.Abs" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestFunctions.Abs
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestFunctions
+[ RUN      ] TestFunctions.Abs
+[       OK ] TestFunctions.Abs (0 ms)
+[----------] 1 test from TestFunctions (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TestFunctions.Abs" end time: Aug 21 02:48 -03
+"TestFunctions.Abs" time elapsed: 00:00:00
+----------------------------------------------------------
+
+32/116 Testing: TestFunctions.Sin
+32/116 Test: TestFunctions.Sin
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestFunctions.Sin" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestFunctions.Sin" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestFunctions.Sin
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestFunctions
+[ RUN      ] TestFunctions.Sin
+[       OK ] TestFunctions.Sin (0 ms)
+[----------] 1 test from TestFunctions (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TestFunctions.Sin" end time: Aug 21 02:48 -03
+"TestFunctions.Sin" time elapsed: 00:00:00
+----------------------------------------------------------
+
+33/116 Testing: TestFunctions.Cos
+33/116 Test: TestFunctions.Cos
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestFunctions.Cos" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestFunctions.Cos" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestFunctions.Cos
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestFunctions
+[ RUN      ] TestFunctions.Cos
+[       OK ] TestFunctions.Cos (0 ms)
+[----------] 1 test from TestFunctions (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TestFunctions.Cos" end time: Aug 21 02:48 -03
+"TestFunctions.Cos" time elapsed: 00:00:00
+----------------------------------------------------------
+
+34/116 Testing: TestFunctions.Tan
+34/116 Test: TestFunctions.Tan
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestFunctions.Tan" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestFunctions.Tan" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestFunctions.Tan
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestFunctions
+[ RUN      ] TestFunctions.Tan
+[       OK ] TestFunctions.Tan (0 ms)
+[----------] 1 test from TestFunctions (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TestFunctions.Tan" end time: Aug 21 02:48 -03
+"TestFunctions.Tan" time elapsed: 00:00:00
+----------------------------------------------------------
+
+35/116 Testing: TestFunctions.Sinh
+35/116 Test: TestFunctions.Sinh
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestFunctions.Sinh" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestFunctions.Sinh" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestFunctions.Sinh
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestFunctions
+[ RUN      ] TestFunctions.Sinh
+[       OK ] TestFunctions.Sinh (0 ms)
+[----------] 1 test from TestFunctions (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TestFunctions.Sinh" end time: Aug 21 02:48 -03
+"TestFunctions.Sinh" time elapsed: 00:00:00
+----------------------------------------------------------
+
+36/116 Testing: TestFunctions.Cosh
+36/116 Test: TestFunctions.Cosh
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestFunctions.Cosh" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestFunctions.Cosh" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestFunctions.Cosh
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestFunctions
+[ RUN      ] TestFunctions.Cosh
+[       OK ] TestFunctions.Cosh (0 ms)
+[----------] 1 test from TestFunctions (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TestFunctions.Cosh" end time: Aug 21 02:48 -03
+"TestFunctions.Cosh" time elapsed: 00:00:00
+----------------------------------------------------------
+
+37/116 Testing: TestFunctions.Tanh
+37/116 Test: TestFunctions.Tanh
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestFunctions.Tanh" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestFunctions.Tanh" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestFunctions.Tanh
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestFunctions
+[ RUN      ] TestFunctions.Tanh
+[       OK ] TestFunctions.Tanh (0 ms)
+[----------] 1 test from TestFunctions (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TestFunctions.Tanh" end time: Aug 21 02:48 -03
+"TestFunctions.Tanh" time elapsed: 00:00:00
+----------------------------------------------------------
+
+38/116 Testing: MatmulTests.Basic
+38/116 Test: MatmulTests.Basic
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=MatmulTests.Basic" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"MatmulTests.Basic" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = MatmulTests.Basic
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from MatmulTests
+[ RUN      ] MatmulTests.Basic
+[       OK ] MatmulTests.Basic (0 ms)
+[----------] 1 test from MatmulTests (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"MatmulTests.Basic" end time: Aug 21 02:48 -03
+"MatmulTests.Basic" time elapsed: 00:00:00
+----------------------------------------------------------
+
+39/116 Testing: MatmulTests.FirstTransposed
+39/116 Test: MatmulTests.FirstTransposed
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=MatmulTests.FirstTransposed" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"MatmulTests.FirstTransposed" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = MatmulTests.FirstTransposed
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from MatmulTests
+[ RUN      ] MatmulTests.FirstTransposed
+[       OK ] MatmulTests.FirstTransposed (0 ms)
+[----------] 1 test from MatmulTests (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"MatmulTests.FirstTransposed" end time: Aug 21 02:48 -03
+"MatmulTests.FirstTransposed" time elapsed: 00:00:00
+----------------------------------------------------------
+
+40/116 Testing: MatmulTests.Batched
+40/116 Test: MatmulTests.Batched
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=MatmulTests.Batched" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"MatmulTests.Batched" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = MatmulTests.Batched
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from MatmulTests
+[ RUN      ] MatmulTests.Batched
+[       OK ] MatmulTests.Batched (0 ms)
+[----------] 1 test from MatmulTests (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"MatmulTests.Batched" end time: Aug 21 02:48 -03
+"MatmulTests.Batched" time elapsed: 00:00:00
+----------------------------------------------------------
+
+41/116 Testing: MatmulTests.SecondTransposed
+41/116 Test: MatmulTests.SecondTransposed
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=MatmulTests.SecondTransposed" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"MatmulTests.SecondTransposed" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = MatmulTests.SecondTransposed
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from MatmulTests
+[ RUN      ] MatmulTests.SecondTransposed
+[       OK ] MatmulTests.SecondTransposed (0 ms)
+[----------] 1 test from MatmulTests (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"MatmulTests.SecondTransposed" end time: Aug 21 02:48 -03
+"MatmulTests.SecondTransposed" time elapsed: 00:00:00
+----------------------------------------------------------
+
+42/116 Testing: MatmulTests.BothTransposed
+42/116 Test: MatmulTests.BothTransposed
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=MatmulTests.BothTransposed" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"MatmulTests.BothTransposed" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = MatmulTests.BothTransposed
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from MatmulTests
+[ RUN      ] MatmulTests.BothTransposed
+[       OK ] MatmulTests.BothTransposed (0 ms)
+[----------] 1 test from MatmulTests (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"MatmulTests.BothTransposed" end time: Aug 21 02:48 -03
+"MatmulTests.BothTransposed" time elapsed: 00:00:00
+----------------------------------------------------------
+
+43/116 Testing: MatmulTests.Rank4_SecondTransposed
+43/116 Test: MatmulTests.Rank4_SecondTransposed
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=MatmulTests.Rank4_SecondTransposed" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"MatmulTests.Rank4_SecondTransposed" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = MatmulTests.Rank4_SecondTransposed
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from MatmulTests
+[ RUN      ] MatmulTests.Rank4_SecondTransposed
+[       OK ] MatmulTests.Rank4_SecondTransposed (0 ms)
+[----------] 1 test from MatmulTests (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"MatmulTests.Rank4_SecondTransposed" end time: Aug 21 02:48 -03
+"MatmulTests.Rank4_SecondTransposed" time elapsed: 00:00:00
+----------------------------------------------------------
+
+44/116 Testing: TestUnaryOp.Negation
+44/116 Test: TestUnaryOp.Negation
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestUnaryOp.Negation" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestUnaryOp.Negation" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestUnaryOp.Negation
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestUnaryOp
+[ RUN      ] TestUnaryOp.Negation
+[       OK ] TestUnaryOp.Negation (0 ms)
+[----------] 1 test from TestUnaryOp (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TestUnaryOp.Negation" end time: Aug 21 02:48 -03
+"TestUnaryOp.Negation" time elapsed: 00:00:00
+----------------------------------------------------------
+
+45/116 Testing: TestBinaryOps.Addition
+45/116 Test: TestBinaryOps.Addition
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestBinaryOps.Addition" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestBinaryOps.Addition" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestBinaryOps.Addition
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestBinaryOps
+[ RUN      ] TestBinaryOps.Addition
+[       OK ] TestBinaryOps.Addition (0 ms)
+[----------] 1 test from TestBinaryOps (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TestBinaryOps.Addition" end time: Aug 21 02:48 -03
+"TestBinaryOps.Addition" time elapsed: 00:00:00
+----------------------------------------------------------
+
+46/116 Testing: TestBinaryOps.Multiplication
+46/116 Test: TestBinaryOps.Multiplication
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestBinaryOps.Multiplication" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestBinaryOps.Multiplication" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestBinaryOps.Multiplication
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestBinaryOps
+[ RUN      ] TestBinaryOps.Multiplication
+[       OK ] TestBinaryOps.Multiplication (0 ms)
+[----------] 1 test from TestBinaryOps (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TestBinaryOps.Multiplication" end time: Aug 21 02:48 -03
+"TestBinaryOps.Multiplication" time elapsed: 00:00:00
+----------------------------------------------------------
+
+47/116 Testing: TestBinaryOps.Subtraction
+47/116 Test: TestBinaryOps.Subtraction
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestBinaryOps.Subtraction" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestBinaryOps.Subtraction" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestBinaryOps.Subtraction
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestBinaryOps
+[ RUN      ] TestBinaryOps.Subtraction
+[       OK ] TestBinaryOps.Subtraction (0 ms)
+[----------] 1 test from TestBinaryOps (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (1 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TestBinaryOps.Subtraction" end time: Aug 21 02:48 -03
+"TestBinaryOps.Subtraction" time elapsed: 00:00:00
+----------------------------------------------------------
+
+48/116 Testing: TestBinaryOps.Complex
+48/116 Test: TestBinaryOps.Complex
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestBinaryOps.Complex" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestBinaryOps.Complex" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestBinaryOps.Complex
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestBinaryOps
+[ RUN      ] TestBinaryOps.Complex
+[       OK ] TestBinaryOps.Complex (0 ms)
+[----------] 1 test from TestBinaryOps (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TestBinaryOps.Complex" end time: Aug 21 02:48 -03
+"TestBinaryOps.Complex" time elapsed: 00:00:00
+----------------------------------------------------------
+
+49/116 Testing: TestBinaryOps.Power
+49/116 Test: TestBinaryOps.Power
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestBinaryOps.Power" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestBinaryOps.Power" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestBinaryOps.Power
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestBinaryOps
+[ RUN      ] TestBinaryOps.Power
+[       OK ] TestBinaryOps.Power (0 ms)
+[----------] 1 test from TestBinaryOps (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TestBinaryOps.Power" end time: Aug 21 02:48 -03
+"TestBinaryOps.Power" time elapsed: 00:00:00
+----------------------------------------------------------
+
+50/116 Testing: TestBinaryOps.BroadcastMultiplyAdd
+50/116 Test: TestBinaryOps.BroadcastMultiplyAdd
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestBinaryOps.BroadcastMultiplyAdd" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestBinaryOps.BroadcastMultiplyAdd" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestBinaryOps.BroadcastMultiplyAdd
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestBinaryOps
+[ RUN      ] TestBinaryOps.BroadcastMultiplyAdd
+[       OK ] TestBinaryOps.BroadcastMultiplyAdd (0 ms)
+[----------] 1 test from TestBinaryOps (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TestBinaryOps.BroadcastMultiplyAdd" end time: Aug 21 02:48 -03
+"TestBinaryOps.BroadcastMultiplyAdd" time elapsed: 00:00:00
+----------------------------------------------------------
+
+51/116 Testing: TestOuter.HostOuterProduct
+51/116 Test: TestOuter.HostOuterProduct
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestOuter.HostOuterProduct" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestOuter.HostOuterProduct" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestOuter.HostOuterProduct
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestOuter
+[ RUN      ] TestOuter.HostOuterProduct
+[       OK ] TestOuter.HostOuterProduct (0 ms)
+[----------] 1 test from TestOuter (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TestOuter.HostOuterProduct" end time: Aug 21 02:48 -03
+"TestOuter.HostOuterProduct" time elapsed: 00:00:00
+----------------------------------------------------------
+
+52/116 Testing: TestReductions.Test1D
+52/116 Test: TestReductions.Test1D
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestReductions.Test1D" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestReductions.Test1D" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestReductions.Test1D
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestReductions
+[ RUN      ] TestReductions.Test1D
+[       OK ] TestReductions.Test1D (0 ms)
+[----------] 1 test from TestReductions (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TestReductions.Test1D" end time: Aug 21 02:48 -03
+"TestReductions.Test1D" time elapsed: 00:00:00
+----------------------------------------------------------
+
+53/116 Testing: TestReductions.Test2D
+53/116 Test: TestReductions.Test2D
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestReductions.Test2D" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestReductions.Test2D" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestReductions.Test2D
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestReductions
+[ RUN      ] TestReductions.Test2D
+[       OK ] TestReductions.Test2D (0 ms)
+[----------] 1 test from TestReductions (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TestReductions.Test2D" end time: Aug 21 02:48 -03
+"TestReductions.Test2D" time elapsed: 00:00:00
+----------------------------------------------------------
+
+54/116 Testing: TestReductions.Test2D_Axis0
+54/116 Test: TestReductions.Test2D_Axis0
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestReductions.Test2D_Axis0" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestReductions.Test2D_Axis0" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestReductions.Test2D_Axis0
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestReductions
+[ RUN      ] TestReductions.Test2D_Axis0
+Tensor([2, 
+        1, 
+        2, 
+        1] dtype=int64, shape=(4))Tensor([0, 
+        2, 
+        1, 
+        0] dtype=int64, shape=(4))[       OK ] TestReductions.Test2D_Axis0 (0 ms)
+[----------] 1 test from TestReductions (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TestReductions.Test2D_Axis0" end time: Aug 21 02:48 -03
+"TestReductions.Test2D_Axis0" time elapsed: 00:00:00
+----------------------------------------------------------
+
+55/116 Testing: TestReductions.TestSum2D_Keepdim
+55/116 Test: TestReductions.TestSum2D_Keepdim
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestReductions.TestSum2D_Keepdim" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestReductions.TestSum2D_Keepdim" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestReductions.TestSum2D_Keepdim
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestReductions
+[ RUN      ] TestReductions.TestSum2D_Keepdim
+[       OK ] TestReductions.TestSum2D_Keepdim (0 ms)
+[----------] 1 test from TestReductions (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TestReductions.TestSum2D_Keepdim" end time: Aug 21 02:48 -03
+"TestReductions.TestSum2D_Keepdim" time elapsed: 00:00:00
+----------------------------------------------------------
+
+56/116 Testing: TestReductions.TestMean2D
+56/116 Test: TestReductions.TestMean2D
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestReductions.TestMean2D" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestReductions.TestMean2D" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestReductions.TestMean2D
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestReductions
+[ RUN      ] TestReductions.TestMean2D
+[       OK ] TestReductions.TestMean2D (0 ms)
+[----------] 1 test from TestReductions (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TestReductions.TestMean2D" end time: Aug 21 02:48 -03
+"TestReductions.TestMean2D" time elapsed: 00:00:00
+----------------------------------------------------------
+
+57/116 Testing: TestReductions.Test1D_MeanAndSum
+57/116 Test: TestReductions.Test1D_MeanAndSum
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestReductions.Test1D_MeanAndSum" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestReductions.Test1D_MeanAndSum" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestReductions.Test1D_MeanAndSum
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestReductions
+[ RUN      ] TestReductions.Test1D_MeanAndSum
+[       OK ] TestReductions.Test1D_MeanAndSum (0 ms)
+[----------] 1 test from TestReductions (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TestReductions.Test1D_MeanAndSum" end time: Aug 21 02:48 -03
+"TestReductions.Test1D_MeanAndSum" time elapsed: 00:00:00
+----------------------------------------------------------
+
+58/116 Testing: TestReductions.Test1D_MeanAndSum_Keepdim
+58/116 Test: TestReductions.Test1D_MeanAndSum_Keepdim
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestReductions.Test1D_MeanAndSum_Keepdim" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestReductions.Test1D_MeanAndSum_Keepdim" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestReductions.Test1D_MeanAndSum_Keepdim
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestReductions
+[ RUN      ] TestReductions.Test1D_MeanAndSum_Keepdim
+[       OK ] TestReductions.Test1D_MeanAndSum_Keepdim (0 ms)
+[----------] 1 test from TestReductions (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TestReductions.Test1D_MeanAndSum_Keepdim" end time: Aug 21 02:48 -03
+"TestReductions.Test1D_MeanAndSum_Keepdim" time elapsed: 00:00:00
+----------------------------------------------------------
+
+59/116 Testing: TestReductions.Test2D_AxisMinus1_Keepdim
+59/116 Test: TestReductions.Test2D_AxisMinus1_Keepdim
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestReductions.Test2D_AxisMinus1_Keepdim" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestReductions.Test2D_AxisMinus1_Keepdim" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestReductions.Test2D_AxisMinus1_Keepdim
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestReductions
+[ RUN      ] TestReductions.Test2D_AxisMinus1_Keepdim
+[       OK ] TestReductions.Test2D_AxisMinus1_Keepdim (0 ms)
+[----------] 1 test from TestReductions (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TestReductions.Test2D_AxisMinus1_Keepdim" end time: Aug 21 02:48 -03
+"TestReductions.Test2D_AxisMinus1_Keepdim" time elapsed: 00:00:00
+----------------------------------------------------------
+
+60/116 Testing: TestReductions.Test3D_AxisMinus1_Keepdim
+60/116 Test: TestReductions.Test3D_AxisMinus1_Keepdim
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestReductions.Test3D_AxisMinus1_Keepdim" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestReductions.Test3D_AxisMinus1_Keepdim" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestReductions.Test3D_AxisMinus1_Keepdim
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestReductions
+[ RUN      ] TestReductions.Test3D_AxisMinus1_Keepdim
+[       OK ] TestReductions.Test3D_AxisMinus1_Keepdim (0 ms)
+[----------] 1 test from TestReductions (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TestReductions.Test3D_AxisMinus1_Keepdim" end time: Aug 21 02:48 -03
+"TestReductions.Test3D_AxisMinus1_Keepdim" time elapsed: 00:00:00
+----------------------------------------------------------
+
+61/116 Testing: TestReductions.TestRMSIssued
+61/116 Test: TestReductions.TestRMSIssued
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestReductions.TestRMSIssued" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestReductions.TestRMSIssued" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestReductions.TestRMSIssued
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestReductions
+[ RUN      ] TestReductions.TestRMSIssued
+[       OK ] TestReductions.TestRMSIssued (0 ms)
+[----------] 1 test from TestReductions (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TestReductions.TestRMSIssued" end time: Aug 21 02:48 -03
+"TestReductions.TestRMSIssued" time elapsed: 00:00:00
+----------------------------------------------------------
+
+62/116 Testing: TestRepeats.TestReps
+62/116 Test: TestRepeats.TestReps
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestRepeats.TestReps" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestRepeats.TestReps" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestRepeats.TestReps
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestRepeats
+[ RUN      ] TestRepeats.TestReps
+[       OK ] TestRepeats.TestReps (0 ms)
+[----------] 1 test from TestRepeats (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TestRepeats.TestReps" end time: Aug 21 02:48 -03
+"TestRepeats.TestReps" time elapsed: 00:00:00
+----------------------------------------------------------
+
+63/116 Testing: TestRepeats.TestRepeatDim1
+63/116 Test: TestRepeats.TestRepeatDim1
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestRepeats.TestRepeatDim1" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestRepeats.TestRepeatDim1" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestRepeats.TestRepeatDim1
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestRepeats
+[ RUN      ] TestRepeats.TestRepeatDim1
+[       OK ] TestRepeats.TestRepeatDim1 (0 ms)
+[----------] 1 test from TestRepeats (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TestRepeats.TestRepeatDim1" end time: Aug 21 02:48 -03
+"TestRepeats.TestRepeatDim1" time elapsed: 00:00:00
+----------------------------------------------------------
+
+64/116 Testing: TestPermute.TestPermute234to423
+64/116 Test: TestPermute.TestPermute234to423
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestPermute.TestPermute234to423" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestPermute.TestPermute234to423" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestPermute.TestPermute234to423
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestPermute
+[ RUN      ] TestPermute.TestPermute234to423
+[       OK ] TestPermute.TestPermute234to423 (0 ms)
+[----------] 1 test from TestPermute (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TestPermute.TestPermute234to423" end time: Aug 21 02:48 -03
+"TestPermute.TestPermute234to423" time elapsed: 00:00:00
+----------------------------------------------------------
+
+65/116 Testing: TestTensorView.TestBasicView
+65/116 Test: TestTensorView.TestBasicView
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestTensorView.TestBasicView" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestTensorView.TestBasicView" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestTensorView.TestBasicView
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestTensorView
+[ RUN      ] TestTensorView.TestBasicView
+[       OK ] TestTensorView.TestBasicView (0 ms)
+[----------] 1 test from TestTensorView (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TestTensorView.TestBasicView" end time: Aug 21 02:48 -03
+"TestTensorView.TestBasicView" time elapsed: 00:00:00
+----------------------------------------------------------
+
+66/116 Testing: TestTensorReshape.TestBasicReshape
+66/116 Test: TestTensorReshape.TestBasicReshape
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestTensorReshape.TestBasicReshape" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestTensorReshape.TestBasicReshape" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestTensorReshape.TestBasicReshape
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestTensorReshape
+[ RUN      ] TestTensorReshape.TestBasicReshape
+[       OK ] TestTensorReshape.TestBasicReshape (0 ms)
+[----------] 1 test from TestTensorReshape (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TestTensorReshape.TestBasicReshape" end time: Aug 21 02:48 -03
+"TestTensorReshape.TestBasicReshape" time elapsed: 00:00:00
+----------------------------------------------------------
+
+67/116 Testing: TestTensorExpand.TestBasicExpand
+67/116 Test: TestTensorExpand.TestBasicExpand
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestTensorExpand.TestBasicExpand" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestTensorExpand.TestBasicExpand" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestTensorExpand.TestBasicExpand
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestTensorExpand
+[ RUN      ] TestTensorExpand.TestBasicExpand
+[       OK ] TestTensorExpand.TestBasicExpand (0 ms)
+[----------] 1 test from TestTensorExpand (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TestTensorExpand.TestBasicExpand" end time: Aug 21 02:48 -03
+"TestTensorExpand.TestBasicExpand" time elapsed: 00:00:00
+----------------------------------------------------------
+
+68/116 Testing: TestCUDADevice.TestCUDAAlloc
+68/116 Test: TestCUDADevice.TestCUDAAlloc
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestCUDADevice.TestCUDAAlloc" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestCUDADevice.TestCUDAAlloc" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestCUDADevice.TestCUDAAlloc
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestCUDADevice
+[ RUN      ] TestCUDADevice.TestCUDAAlloc
+[       OK ] TestCUDADevice.TestCUDAAlloc (219 ms)
+[----------] 1 test from TestCUDADevice (219 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (219 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.33 sec
+----------------------------------------------------------
+Test Passed.
+"TestCUDADevice.TestCUDAAlloc" end time: Aug 21 02:48 -03
+"TestCUDADevice.TestCUDAAlloc" time elapsed: 00:00:00
+----------------------------------------------------------
+
+69/116 Testing: CUDAComplexTests.CUDAComplexificationAndRealification
+69/116 Test: CUDAComplexTests.CUDAComplexificationAndRealification
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=CUDAComplexTests.CUDAComplexificationAndRealification" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"CUDAComplexTests.CUDAComplexificationAndRealification" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = CUDAComplexTests.CUDAComplexificationAndRealification
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CUDAComplexTests
+[ RUN      ] CUDAComplexTests.CUDAComplexificationAndRealification
+[       OK ] CUDAComplexTests.CUDAComplexificationAndRealification (207 ms)
+[----------] 1 test from CUDAComplexTests (207 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (207 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.31 sec
+----------------------------------------------------------
+Test Passed.
+"CUDAComplexTests.CUDAComplexificationAndRealification" end time: Aug 21 02:48 -03
+"CUDAComplexTests.CUDAComplexificationAndRealification" time elapsed: 00:00:00
+----------------------------------------------------------
+
+70/116 Testing: CUDAComplexTests.CUDAPolarConversionManual
+70/116 Test: CUDAComplexTests.CUDAPolarConversionManual
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=CUDAComplexTests.CUDAPolarConversionManual" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"CUDAComplexTests.CUDAPolarConversionManual" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = CUDAComplexTests.CUDAPolarConversionManual
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CUDAComplexTests
+[ RUN      ] CUDAComplexTests.CUDAPolarConversionManual
+[       OK ] CUDAComplexTests.CUDAPolarConversionManual (225 ms)
+[----------] 1 test from CUDAComplexTests (225 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (225 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.36 sec
+----------------------------------------------------------
+Test Passed.
+"CUDAComplexTests.CUDAPolarConversionManual" end time: Aug 21 02:48 -03
+"CUDAComplexTests.CUDAPolarConversionManual" time elapsed: 00:00:00
+----------------------------------------------------------
+
+71/116 Testing: TestCUDAConcat.ConcatCUDADim0
+71/116 Test: TestCUDAConcat.ConcatCUDADim0
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestCUDAConcat.ConcatCUDADim0" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestCUDAConcat.ConcatCUDADim0" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestCUDAConcat.ConcatCUDADim0
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestCUDAConcat
+[ RUN      ] TestCUDAConcat.ConcatCUDADim0
+[       OK ] TestCUDAConcat.ConcatCUDADim0 (228 ms)
+[----------] 1 test from TestCUDAConcat (228 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (228 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.34 sec
+----------------------------------------------------------
+Test Passed.
+"TestCUDAConcat.ConcatCUDADim0" end time: Aug 21 02:48 -03
+"TestCUDAConcat.ConcatCUDADim0" time elapsed: 00:00:00
+----------------------------------------------------------
+
+72/116 Testing: TestCUDAConcat.ConcatCUDADim1
+72/116 Test: TestCUDAConcat.ConcatCUDADim1
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestCUDAConcat.ConcatCUDADim1" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestCUDAConcat.ConcatCUDADim1" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestCUDAConcat.ConcatCUDADim1
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestCUDAConcat
+[ RUN      ] TestCUDAConcat.ConcatCUDADim1
+[       OK ] TestCUDAConcat.ConcatCUDADim1 (210 ms)
+[----------] 1 test from TestCUDAConcat (210 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (210 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.33 sec
+----------------------------------------------------------
+Test Passed.
+"TestCUDAConcat.ConcatCUDADim1" end time: Aug 21 02:48 -03
+"TestCUDAConcat.ConcatCUDADim1" time elapsed: 00:00:00
+----------------------------------------------------------
+
+73/116 Testing: TestCUDAFunctions.Log
+73/116 Test: TestCUDAFunctions.Log
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestCUDAFunctions.Log" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestCUDAFunctions.Log" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestCUDAFunctions.Log
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestCUDAFunctions
+[ RUN      ] TestCUDAFunctions.Log
+[       OK ] TestCUDAFunctions.Log (203 ms)
+[----------] 1 test from TestCUDAFunctions (203 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (203 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.32 sec
+----------------------------------------------------------
+Test Passed.
+"TestCUDAFunctions.Log" end time: Aug 21 02:48 -03
+"TestCUDAFunctions.Log" time elapsed: 00:00:00
+----------------------------------------------------------
+
+74/116 Testing: TestCUDAFunctions.Exp
+74/116 Test: TestCUDAFunctions.Exp
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestCUDAFunctions.Exp" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestCUDAFunctions.Exp" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestCUDAFunctions.Exp
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestCUDAFunctions
+[ RUN      ] TestCUDAFunctions.Exp
+[       OK ] TestCUDAFunctions.Exp (225 ms)
+[----------] 1 test from TestCUDAFunctions (225 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (226 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.35 sec
+----------------------------------------------------------
+Test Passed.
+"TestCUDAFunctions.Exp" end time: Aug 21 02:48 -03
+"TestCUDAFunctions.Exp" time elapsed: 00:00:00
+----------------------------------------------------------
+
+75/116 Testing: TestCUDAFunctions.Sqrt
+75/116 Test: TestCUDAFunctions.Sqrt
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestCUDAFunctions.Sqrt" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestCUDAFunctions.Sqrt" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestCUDAFunctions.Sqrt
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestCUDAFunctions
+[ RUN      ] TestCUDAFunctions.Sqrt
+[       OK ] TestCUDAFunctions.Sqrt (206 ms)
+[----------] 1 test from TestCUDAFunctions (206 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (206 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.31 sec
+----------------------------------------------------------
+Test Passed.
+"TestCUDAFunctions.Sqrt" end time: Aug 21 02:48 -03
+"TestCUDAFunctions.Sqrt" time elapsed: 00:00:00
+----------------------------------------------------------
+
+76/116 Testing: TestCUDAFunctions.Rsqrt
+76/116 Test: TestCUDAFunctions.Rsqrt
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestCUDAFunctions.Rsqrt" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestCUDAFunctions.Rsqrt" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestCUDAFunctions.Rsqrt
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestCUDAFunctions
+[ RUN      ] TestCUDAFunctions.Rsqrt
+[       OK ] TestCUDAFunctions.Rsqrt (211 ms)
+[----------] 1 test from TestCUDAFunctions (211 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (211 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.34 sec
+----------------------------------------------------------
+Test Passed.
+"TestCUDAFunctions.Rsqrt" end time: Aug 21 02:48 -03
+"TestCUDAFunctions.Rsqrt" time elapsed: 00:00:00
+----------------------------------------------------------
+
+77/116 Testing: TestCUDAFunctions.Abs
+77/116 Test: TestCUDAFunctions.Abs
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestCUDAFunctions.Abs" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestCUDAFunctions.Abs" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestCUDAFunctions.Abs
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestCUDAFunctions
+[ RUN      ] TestCUDAFunctions.Abs
+[       OK ] TestCUDAFunctions.Abs (240 ms)
+[----------] 1 test from TestCUDAFunctions (240 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (240 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.36 sec
+----------------------------------------------------------
+Test Passed.
+"TestCUDAFunctions.Abs" end time: Aug 21 02:48 -03
+"TestCUDAFunctions.Abs" time elapsed: 00:00:00
+----------------------------------------------------------
+
+78/116 Testing: TestCUDAFunctions.Sin
+78/116 Test: TestCUDAFunctions.Sin
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestCUDAFunctions.Sin" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestCUDAFunctions.Sin" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestCUDAFunctions.Sin
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestCUDAFunctions
+[ RUN      ] TestCUDAFunctions.Sin
+[       OK ] TestCUDAFunctions.Sin (226 ms)
+[----------] 1 test from TestCUDAFunctions (226 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (226 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.35 sec
+----------------------------------------------------------
+Test Passed.
+"TestCUDAFunctions.Sin" end time: Aug 21 02:48 -03
+"TestCUDAFunctions.Sin" time elapsed: 00:00:00
+----------------------------------------------------------
+
+79/116 Testing: TestCUDAFunctions.Cos
+79/116 Test: TestCUDAFunctions.Cos
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestCUDAFunctions.Cos" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestCUDAFunctions.Cos" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestCUDAFunctions.Cos
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestCUDAFunctions
+[ RUN      ] TestCUDAFunctions.Cos
+[       OK ] TestCUDAFunctions.Cos (222 ms)
+[----------] 1 test from TestCUDAFunctions (222 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (223 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.35 sec
+----------------------------------------------------------
+Test Passed.
+"TestCUDAFunctions.Cos" end time: Aug 21 02:48 -03
+"TestCUDAFunctions.Cos" time elapsed: 00:00:00
+----------------------------------------------------------
+
+80/116 Testing: TestCUDAFunctions.Tan
+80/116 Test: TestCUDAFunctions.Tan
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestCUDAFunctions.Tan" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestCUDAFunctions.Tan" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestCUDAFunctions.Tan
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestCUDAFunctions
+[ RUN      ] TestCUDAFunctions.Tan
+[       OK ] TestCUDAFunctions.Tan (205 ms)
+[----------] 1 test from TestCUDAFunctions (205 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (205 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.33 sec
+----------------------------------------------------------
+Test Passed.
+"TestCUDAFunctions.Tan" end time: Aug 21 02:48 -03
+"TestCUDAFunctions.Tan" time elapsed: 00:00:00
+----------------------------------------------------------
+
+81/116 Testing: TestCUDAFunctions.Sinh
+81/116 Test: TestCUDAFunctions.Sinh
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestCUDAFunctions.Sinh" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestCUDAFunctions.Sinh" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestCUDAFunctions.Sinh
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestCUDAFunctions
+[ RUN      ] TestCUDAFunctions.Sinh
+[       OK ] TestCUDAFunctions.Sinh (207 ms)
+[----------] 1 test from TestCUDAFunctions (207 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (207 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.32 sec
+----------------------------------------------------------
+Test Passed.
+"TestCUDAFunctions.Sinh" end time: Aug 21 02:48 -03
+"TestCUDAFunctions.Sinh" time elapsed: 00:00:00
+----------------------------------------------------------
+
+82/116 Testing: TestCUDAFunctions.Cosh
+82/116 Test: TestCUDAFunctions.Cosh
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestCUDAFunctions.Cosh" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestCUDAFunctions.Cosh" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestCUDAFunctions.Cosh
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestCUDAFunctions
+[ RUN      ] TestCUDAFunctions.Cosh
+[       OK ] TestCUDAFunctions.Cosh (230 ms)
+[----------] 1 test from TestCUDAFunctions (230 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (230 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.37 sec
+----------------------------------------------------------
+Test Passed.
+"TestCUDAFunctions.Cosh" end time: Aug 21 02:48 -03
+"TestCUDAFunctions.Cosh" time elapsed: 00:00:00
+----------------------------------------------------------
+
+83/116 Testing: TestCUDAFunctions.Tanh
+83/116 Test: TestCUDAFunctions.Tanh
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestCUDAFunctions.Tanh" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestCUDAFunctions.Tanh" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestCUDAFunctions.Tanh
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestCUDAFunctions
+[ RUN      ] TestCUDAFunctions.Tanh
+[       OK ] TestCUDAFunctions.Tanh (207 ms)
+[----------] 1 test from TestCUDAFunctions (207 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (207 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.33 sec
+----------------------------------------------------------
+Test Passed.
+"TestCUDAFunctions.Tanh" end time: Aug 21 02:48 -03
+"TestCUDAFunctions.Tanh" time elapsed: 00:00:00
+----------------------------------------------------------
+
+84/116 Testing: TestCUDAView.TestCUDASlice
+84/116 Test: TestCUDAView.TestCUDASlice
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestCUDAView.TestCUDASlice" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestCUDAView.TestCUDASlice" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestCUDAView.TestCUDASlice
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestCUDAView
+[ RUN      ] TestCUDAView.TestCUDASlice
+[       OK ] TestCUDAView.TestCUDASlice (200 ms)
+[----------] 1 test from TestCUDAView (200 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (200 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.31 sec
+----------------------------------------------------------
+Test Passed.
+"TestCUDAView.TestCUDASlice" end time: Aug 21 02:48 -03
+"TestCUDAView.TestCUDASlice" time elapsed: 00:00:00
+----------------------------------------------------------
+
+85/116 Testing: TestCUDAView.NegativeIndexing
+85/116 Test: TestCUDAView.NegativeIndexing
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestCUDAView.NegativeIndexing" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestCUDAView.NegativeIndexing" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestCUDAView.NegativeIndexing
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestCUDAView
+[ RUN      ] TestCUDAView.NegativeIndexing
+[       OK ] TestCUDAView.NegativeIndexing (192 ms)
+[----------] 1 test from TestCUDAView (192 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (192 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.30 sec
+----------------------------------------------------------
+Test Passed.
+"TestCUDAView.NegativeIndexing" end time: Aug 21 02:48 -03
+"TestCUDAView.NegativeIndexing" time elapsed: 00:00:00
+----------------------------------------------------------
+
+86/116 Testing: CUDAMatmulTests.Basic
+86/116 Test: CUDAMatmulTests.Basic
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=CUDAMatmulTests.Basic" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"CUDAMatmulTests.Basic" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = CUDAMatmulTests.Basic
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CUDAMatmulTests
+[ RUN      ] CUDAMatmulTests.Basic
+[       OK ] CUDAMatmulTests.Basic (231 ms)
+[----------] 1 test from CUDAMatmulTests (231 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (232 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.34 sec
+----------------------------------------------------------
+Test Passed.
+"CUDAMatmulTests.Basic" end time: Aug 21 02:48 -03
+"CUDAMatmulTests.Basic" time elapsed: 00:00:00
+----------------------------------------------------------
+
+87/116 Testing: CUDAMatmulTests.FirstTransposed
+87/116 Test: CUDAMatmulTests.FirstTransposed
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=CUDAMatmulTests.FirstTransposed" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"CUDAMatmulTests.FirstTransposed" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = CUDAMatmulTests.FirstTransposed
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CUDAMatmulTests
+[ RUN      ] CUDAMatmulTests.FirstTransposed
+[       OK ] CUDAMatmulTests.FirstTransposed (211 ms)
+[----------] 1 test from CUDAMatmulTests (211 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (212 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.32 sec
+----------------------------------------------------------
+Test Passed.
+"CUDAMatmulTests.FirstTransposed" end time: Aug 21 02:48 -03
+"CUDAMatmulTests.FirstTransposed" time elapsed: 00:00:00
+----------------------------------------------------------
+
+88/116 Testing: CUDAMatmulTests.Batched
+88/116 Test: CUDAMatmulTests.Batched
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=CUDAMatmulTests.Batched" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"CUDAMatmulTests.Batched" start time: Aug 21 02:48 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = CUDAMatmulTests.Batched
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CUDAMatmulTests
+[ RUN      ] CUDAMatmulTests.Batched
+[       OK ] CUDAMatmulTests.Batched (226 ms)
+[----------] 1 test from CUDAMatmulTests (226 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (226 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.34 sec
+----------------------------------------------------------
+Test Passed.
+"CUDAMatmulTests.Batched" end time: Aug 21 02:49 -03
+"CUDAMatmulTests.Batched" time elapsed: 00:00:00
+----------------------------------------------------------
+
+89/116 Testing: CUDAMatmulTests.SecondTransposed
+89/116 Test: CUDAMatmulTests.SecondTransposed
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=CUDAMatmulTests.SecondTransposed" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"CUDAMatmulTests.SecondTransposed" start time: Aug 21 02:49 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = CUDAMatmulTests.SecondTransposed
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CUDAMatmulTests
+[ RUN      ] CUDAMatmulTests.SecondTransposed
+[       OK ] CUDAMatmulTests.SecondTransposed (232 ms)
+[----------] 1 test from CUDAMatmulTests (232 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (232 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.35 sec
+----------------------------------------------------------
+Test Passed.
+"CUDAMatmulTests.SecondTransposed" end time: Aug 21 02:49 -03
+"CUDAMatmulTests.SecondTransposed" time elapsed: 00:00:00
+----------------------------------------------------------
+
+90/116 Testing: CUDAMatmulTests.BothTransposed
+90/116 Test: CUDAMatmulTests.BothTransposed
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=CUDAMatmulTests.BothTransposed" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"CUDAMatmulTests.BothTransposed" start time: Aug 21 02:49 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = CUDAMatmulTests.BothTransposed
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CUDAMatmulTests
+[ RUN      ] CUDAMatmulTests.BothTransposed
+[       OK ] CUDAMatmulTests.BothTransposed (235 ms)
+[----------] 1 test from CUDAMatmulTests (235 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (236 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.35 sec
+----------------------------------------------------------
+Test Passed.
+"CUDAMatmulTests.BothTransposed" end time: Aug 21 02:49 -03
+"CUDAMatmulTests.BothTransposed" time elapsed: 00:00:00
+----------------------------------------------------------
+
+91/116 Testing: CUDAMatmulTests.Rank4_SecondTransposed
+91/116 Test: CUDAMatmulTests.Rank4_SecondTransposed
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=CUDAMatmulTests.Rank4_SecondTransposed" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"CUDAMatmulTests.Rank4_SecondTransposed" start time: Aug 21 02:49 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = CUDAMatmulTests.Rank4_SecondTransposed
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CUDAMatmulTests
+[ RUN      ] CUDAMatmulTests.Rank4_SecondTransposed
+[       OK ] CUDAMatmulTests.Rank4_SecondTransposed (227 ms)
+[----------] 1 test from CUDAMatmulTests (227 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (227 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.34 sec
+----------------------------------------------------------
+Test Passed.
+"CUDAMatmulTests.Rank4_SecondTransposed" end time: Aug 21 02:49 -03
+"CUDAMatmulTests.Rank4_SecondTransposed" time elapsed: 00:00:00
+----------------------------------------------------------
+
+92/116 Testing: TestCUDAOperations.Neg
+92/116 Test: TestCUDAOperations.Neg
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestCUDAOperations.Neg" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestCUDAOperations.Neg" start time: Aug 21 02:49 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestCUDAOperations.Neg
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestCUDAOperations
+[ RUN      ] TestCUDAOperations.Neg
+[       OK ] TestCUDAOperations.Neg (216 ms)
+[----------] 1 test from TestCUDAOperations (216 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (216 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.33 sec
+----------------------------------------------------------
+Test Passed.
+"TestCUDAOperations.Neg" end time: Aug 21 02:49 -03
+"TestCUDAOperations.Neg" time elapsed: 00:00:00
+----------------------------------------------------------
+
+93/116 Testing: TestCUDAOperations.Addition
+93/116 Test: TestCUDAOperations.Addition
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestCUDAOperations.Addition" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestCUDAOperations.Addition" start time: Aug 21 02:49 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestCUDAOperations.Addition
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestCUDAOperations
+[ RUN      ] TestCUDAOperations.Addition
+[       OK ] TestCUDAOperations.Addition (224 ms)
+[----------] 1 test from TestCUDAOperations (224 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (224 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.33 sec
+----------------------------------------------------------
+Test Passed.
+"TestCUDAOperations.Addition" end time: Aug 21 02:49 -03
+"TestCUDAOperations.Addition" time elapsed: 00:00:00
+----------------------------------------------------------
+
+94/116 Testing: TestCUDAOperations.Multiplication
+94/116 Test: TestCUDAOperations.Multiplication
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestCUDAOperations.Multiplication" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestCUDAOperations.Multiplication" start time: Aug 21 02:49 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestCUDAOperations.Multiplication
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestCUDAOperations
+[ RUN      ] TestCUDAOperations.Multiplication
+[       OK ] TestCUDAOperations.Multiplication (206 ms)
+[----------] 1 test from TestCUDAOperations (206 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (206 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.33 sec
+----------------------------------------------------------
+Test Passed.
+"TestCUDAOperations.Multiplication" end time: Aug 21 02:49 -03
+"TestCUDAOperations.Multiplication" time elapsed: 00:00:00
+----------------------------------------------------------
+
+95/116 Testing: TestCUDAOperations.Subtraction
+95/116 Test: TestCUDAOperations.Subtraction
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestCUDAOperations.Subtraction" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestCUDAOperations.Subtraction" start time: Aug 21 02:49 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestCUDAOperations.Subtraction
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestCUDAOperations
+[ RUN      ] TestCUDAOperations.Subtraction
+[       OK ] TestCUDAOperations.Subtraction (226 ms)
+[----------] 1 test from TestCUDAOperations (226 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (226 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.33 sec
+----------------------------------------------------------
+Test Passed.
+"TestCUDAOperations.Subtraction" end time: Aug 21 02:49 -03
+"TestCUDAOperations.Subtraction" time elapsed: 00:00:00
+----------------------------------------------------------
+
+96/116 Testing: TestCUDAOperations.Complex_CUDA
+96/116 Test: TestCUDAOperations.Complex_CUDA
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestCUDAOperations.Complex_CUDA" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestCUDAOperations.Complex_CUDA" start time: Aug 21 02:49 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestCUDAOperations.Complex_CUDA
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestCUDAOperations
+[ RUN      ] TestCUDAOperations.Complex_CUDA
+[       OK ] TestCUDAOperations.Complex_CUDA (227 ms)
+[----------] 1 test from TestCUDAOperations (227 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (227 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.36 sec
+----------------------------------------------------------
+Test Passed.
+"TestCUDAOperations.Complex_CUDA" end time: Aug 21 02:49 -03
+"TestCUDAOperations.Complex_CUDA" time elapsed: 00:00:00
+----------------------------------------------------------
+
+97/116 Testing: TestCUDAOperations.LinearCombination
+97/116 Test: TestCUDAOperations.LinearCombination
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestCUDAOperations.LinearCombination" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestCUDAOperations.LinearCombination" start time: Aug 21 02:49 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestCUDAOperations.LinearCombination
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestCUDAOperations
+[ RUN      ] TestCUDAOperations.LinearCombination
+[       OK ] TestCUDAOperations.LinearCombination (228 ms)
+[----------] 1 test from TestCUDAOperations (228 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (228 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.34 sec
+----------------------------------------------------------
+Test Passed.
+"TestCUDAOperations.LinearCombination" end time: Aug 21 02:49 -03
+"TestCUDAOperations.LinearCombination" time elapsed: 00:00:00
+----------------------------------------------------------
+
+98/116 Testing: TestCUDAOuter.CUDAOuterProduct
+98/116 Test: TestCUDAOuter.CUDAOuterProduct
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestCUDAOuter.CUDAOuterProduct" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestCUDAOuter.CUDAOuterProduct" start time: Aug 21 02:49 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestCUDAOuter.CUDAOuterProduct
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestCUDAOuter
+[ RUN      ] TestCUDAOuter.CUDAOuterProduct
+[       OK ] TestCUDAOuter.CUDAOuterProduct (202 ms)
+[----------] 1 test from TestCUDAOuter (202 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (202 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.32 sec
+----------------------------------------------------------
+Test Passed.
+"TestCUDAOuter.CUDAOuterProduct" end time: Aug 21 02:49 -03
+"TestCUDAOuter.CUDAOuterProduct" time elapsed: 00:00:00
+----------------------------------------------------------
+
+99/116 Testing: TestCUDAReductions.TestCUDA1D
+99/116 Test: TestCUDAReductions.TestCUDA1D
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestCUDAReductions.TestCUDA1D" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestCUDAReductions.TestCUDA1D" start time: Aug 21 02:49 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestCUDAReductions.TestCUDA1D
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestCUDAReductions
+[ RUN      ] TestCUDAReductions.TestCUDA1D
+[       OK ] TestCUDAReductions.TestCUDA1D (166 ms)
+[----------] 1 test from TestCUDAReductions (166 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (166 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.27 sec
+----------------------------------------------------------
+Test Passed.
+"TestCUDAReductions.TestCUDA1D" end time: Aug 21 02:49 -03
+"TestCUDAReductions.TestCUDA1D" time elapsed: 00:00:00
+----------------------------------------------------------
+
+100/116 Testing: TestCUDAReductions.TestCUDA2D
+100/116 Test: TestCUDAReductions.TestCUDA2D
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestCUDAReductions.TestCUDA2D" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestCUDAReductions.TestCUDA2D" start time: Aug 21 02:49 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestCUDAReductions.TestCUDA2D
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestCUDAReductions
+[ RUN      ] TestCUDAReductions.TestCUDA2D
+[       OK ] TestCUDAReductions.TestCUDA2D (192 ms)
+[----------] 1 test from TestCUDAReductions (192 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (192 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.31 sec
+----------------------------------------------------------
+Test Passed.
+"TestCUDAReductions.TestCUDA2D" end time: Aug 21 02:49 -03
+"TestCUDAReductions.TestCUDA2D" time elapsed: 00:00:00
+----------------------------------------------------------
+
+101/116 Testing: TestCUDAReductions.TestCUDA2D_Axis0
+101/116 Test: TestCUDAReductions.TestCUDA2D_Axis0
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestCUDAReductions.TestCUDA2D_Axis0" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestCUDAReductions.TestCUDA2D_Axis0" start time: Aug 21 02:49 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestCUDAReductions.TestCUDA2D_Axis0
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestCUDAReductions
+[ RUN      ] TestCUDAReductions.TestCUDA2D_Axis0
+[       OK ] TestCUDAReductions.TestCUDA2D_Axis0 (169 ms)
+[----------] 1 test from TestCUDAReductions (169 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (169 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.30 sec
+----------------------------------------------------------
+Test Passed.
+"TestCUDAReductions.TestCUDA2D_Axis0" end time: Aug 21 02:49 -03
+"TestCUDAReductions.TestCUDA2D_Axis0" time elapsed: 00:00:00
+----------------------------------------------------------
+
+102/116 Testing: TestCUDAReductions.TestCUDASum2D_Keepdim
+102/116 Test: TestCUDAReductions.TestCUDASum2D_Keepdim
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestCUDAReductions.TestCUDASum2D_Keepdim" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestCUDAReductions.TestCUDASum2D_Keepdim" start time: Aug 21 02:49 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestCUDAReductions.TestCUDASum2D_Keepdim
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestCUDAReductions
+[ RUN      ] TestCUDAReductions.TestCUDASum2D_Keepdim
+[       OK ] TestCUDAReductions.TestCUDASum2D_Keepdim (218 ms)
+[----------] 1 test from TestCUDAReductions (218 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (218 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.33 sec
+----------------------------------------------------------
+Test Passed.
+"TestCUDAReductions.TestCUDASum2D_Keepdim" end time: Aug 21 02:49 -03
+"TestCUDAReductions.TestCUDASum2D_Keepdim" time elapsed: 00:00:00
+----------------------------------------------------------
+
+103/116 Testing: TestCUDAReductions.TestCUDAMean2D
+103/116 Test: TestCUDAReductions.TestCUDAMean2D
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestCUDAReductions.TestCUDAMean2D" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestCUDAReductions.TestCUDAMean2D" start time: Aug 21 02:49 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestCUDAReductions.TestCUDAMean2D
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestCUDAReductions
+[ RUN      ] TestCUDAReductions.TestCUDAMean2D
+[       OK ] TestCUDAReductions.TestCUDAMean2D (209 ms)
+[----------] 1 test from TestCUDAReductions (209 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (209 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.32 sec
+----------------------------------------------------------
+Test Passed.
+"TestCUDAReductions.TestCUDAMean2D" end time: Aug 21 02:49 -03
+"TestCUDAReductions.TestCUDAMean2D" time elapsed: 00:00:00
+----------------------------------------------------------
+
+104/116 Testing: TestCUDAReductions.TestCUDA1D_MeanAndSum
+104/116 Test: TestCUDAReductions.TestCUDA1D_MeanAndSum
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestCUDAReductions.TestCUDA1D_MeanAndSum" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestCUDAReductions.TestCUDA1D_MeanAndSum" start time: Aug 21 02:49 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestCUDAReductions.TestCUDA1D_MeanAndSum
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestCUDAReductions
+[ RUN      ] TestCUDAReductions.TestCUDA1D_MeanAndSum
+[       OK ] TestCUDAReductions.TestCUDA1D_MeanAndSum (212 ms)
+[----------] 1 test from TestCUDAReductions (213 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (213 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.33 sec
+----------------------------------------------------------
+Test Passed.
+"TestCUDAReductions.TestCUDA1D_MeanAndSum" end time: Aug 21 02:49 -03
+"TestCUDAReductions.TestCUDA1D_MeanAndSum" time elapsed: 00:00:00
+----------------------------------------------------------
+
+105/116 Testing: TestCUDAReductions.TestCUDA2D_AxisMinus1
+105/116 Test: TestCUDAReductions.TestCUDA2D_AxisMinus1
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestCUDAReductions.TestCUDA2D_AxisMinus1" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestCUDAReductions.TestCUDA2D_AxisMinus1" start time: Aug 21 02:49 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestCUDAReductions.TestCUDA2D_AxisMinus1
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestCUDAReductions
+[ RUN      ] TestCUDAReductions.TestCUDA2D_AxisMinus1
+[       OK ] TestCUDAReductions.TestCUDA2D_AxisMinus1 (224 ms)
+[----------] 1 test from TestCUDAReductions (225 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (225 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.34 sec
+----------------------------------------------------------
+Test Passed.
+"TestCUDAReductions.TestCUDA2D_AxisMinus1" end time: Aug 21 02:49 -03
+"TestCUDAReductions.TestCUDA2D_AxisMinus1" time elapsed: 00:00:00
+----------------------------------------------------------
+
+106/116 Testing: TestCUDAReductions.TestCUDA3D_AxisMinus1
+106/116 Test: TestCUDAReductions.TestCUDA3D_AxisMinus1
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestCUDAReductions.TestCUDA3D_AxisMinus1" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestCUDAReductions.TestCUDA3D_AxisMinus1" start time: Aug 21 02:49 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestCUDAReductions.TestCUDA3D_AxisMinus1
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestCUDAReductions
+[ RUN      ] TestCUDAReductions.TestCUDA3D_AxisMinus1
+[       OK ] TestCUDAReductions.TestCUDA3D_AxisMinus1 (240 ms)
+[----------] 1 test from TestCUDAReductions (240 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (240 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.36 sec
+----------------------------------------------------------
+Test Passed.
+"TestCUDAReductions.TestCUDA3D_AxisMinus1" end time: Aug 21 02:49 -03
+"TestCUDAReductions.TestCUDA3D_AxisMinus1" time elapsed: 00:00:00
+----------------------------------------------------------
+
+107/116 Testing: TestRepeatsCUDA.TestRepsCUDA
+107/116 Test: TestRepeatsCUDA.TestRepsCUDA
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestRepeatsCUDA.TestRepsCUDA" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestRepeatsCUDA.TestRepsCUDA" start time: Aug 21 02:49 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestRepeatsCUDA.TestRepsCUDA
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestRepeatsCUDA
+[ RUN      ] TestRepeatsCUDA.TestRepsCUDA
+[       OK ] TestRepeatsCUDA.TestRepsCUDA (234 ms)
+[----------] 1 test from TestRepeatsCUDA (234 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (234 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.36 sec
+----------------------------------------------------------
+Test Passed.
+"TestRepeatsCUDA.TestRepsCUDA" end time: Aug 21 02:49 -03
+"TestRepeatsCUDA.TestRepsCUDA" time elapsed: 00:00:00
+----------------------------------------------------------
+
+108/116 Testing: TestRepeatsCUDA.TestRepeatDim1CUDA
+108/116 Test: TestRepeatsCUDA.TestRepeatDim1CUDA
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestRepeatsCUDA.TestRepeatDim1CUDA" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestRepeatsCUDA.TestRepeatDim1CUDA" start time: Aug 21 02:49 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestRepeatsCUDA.TestRepeatDim1CUDA
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestRepeatsCUDA
+[ RUN      ] TestRepeatsCUDA.TestRepeatDim1CUDA
+[       OK ] TestRepeatsCUDA.TestRepeatDim1CUDA (239 ms)
+[----------] 1 test from TestRepeatsCUDA (239 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (239 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.35 sec
+----------------------------------------------------------
+Test Passed.
+"TestRepeatsCUDA.TestRepeatDim1CUDA" end time: Aug 21 02:49 -03
+"TestRepeatsCUDA.TestRepeatDim1CUDA" time elapsed: 00:00:00
+----------------------------------------------------------
+
+109/116 Testing: Test.Constructor
+109/116 Test: Test.Constructor
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=Test.Constructor" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"Test.Constructor" start time: Aug 21 02:49 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = Test.Constructor
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Test
+[ RUN      ] Test.Constructor
+[       OK ] Test.Constructor (0 ms)
+[----------] 1 test from Test (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Test.Constructor" end time: Aug 21 02:49 -03
+"Test.Constructor" time elapsed: 00:00:00
+----------------------------------------------------------
+
+110/116 Testing: Test.ConstructorAndComparison
+110/116 Test: Test.ConstructorAndComparison
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=Test.ConstructorAndComparison" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"Test.ConstructorAndComparison" start time: Aug 21 02:49 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = Test.ConstructorAndComparison
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Test
+[ RUN      ] Test.ConstructorAndComparison
+[       OK ] Test.ConstructorAndComparison (0 ms)
+[----------] 1 test from Test (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Test.ConstructorAndComparison" end time: Aug 21 02:49 -03
+"Test.ConstructorAndComparison" time elapsed: 00:00:00
+----------------------------------------------------------
+
+111/116 Testing: Test.ConstexprStrides
+111/116 Test: Test.ConstexprStrides
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=Test.ConstexprStrides" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"Test.ConstexprStrides" start time: Aug 21 02:49 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = Test.ConstexprStrides
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Test
+[ RUN      ] Test.ConstexprStrides
+[       OK ] Test.ConstexprStrides (0 ms)
+[----------] 1 test from Test (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Test.ConstexprStrides" end time: Aug 21 02:49 -03
+"Test.ConstexprStrides" time elapsed: 00:00:00
+----------------------------------------------------------
+
+112/116 Testing: TestView.TestSlice
+112/116 Test: TestView.TestSlice
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestView.TestSlice" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestView.TestSlice" start time: Aug 21 02:49 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestView.TestSlice
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestView
+[ RUN      ] TestView.TestSlice
+[       OK ] TestView.TestSlice (0 ms)
+[----------] 1 test from TestView (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TestView.TestSlice" end time: Aug 21 02:49 -03
+"TestView.TestSlice" time elapsed: 00:00:00
+----------------------------------------------------------
+
+113/116 Testing: TestTensor.TestInitializerLists
+113/116 Test: TestTensor.TestInitializerLists
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=TestTensor.TestInitializerLists" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"TestTensor.TestInitializerLists" start time: Aug 21 02:49 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = TestTensor.TestInitializerLists
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestTensor
+[ RUN      ] TestTensor.TestInitializerLists
+Shape(2, 2, 2)
+32
+[       OK ] TestTensor.TestInitializerLists (0 ms)
+[----------] 1 test from TestTensor (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TestTensor.TestInitializerLists" end time: Aug 21 02:49 -03
+"TestTensor.TestInitializerLists" time elapsed: 00:00:00
+----------------------------------------------------------
+
+114/116 Testing: DTypeTest.SizeofValuesAreCorrect
+114/116 Test: DTypeTest.SizeofValuesAreCorrect
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=DTypeTest.SizeofValuesAreCorrect" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"DTypeTest.SizeofValuesAreCorrect" start time: Aug 21 02:49 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = DTypeTest.SizeofValuesAreCorrect
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from DTypeTest
+[ RUN      ] DTypeTest.SizeofValuesAreCorrect
+[       OK ] DTypeTest.SizeofValuesAreCorrect (0 ms)
+[----------] 1 test from DTypeTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"DTypeTest.SizeofValuesAreCorrect" end time: Aug 21 02:49 -03
+"DTypeTest.SizeofValuesAreCorrect" time elapsed: 00:00:00
+----------------------------------------------------------
+
+115/116 Testing: DTypeTest.NameofValuesAreCorrect
+115/116 Test: DTypeTest.NameofValuesAreCorrect
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=DTypeTest.NameofValuesAreCorrect" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"DTypeTest.NameofValuesAreCorrect" start time: Aug 21 02:49 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = DTypeTest.NameofValuesAreCorrect
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from DTypeTest
+[ RUN      ] DTypeTest.NameofValuesAreCorrect
+[       OK ] DTypeTest.NameofValuesAreCorrect (0 ms)
+[----------] 1 test from DTypeTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"DTypeTest.NameofValuesAreCorrect" end time: Aug 21 02:49 -03
+"DTypeTest.NameofValuesAreCorrect" time elapsed: 00:00:00
+----------------------------------------------------------
+
+116/116 Testing: DTypeTest.OstreamOperatorPrintsCorrectly
+116/116 Test: DTypeTest.OstreamOperatorPrintsCorrectly
+Command: "/home/eric/tannic-nn/build/external/tannic/tests" "--gtest_filter=DTypeTest.OstreamOperatorPrintsCorrectly" "--gtest_also_run_disabled_tests"
+Directory: /home/eric/tannic-nn/build/external/tannic
+"DTypeTest.OstreamOperatorPrintsCorrectly" start time: Aug 21 02:49 -03
+Output:
+----------------------------------------------------------
+Running main() from ./googletest/src/gtest_main.cc
+Note: Google Test filter = DTypeTest.OstreamOperatorPrintsCorrectly
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from DTypeTest
+[ RUN      ] DTypeTest.OstreamOperatorPrintsCorrectly
+[       OK ] DTypeTest.OstreamOperatorPrintsCorrectly (0 ms)
+[----------] 1 test from DTypeTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"DTypeTest.OstreamOperatorPrintsCorrectly" end time: Aug 21 02:49 -03
+"DTypeTest.OstreamOperatorPrintsCorrectly" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Aug 21 02:49 -03

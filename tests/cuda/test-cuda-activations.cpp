@@ -5,7 +5,7 @@
 #include <cstring>
 #include <tannic.hpp>
 #include <cuda_runtime.h> 
-#include "Activations.hpp"
+#include "Functional.hpp"
 
 using namespace tannic;
 
@@ -54,4 +54,18 @@ TEST_F(TestCUDAActivations, TestCUDASiLU) {
     };
     compareWithExpected(result, expected);
 } 
+
+TEST_F(TestCUDAActivations, TestCUDAGELU) {
+    Tensor result = nn::gelu(A);
+
+    float expected[6];
+    int idx = 0;
+    for (float x : {-1.0f, 0.0f, 1.0f, -0.5f, 0.5f, 2.0f}) {
+        float c = std::sqrt(2.0f / M_PI);
+        expected[idx++] = 0.5f * x * (1.0f + std::tanh(c * (x + 0.044715f * x * x * x)));
+    }
+
+    compareWithExpected(result, expected);
+}
+
 #endif

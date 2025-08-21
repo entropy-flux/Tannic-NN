@@ -12,5 +12,6 @@ namespace cpu {
 
 status relu(const tensor_t*, tensor_t*);
 status silu(const tensor_t*, tensor_t*); 
+status gelu(const tensor_t*, tensor_t*);
 
 }

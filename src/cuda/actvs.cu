@@ -76,6 +76,14 @@ struct SiLU {
     }
 };
 
+struct GELU {
+    template <class T>
+    __device__ __forceinline__ T operator()(T x) const noexcept {
+        const T c = rsqrt(T(M_PI) / T(2.0)); // sqrt(2/pi)
+        return T(0.5) * x * (T(1) + tanh(c * (x + T(0.044715) * x * x * x)));
+    }
+};
+
 constexpr static inline int index(type type) {
     return static_cast<int>(type);
 }   
@@ -103,6 +111,15 @@ constexpr auto dispatchSiLUKernel = []() {
     table[index(float64)] = launchActvKernel<double, double, SiLU>;
     return table;
 }();
+
+constexpr auto dispatchGELUKernel = []() { 
+    std::array<Kernel, index(TYPES)> table; 
+    table.fill(launchDefaultKernel);
+    table[index(float32)] = launchActvKernel<float, float, GELU>;
+    table[index(float64)] = launchActvKernel<double, double, GELU>;
+    return table;
+}();
+
  
 } namespace cuda {
  
@@ -113,6 +130,9 @@ status relu(const tensor_t* src, tensor_t* dst, stream_t stream) {
 status silu(const tensor_t* src, tensor_t* dst, stream_t stream) { 
     return dispatchSiLUKernel[index(src->dtype)](src, dst, stream); 
 };
-  
+
+status gelu(const tensor_t* src, tensor_t* dst, stream_t stream) { 
+    return dispatchGELUKernel[index(src->dtype)](src, dst, stream); 
+};  
 
 }

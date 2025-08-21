@@ -174,7 +174,7 @@ public:
 
     constexpr auto transpose(int first = -1, int second = -2) const { 
         return Transpose<Parameter>(*this, std::make_pair<int, int>(std::move(first), std::move(second)));
-    }   
+    }    
      
 private:
     type dtype_;

@@ -30,19 +30,49 @@ using tannic::function::Function;
 
 namespace functional  {  
 
+struct ReLU {
+    void operator()(Tensor const&, Tensor&) const;
+};
+
+struct SiLU {
+    void operator()(Tensor const&, Tensor&) const;
+};
+
+struct GELU { 
+    void operator()(Tensor const&, Tensor&) const;
+};
+
 struct Softmax {
     int axis;
     void operator()(Tensor const&, Tensor&) const;
-}; 
+};  
+ 
+template<Expression Aggregation>
+constexpr auto relu(Aggregation&& aggregation) {
+    return Function<ReLU, Aggregation>({}, std::forward<Aggregation>(aggregation));
+} 
+
+template<Expression Aggregation>
+constexpr auto silu(Aggregation&& aggregation) {
+    return Function<SiLU, Aggregation>({}, std::forward<Aggregation>(aggregation));
+} 
+
+template<Expression Aggregation>
+constexpr auto gelu(Aggregation&& aggregation) {
+    return Function<GELU, Aggregation>({}, std::forward<Aggregation>(aggregation));
+} 
 
 template<Expression Aggregation>
 constexpr auto softmax(Aggregation&& aggregation, int axis) {
     return Function<Softmax, Aggregation>({indexing::normalize(axis, aggregation.shape().rank())}, std::forward<Aggregation>(aggregation));
 }  
 
-} // namespace functional
-
-using functional::softmax; 
+} // namespace functional 
+ 
+using functional::relu;
+using functional::silu;
+using functional::gelu; 
+using functional::softmax;  
 
 } // namespace tannic::nn
 
