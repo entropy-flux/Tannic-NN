@@ -21,9 +21,9 @@
 #include <list>
 #include <memory>
 #include <tannic.hpp> 
-#include <tannic/Convolutions.hpp>
-#include "Parameters.hpp"
-#include "Modules.hpp"
+#include <tannic/convolutions.hpp>
+#include "parameters.hpp"
+#include "modules.hpp"
 
 namespace tannic::nn { 
     

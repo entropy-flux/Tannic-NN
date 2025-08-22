@@ -18,11 +18,11 @@
 #ifndef NN_FUNCTIONS_HPP
 #define NN_FUNCTIONS_HPP
  
-#include <tannic/Shape.hpp>
-#include <tannic/Strides.hpp>
-#include <tannic/Tensor.hpp>
-#include <tannic/Concepts.hpp>
-#include <tannic/Functions.hpp>
+#include <tannic/shape.hpp>
+#include <tannic/strides.hpp>
+#include <tannic/tensor.hpp>
+#include <tannic/concepts.hpp>
+#include <tannic/functions.hpp>
 
 namespace tannic::nn {
 

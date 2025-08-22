@@ -3,7 +3,7 @@
 #include <cmath>
 #include <cstring>
 #include <tannic.hpp>
-#include "Functional.hpp"
+#include "functional.hpp"
 
 using namespace tannic; 
  

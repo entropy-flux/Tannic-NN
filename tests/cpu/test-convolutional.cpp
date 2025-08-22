@@ -2,7 +2,7 @@
 #include <vector>
 #include <cmath>
 #include <tannic.hpp>
-#include "Convolutional.hpp"
+#include "convolutional.hpp"
 
 using namespace tannic;
 

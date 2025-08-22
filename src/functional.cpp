@@ -1,9 +1,9 @@
-#include <tannic/Tensor.hpp>
-#include <tannic/Callback.hpp>
+#include <tannic/tensor.hpp>
+#include <tannic/callback.hpp>
 #include <tannic/runtime/tensor.h>
 #include <tannic/runtime/status.h>
 #include <tannic/runtime/streams.h> 
-#include "Functional.hpp"
+#include "functional.hpp"
 
 #include "cpu/actvs.hpp"
 #include "cpu/softmax.hpp"

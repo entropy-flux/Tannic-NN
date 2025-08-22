@@ -1,7 +1,7 @@
 #include <cstring>
-#include <tannic/Callback.hpp>
+#include <tannic/callback.hpp>
 #include <cstring>
-#include "Embeddings.hpp"
+#include "embeddings.hpp"
 
 #include "cpu/emb.hpp"
 #ifdef CUDA

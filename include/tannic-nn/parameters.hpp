@@ -24,8 +24,8 @@
 #include <stdexcept> 
 #include <unordered_map>
 #include <tannic.hpp>  
-#include <tannic/Slices.hpp>
-#include <tannic/Views.hpp>
+#include <tannic/slices.hpp>
+#include <tannic/views.hpp>
   
 namespace tannic::nn {
 

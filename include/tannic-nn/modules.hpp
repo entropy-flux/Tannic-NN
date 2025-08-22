@@ -21,7 +21,8 @@
 #include <list>
 #include <memory>
 #include <tannic.hpp> 
-#include "Parameters.hpp"
+#include <tannic/transformations.hpp> 
+#include "parameters.hpp"
 
 namespace tannic::nn {
 

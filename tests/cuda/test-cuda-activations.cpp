@@ -5,7 +5,7 @@
 #include <cstring>
 #include <tannic.hpp>
 #include <cuda_runtime.h> 
-#include "Functional.hpp"
+#include "functional.hpp"
 
 using namespace tannic;
 

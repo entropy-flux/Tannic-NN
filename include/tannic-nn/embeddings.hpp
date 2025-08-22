@@ -19,9 +19,9 @@
 #define NN_EMBEDDINGS_HPP
 
 #include <tannic.hpp>  
-#include <tannic/Slices.hpp>
-#include "Parameters.hpp"
-#include "Modules.hpp"
+#include <tannic/slices.hpp>
+#include "parameters.hpp"
+#include "modules.hpp"
 
 namespace tannic::nn {
 

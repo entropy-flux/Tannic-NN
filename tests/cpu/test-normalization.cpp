@@ -3,7 +3,7 @@
 #include <cmath>
 #include <cstring>
 #include <tannic.hpp>
-#include "Normalization.hpp"
+#include "normalization.hpp"
 
 using namespace tannic;  
 TEST(TestNormalization, TestRMS) { 

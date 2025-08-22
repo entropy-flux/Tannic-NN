@@ -4,7 +4,7 @@
 #include <cstring>
 #include <tannic.hpp>
 #include <cuda_runtime.h>
-#include "Normalization.hpp"
+#include "normalization.hpp"
 
 using namespace tannic;
  

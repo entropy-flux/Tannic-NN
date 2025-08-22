@@ -1,6 +1,6 @@
 #include <iostream>  
 #include <fstream> 
-#include "Parameters.hpp" 
+#include "parameters.hpp" 
 #ifdef CUDA
 #include "cuda/mem.cuh"
 #else 

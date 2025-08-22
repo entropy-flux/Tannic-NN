@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
-#include "Parameters.hpp"
-#include "Embeddings.hpp"
+#include "parameters.hpp"
+#include "embeddings.hpp"
 
 using namespace tannic;
 

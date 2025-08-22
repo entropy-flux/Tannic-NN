@@ -1,8 +1,8 @@
 #ifdef CUDA
 #include <gtest/gtest.h>
 #include <cuda_runtime.h>
-#include "Tensor.hpp"
-#include "Functional.hpp"
+#include "tensor.hpp"
+#include "functional.hpp"
 
 using namespace tannic;
 

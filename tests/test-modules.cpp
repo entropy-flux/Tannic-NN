@@ -1,6 +1,7 @@
 #include <gtest/gtest.h>
 #include <tannic.hpp>
 #include <tannic-nn.hpp>    
+#include <tannic-nn/functional.hpp>    
  
 using namespace tannic;
 

@@ -4,7 +4,7 @@
 #include <memory>
 #include <tannic.hpp>
 #include <tannic-nn.hpp>  
-#include <tannic-nn/Normalization.hpp>
+#include <tannic-nn/convolutional.hpp>
 
 using namespace tannic;    
  

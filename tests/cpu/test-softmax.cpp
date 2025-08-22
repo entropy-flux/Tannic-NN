@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 #include <cstring>
-#include "Tensor.hpp"
-#include "Functional.hpp"
+#include "tensor.hpp"
+#include "functional.hpp"
 
 using namespace tannic;
 

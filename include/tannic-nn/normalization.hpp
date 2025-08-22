@@ -21,8 +21,10 @@
 #include <list>
 #include <memory>
 #include <tannic.hpp> 
-#include "Parameters.hpp"
-#include "Modules.hpp"
+#include <tannic/functions.hpp>
+#include <tannic/reductions.hpp>
+#include "parameters.hpp"
+#include "modules.hpp"
 
 namespace tannic::nn { 
  
