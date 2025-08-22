@@ -14,6 +14,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
+
 #ifndef NN_PARAMETERS_HPP
 #define NN_PARAMETERS_HPP
   

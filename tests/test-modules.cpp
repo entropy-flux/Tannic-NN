@@ -38,8 +38,8 @@ TEST(TestMLP, TestForward) {
     model.input_layer.weight[4,0] = 1.3f; model.input_layer.weight[4,1] = 1.4f; model.input_layer.weight[4,2] = 1.5f;
 
     // Input layer biases (5)
-    model.input_layer.bias[0] = 0.01f; model.input_layer.bias[1] = 0.02f; model.input_layer.bias[2] = 0.03f;
-    model.input_layer.bias[3] = 0.04f; model.input_layer.bias[4] = 0.05f;
+    model.input_layer.bias.value()[0] = 0.01f; model.input_layer.bias.value()[1] = 0.02f; model.input_layer.bias.value()[2] = 0.03f;
+    model.input_layer.bias.value()[3] = 0.04f; model.input_layer.bias.value()[4] = 0.05f;
 
     // Output layer weights (2x5)
     model.output_layer.weight[0,0] = 0.1f; model.output_layer.weight[0,1] = 0.2f; model.output_layer.weight[0,2] = 0.3f;
@@ -49,7 +49,7 @@ TEST(TestMLP, TestForward) {
     model.output_layer.weight[1,3] = 0.9f; model.output_layer.weight[1,4] = 1.0f;
 
     // Output layer biases (2)
-    model.output_layer.bias[0] = 0.1f; model.output_layer.bias[1] = 0.2f;
+    model.output_layer.bias.value()[0] = 0.1f; model.output_layer.bias.value()[1] = 0.2f;
 
 
     Tensor input(float32, {1,3}); input.initialize();

@@ -54,22 +54,29 @@ private:
 
 struct Linear : Module {
     Parameter weight;
-    Parameter bias;
+    std::optional<Parameter> bias;   
 
-    constexpr Linear(type dtype, size_t input_features, size_t output_features)
-    :   weight(dtype, {output_features ,input_features})
-    ,   bias(dtype, {output_features})
-    {}
-    
-    Tensor forward(Tensor input) const { 
-        return matmul(input, transpose(weight, -1, -2)) + bias; // TODO: Add template specialization for this.
+    constexpr Linear(type dtype, size_t input_features, size_t output_features, bool use_bias = true) 
+    :   weight(dtype, {output_features, input_features}) {
+        if (use_bias) {
+            bias.emplace(dtype, Shape{output_features});
+        }
     }
-
+    
     void initialize(std::string const& name, Parameters& parameters) const {  
         weight.initialize(name + ".weight", parameters);
-        bias.initialize(name + ".bias", parameters);
+        if (bias.has_value()) {
+            bias->initialize(name + ".bias", parameters);
+        }
     }
-};  
+
+    Tensor forward(Tensor input) const {  
+        if (bias.has_value()) 
+            return matmul(input, weight.transpose()) + bias.value();
+        else
+            return matmul(input, weight.transpose());
+    }
+};
 
 } // tannic::nn
 

@@ -15,8 +15,8 @@
 // limitations under the License.
 // 
 
-#ifndef EMBEDDINGS_HPP
-#define EMBEDDINGS_HPP
+#ifndef NN_EMBEDDINGS_HPP
+#define NN_EMBEDDINGS_HPP
 
 #include <tannic.hpp>  
 #include <tannic/Slices.hpp>
