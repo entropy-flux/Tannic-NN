@@ -101,10 +101,10 @@ struct Convolutional<2> : Module {
         bool use_bias
     )
     :   weight(dtype, {output_channels, input_channels, kernel_size, kernel_size}) 
-    ,   strides{stride}
-    ,   padding{padding} {
+    ,   strides{stride, stride}
+    ,   padding{padding, padding} {
         if (use_bias) {
-            bias.emplace(dtype, Shape{output_channels});
+            bias.emplace(dtype, Shape{1,output_channels,1,1});
         }
     } 
 
@@ -126,9 +126,9 @@ struct Convolutional<2> : Module {
     } 
 
     void initialize(std::string const& name, Parameters& parameters) const {
-        weight.initialize(name, parameters);
+        weight.initialize(name + ".weight", parameters);
         if (bias.has_value()) 
-            bias->initialize(name, parameters);
+            bias->initialize(name + ".bias", parameters);
     }
 
     Tensor forward(Tensor input) const {
