@@ -1,4 +1,4 @@
-// Copyright 2025 Eric Cardozo
+// Copyright 2025 Eric Hermosis
 //
 // This file is part of the Tannic Tensor Library.
 //
@@ -36,7 +36,7 @@ public:
 
     void initialize(std::string const& name, Parameters& parameters) const { 
         weight_.initialize(name, parameters);
-        allocator_ = parameters.allocator();
+        environment_ = parameters.environment();
     }
 
     template<class... Indexes>
@@ -85,7 +85,7 @@ public:
 
 private:  
     Parameter weight_; 
-    mutable Allocator allocator_ = Host{};
+    mutable Environment environment_ = Host{};
 };
 
 } // namespace tannic

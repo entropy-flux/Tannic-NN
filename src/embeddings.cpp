@@ -24,14 +24,14 @@ void Embedding::forward(Tensor& result, Tensor const& indexes) const {
 void Embedding::forward(Tensor& result, std::vector<int64_t> const& lookup) const {     
     Tensor weight = weight_.forward();
     Tensor indexes(int64, {lookup.size()});  
-    indexes.initialize(weight.allocator()); 
+    indexes.initialize(weight.environment()); 
 
-    if (std::holds_alternative<Host>(indexes.allocator())) {
+    if (std::holds_alternative<Host>(indexes.environment())) {
         std::memcpy((void*)(indexes.bytes()), (const void*)(lookup.data()), indexes.nbytes());
     }
 
     else {
-        Device const& resource = std::get<Device>(indexes.allocator());
+        Device const& resource = std::get<Device>(indexes.environment());
         device_t dvc{.id = resource.id(), .traits = resource.blocking() ? SYNC : ASYNC}; 
         cuda::nn::copyFromHost(&dvc, (const void*)(lookup.data()),(void*)(indexes.bytes()), indexes.nbytes());
     }

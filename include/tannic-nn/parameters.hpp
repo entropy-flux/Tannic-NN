@@ -1,4 +1,4 @@
-// Copyright 2025 Eric Cardozo
+// Copyright 2025 Eric Hermosis
 //
 // This file is part of the Tannic Neural Networks Library.
 //
@@ -26,6 +26,7 @@
 #include <tannic.hpp>  
 #include <tannic/slices.hpp>
 #include <tannic/views.hpp>
+#include <tannic/serialization.hpp>
   
 namespace tannic::nn {
 
@@ -37,8 +38,8 @@ class Parameter;
 class Parameters {
 public: 
     Parameters() = default; 
-    void initialize(std::size_t nbytes, Allocator allocator = Host{});
-    void initialize(std::string const& filename, Allocator allocator = Host{});
+    void initialize(std::size_t nbytes, Environment environment = Host{});
+    void initialize(std::string const& filename, Environment environment = Host{});
 
     std::unordered_map<std::string, std::ptrdiff_t>& offsets() {
         return offsets_;
@@ -56,8 +57,8 @@ public:
         return offset_;
     }
 
-    Allocator const& allocator() const {
-        return buffer_ -> allocator();
+    Environment const& environment() const {
+        return buffer_ -> environment();
     }
  
 
@@ -180,12 +181,24 @@ public:
 private:
     type dtype_;
     Shape shape_;
-    Strides strides_;
+    Strides strides_; 
     mutable std::ptrdiff_t offset_ = 0;
     mutable std::size_t nbytes_ = 0;
     mutable void* buffer_ptr_ = nullptr;
-}; 
+};  
 
-} // namespace tannic::nn
+} namespace tannic {
+
+#pragma pack(push, 1)
+template<>
+struct Metadata<nn::Parameter> {  
+    uint8_t  dcode;    
+    size_t   offset;  
+    size_t   nbytes;  
+    uint32_t namelength; 
+}; 
+#pragma pack(pop)  
+
+}
 
 #endif // NN_PARAMETERS_HPP

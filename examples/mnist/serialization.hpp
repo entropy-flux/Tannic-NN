@@ -1,56 +1,42 @@
-#pragma once
-#include <unistd.h>
-#include <netinet/in.h>
+// Copyright 2025 Eric Hermosis
+//
+// This file is part of the Tannic Neural Networks Library.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+//
+
+#pragma once 
 #include <stdexcept>
 #include <iostream>
 #include <sstream>
-#include <string>
-#include <cstring>
-#include <vector>
+#include <string> 
 #include <cstdint>
-#include <arpa/inet.h>     
+#include <tannic/tensor.hpp>
+#include <tannic/serialization.hpp>
+#include <tannic-nn/parameters.hpp>
 
-namespace tannic {
-
-constexpr uint32_t magic = 0x43495245;
-
-#pragma pack(push, 1)  
-struct Header {
-    uint32_t magic;      
-    uint8_t  protocol;
-    uint8_t  code;
-    uint16_t checksum;
-    uint64_t nbytes; 
-};
-#pragma pack(pop) 
- 
+namespace tannic {  
+  
 #pragma pack(push, 1)
-struct Metadata {
+template<>
+struct Metadata<nn::Parameter> {  
     uint8_t  dcode;    
     size_t   offset;  
     size_t   nbytes; 
     uint8_t  rank;   
-};
-#pragma pack(pop) 
-
-inline Header headerof(Tensor const& tensor) {
-    return Header{
-        .magic=0x43495245,
-        .protocol=0,
-        .code=1,
-        .checksum=0xABCD,
-        .nbytes=tensor.nbytes() + sizeof(Metadata) + tensor.rank() * sizeof(size_t)
-    };
-}
-
-inline Metadata metadataof(Tensor const& tensor) {
-    return Metadata {
-        .dcode = dcodeof(tensor.dtype()),
-        .offset = static_cast<size_t>(tensor.offset()),
-        .nbytes = tensor.nbytes(),
-        .rank = tensor.rank()
-    };
-}
-
+    uint32_t namelength; 
+}; 
+#pragma pack(pop)  
+ 
 
 } // namespace tannic 
