@@ -1,13 +1,19 @@
 #include <iostream>  
 #include <fstream> 
 #include <tannic/serialization.hpp>
+#include <tannic/runtime/resources.h>
+#include <tannic/runtime/tensor.h>
 #include "parameters.hpp"  
 #ifdef CUDA
 #include "cuda/mem.cuh"
 #else 
 namespace cuda::nn {
-inline void copyFromHost(const device_t*, std::byte const* src, std::byte* dst, size_t size) { throw std::runtime_error("CUDA copyFromHost called without CUDA support"); }
-inline bool compareFromHost(const device_t*, std::byte const* src, std::byte const* dst, size_t size) { throw std::runtime_error("CUDA compareFromHost called without CUDA support"); }
+using tannic::tensor_t;
+using tannic::device_t;
+
+inline void copyFromHost(const device_t*, const void* /*host memory address*/, void* /*device memory address*/, size_t /*number of bytes*/) { throw std::runtime_error("CUDA copyFromHost called without CUDA support"); } 
+inline bool compareFromHost(const device_t*, const void* /*host memory address*/, const void* /*device memory address*/, size_t /*number of bytes*/) { throw std::runtime_error("CUDA compareFromHost called without CUDA support"); }
+
 } // namespace cuda
 #endif
 
@@ -91,7 +97,7 @@ void Parameters::initialize(std::string const& filename, Environment environment
             .traits = resource.blocking() ? SYNC : ASYNC
         };
         std::cout << "[DEBUG] Copying data from host to device id=" << resource.id() << "\n";
-        cuda::nn::copyFromHost(&dvc, buffer.data(), buffer_->address(), header.nbytes);
+        cuda::nn::copyFromHost(&dvc, buffer.data(), buffer_->address(), header.nbytes); 
         std::cout << "[DEBUG] Data copied to device memory.\n";
     } 
     std::cout << "[DEBUG] Parameters::initialize finished successfully.\n"; 

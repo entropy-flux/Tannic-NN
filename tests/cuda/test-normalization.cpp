@@ -1,3 +1,4 @@
+#ifdef CUDA
 #include <gtest/gtest.h>
 #include <vector>
 #include <cmath>
@@ -87,3 +88,4 @@ TEST(TestCUDALayerNorm, TestLayerNorm_CUDA) {
         EXPECT_NEAR(y_data[i], expected[i], 1e-4);
     }
 }
+#endif

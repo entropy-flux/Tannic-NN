@@ -9,8 +9,8 @@
 #include "cuda/mem.cuh"
 #else   
 namespace cuda::nn {
-status embed(const tensor_t*, const tensor_t*, tensor_t*, stream_t)  { throw std::runtime_error("CUDA not available"); }
-inline void copyFromHost(const device_t*, std::byte const* src, std::byte* dst, size_t size) { throw std::runtime_error("CUDA copyFromHost called without CUDA support"); } 
+inline status embed(const tensor_t*, const tensor_t*, tensor_t*, stream_t)  { throw std::runtime_error("CUDA not available"); } 
+inline void copyFromHost(const device_t*, const void* /*host memory address*/, void* /*device memory address*/, size_t /*number of bytes*/) { throw std::runtime_error("CUDA copyFromHost called without CUDA support"); } 
 } // namespace cuda
 #endif
 
@@ -33,7 +33,7 @@ void Embedding::forward(Tensor& result, std::vector<int64_t> const& lookup) cons
     else {
         Device const& resource = std::get<Device>(indexes.environment());
         device_t dvc{.id = resource.id(), .traits = resource.blocking() ? SYNC : ASYNC}; 
-        cuda::nn::copyFromHost(&dvc, (const void*)(lookup.data()),(void*)(indexes.bytes()), indexes.nbytes());
+        cuda::nn::copyFromHost(&dvc, static_cast<const void*>(lookup.data()), static_cast<void*>(indexes.bytes()), indexes.nbytes()); 
     }
 
     Callback callback(cpu::nn::embed, cuda::nn::embed);

@@ -1,3 +1,4 @@
+#ifdef CUDA
 #include <gtest/gtest.h>
 #include "parameters.hpp"
 #include "embeddings.hpp"
@@ -52,3 +53,5 @@ TEST(EmbeddingCUDATest, TestCUDAEmbeddings) {
     ASSERT_EQ((X[1,2] == 7),true);
     ASSERT_EQ((X[1,3] == 8),true); 
 }
+
+#endif

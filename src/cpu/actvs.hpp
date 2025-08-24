@@ -8,7 +8,7 @@
 
 using namespace tannic;
 
-namespace cpu {
+namespace cpu::nn {
 
 status relu(const tensor_t*, tensor_t*);
 status silu(const tensor_t*, tensor_t*); 

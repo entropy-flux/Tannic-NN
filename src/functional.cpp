@@ -24,17 +24,17 @@ inline status softmax(const tensor_t*, tensor_t*, stream_t, uint8_t) { throw std
 namespace tannic::nn::functional {  
 
 void ReLU::operator()(Tensor const& input, Tensor& output) const {  
-    Callback callback(cpu::relu, cuda::relu);
+    Callback callback(cpu::nn::relu, cuda::nn::relu);
     callback(input, output);
 }
 
 void SiLU::operator()(Tensor const& input, Tensor& output) const {  
-    Callback callback(cpu::silu, cuda::silu);
+    Callback callback(cpu::nn::silu, cuda::nn::silu);
     callback(input, output);
 }
 
 void GELU::operator()(Tensor const& input, Tensor& output) const {  
-    Callback callback(cpu::gelu, cuda::gelu);
+    Callback callback(cpu::nn::gelu, cuda::nn::gelu);
     callback(input, output);
 }
 

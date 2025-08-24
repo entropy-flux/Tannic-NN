@@ -121,7 +121,7 @@ constexpr auto dispatchGELUKernel = []() {
 }();
 
 
-} namespace cpu {
+} namespace cpu::nn {
  
 status relu(const tensor_t* src, tensor_t* dst) {    
     return dispatchReLUKernel[index(src->dtype)](src, dst);
