@@ -97,14 +97,14 @@ struct Convolutional<2> : Module {
         size_t output_channels, 
         size_t kernel_size, 
         size_t stride, 
-        size_t padding, 
-        bool use_bias
+        size_t padding = 0, 
+        bool use_bias = true
     )
     :   weight(dtype, {output_channels, input_channels, kernel_size, kernel_size}) 
     ,   strides{stride, stride}
     ,   padding{padding, padding} {
         if (use_bias) {
-            bias.emplace(dtype, Shape{1,output_channels,1,1});
+            bias.emplace(dtype, Shape{1, output_channels, 1, 1});
         }
     } 
 
@@ -121,7 +121,7 @@ struct Convolutional<2> : Module {
     ,   strides(strides)
     ,   padding(padding) {
         if (use_bias) {
-            bias.emplace(dtype, Shape{output_channels});
+            bias.emplace(dtype, Shape{1, output_channels, 1, 1});
         }
     } 
 

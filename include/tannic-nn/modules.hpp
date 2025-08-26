@@ -19,6 +19,7 @@
 #define NN_MODULE_HPP
  
 #include <list>
+#include <array>
 #include <memory>
 #include <tannic.hpp> 
 #include <tannic/transformations.hpp> 
@@ -32,7 +33,7 @@ struct Module {
         return std::forward<Self>(self).forward(std::forward<Operands>(operands)...);
     }
 }; 
-  
+
 template <class Module>
 class List { 
 public:
@@ -49,9 +50,34 @@ public:
         modules_.push_back(module);
     }
  
+    auto begin() noexcept {
+        return modules_.begin();
+    }
+
+    auto end() noexcept {
+        return modules_.end();
+    }
+ 
+    auto begin() const noexcept {
+        return modules_.begin();
+    }
+
+    auto end() const noexcept {
+        return modules_.end();
+    }
+ 
+    auto cbegin() const noexcept {
+        return modules_.cbegin();
+    }
+
+    auto cend() const noexcept {
+        return modules_.cend();
+    }
+
 private:
     std::list<Module> modules_{};
-};   
+};
+ 
 
 struct Linear : Module {
     Parameter weight;

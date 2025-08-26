@@ -43,11 +43,27 @@ file(GLOB_RECURSE SRC_FILES
     src/cuda/*.cu
 )
  
-find_package(OpenBLAS QUIET)
-if(OpenBLAS_FOUND)
+# Robust OpenBLAS detection
+find_path(OPENBLAS_INCLUDE_DIR
+    NAMES cblas.h
+    PATHS /usr/include /usr/local/include /opt/openblas/include
+    DOC "OpenBLAS include directory"
+)
+
+find_library(OPENBLAS_LIBRARY
+    NAMES openblas openblas64
+    PATHS /usr/lib /usr/lib64 /usr/local/lib /opt/openblas/lib
+    DOC "OpenBLAS library"
+)
+
+if(OPENBLAS_INCLUDE_DIR AND OPENBLAS_LIBRARY AND EXISTS "${OPENBLAS_INCLUDE_DIR}/cblas.h")
+    set(OpenBLAS_FOUND TRUE)
+    set(OpenBLAS_INCLUDE_DIRS ${OPENBLAS_INCLUDE_DIR})
+    set(OpenBLAS_LIBRARIES ${OPENBLAS_LIBRARY})
     message(STATUS "Found OpenBLAS: ${OpenBLAS_INCLUDE_DIRS}")
-    add_definitions(-DOPENBLAS)
-    include_directories(${OpenBLAS_INCLUDE_DIRS})
+else()
+    message(STATUS "OpenBLAS not found, continuing without it.")
+    set(OpenBLAS_FOUND FALSE)
 endif()
  
 add_library(tannic-nn STATIC ${SRC_FILES})
@@ -69,6 +85,7 @@ if(CUDA_ENABLED)
 endif()
  
 if(OpenBLAS_FOUND)
+    target_include_directories(tannic-nn PUBLIC ${OpenBLAS_INCLUDE_DIRS})
     target_link_libraries(tannic-nn PUBLIC ${OpenBLAS_LIBRARIES})
     target_compile_definitions(tannic-nn PUBLIC BLAS)
 endif()
