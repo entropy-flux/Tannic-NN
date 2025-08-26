@@ -7,7 +7,7 @@
 using namespace tannic;
 
 TEST(TestConvolutional, ForwardNoBias) { 
-    nn::Convolutional<2> conv(float32, 1, 1, {2,2}, {1,1}, {0,0}, false);
+    nn::Convolutional2D conv(float32, 1, 1, {2,2}, {1,1}, {0,0}, false);
     nn::Parameters parameters;
     parameters.initialize(dsizeof(float32) * 100);
     conv.initialize("conv2d_no_bias", parameters);
@@ -40,7 +40,7 @@ TEST(TestConvolutional, ForwardNoBias) {
 }
 
 TEST(TestConvolutional, ForwardWithBias) { 
-    nn::Convolutional<2> conv(float32, 1, 1, {2,2}, {1,1}, {0,0}, true);
+    nn::Convolutional2D conv(float32, 1, 1, {2,2}, {1,1}, {0,0}, true);
     nn::Parameters parameters;
     parameters.initialize(dsizeof(float32) * 100);
     conv.initialize("conv2d_bias", parameters);

@@ -26,17 +26,14 @@
 #include "modules.hpp"
 
 namespace tannic::nn { 
-    
-template<auto Dimension> struct Convolutional; 
-
-template<>
-struct Convolutional<1> : Module {
+     
+struct Convolutional1D : Module {
     nn::Parameter weight;
     std::optional<nn::Parameter> bias;
     std::size_t stride;
     std::size_t padding;
      
-    constexpr Convolutional(
+    constexpr Convolutional1D(
         type dtype, 
         size_t input_channels, 
         size_t output_channels, 
@@ -53,7 +50,7 @@ struct Convolutional<1> : Module {
         }
     }
  
-    constexpr Convolutional(
+    constexpr Convolutional1D(
         type dtype, 
         size_t input_channels,
         size_t output_channels,
@@ -78,20 +75,19 @@ struct Convolutional<1> : Module {
 
     Tensor forward(Tensor input) const {
         if (bias.has_value()) 
-            return convolve<1>(input, weight, stride, padding) + bias.value();
+            return convolve1D(input, weight, stride, padding) + bias.value();
         else 
-            return convolve<1>(input, weight, stride, padding);
+            return convolve1D(input, weight, stride, padding);
     }
 }; 
-
-template<>
-struct Convolutional<2> : Module {
+ 
+struct Convolutional2D: Module {
     nn::Parameter weight;
     std::optional<nn::Parameter> bias;
     std::array<std::size_t, 2> strides;
     std::array<std::size_t, 2> padding;
     
-    constexpr Convolutional(
+    constexpr Convolutional2D(
         type dtype, 
         size_t input_channels, 
         size_t output_channels, 
@@ -108,7 +104,7 @@ struct Convolutional<2> : Module {
         }
     } 
 
-    constexpr Convolutional(
+    constexpr Convolutional2D(
         type dtype, 
         size_t input_channels,
         size_t output_channels,
@@ -133,9 +129,9 @@ struct Convolutional<2> : Module {
 
     Tensor forward(Tensor input) const {
         if (bias.has_value()) 
-            return convolve<2>(input, weight, strides, padding) + bias.value();
+            return convolve2D(input, weight, strides, padding) + bias.value();
         else 
-            return convolve<2>(input, weight, strides, padding);
+            return convolve2D(input, weight, strides, padding);
             
     }
 };
