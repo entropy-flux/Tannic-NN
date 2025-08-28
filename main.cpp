@@ -182,7 +182,7 @@ struct Transformer : nn::Module {
 struct Patcher : nn::Module {
     size_t image_size;
     size_t patch_size;
-    nn::Convolutional<2> projection;
+    nn::Convolutional2D projection;
     
     constexpr Patcher(type dtype, size_t image_size, size_t patch_size, size_t input_channels, size_t model_dimension)
     :   image_size(image_size)

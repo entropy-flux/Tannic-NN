@@ -86,7 +86,7 @@ struct Linear : Module {
     constexpr Linear(type dtype, size_t input_features, size_t output_features, bool use_bias = true) 
     :   weight(dtype, {output_features, input_features}) {
         if (use_bias) {
-            bias.emplace(dtype, Shape{1, output_features});
+            bias.emplace(dtype, Shape{output_features});
         }
     }
     
