@@ -63,7 +63,7 @@ struct Convolutional1D : Module {
     ,   stride(stride)
     ,   padding(padding) {
         if (use_bias) {
-            bias.emplace(dtype, Shape{output_channels});
+            bias.emplace(dtype, Shape{1, output_channels, 1});
         }
     }
 
@@ -100,7 +100,7 @@ struct Convolutional2D: Module {
     ,   strides{stride, stride}
     ,   padding{padding, padding} {
         if (use_bias) {
-            bias.emplace(dtype, Shape{output_channels});
+            bias.emplace(dtype, Shape{1, output_channels, 1, 1});
         }
     } 
 
@@ -117,7 +117,7 @@ struct Convolutional2D: Module {
     ,   strides(strides)
     ,   padding(padding) {
         if (use_bias) {
-            bias.emplace(dtype, Shape{output_channels});
+            bias.emplace(dtype, Shape{1, output_channels, 1, 1});
         }
     } 
 
