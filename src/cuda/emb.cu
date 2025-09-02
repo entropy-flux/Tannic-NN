@@ -1,5 +1,6 @@
-#include <cuda_runtime.h>
 #include "emb.cuh"
+#include <cuda_runtime.h>
+#include <cuda_fp16.h> 
 
 namespace {
 
@@ -66,6 +67,7 @@ status embed(const tensor_t* src_indices, const tensor_t* embedding_matrix, tens
         return UNSUPPORTED_DTYPE; 
     }
     switch (embedding_matrix->dtype) {
+        case float16: return launchEmbeddingKernel<__half> (src_indices, embedding_matrix, dst, stream);
         case float32: return launchEmbeddingKernel<float> (src_indices, embedding_matrix, dst, stream);
         case float64: return launchEmbeddingKernel<double>(src_indices, embedding_matrix, dst, stream);
         default:

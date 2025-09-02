@@ -3,6 +3,18 @@
 #include <vector>
 #include <array> 
 #include "cpu/actvs.hpp" 
+#ifndef HAS_FLOAT16
+    #if defined(__STDCPP_FLOAT16_T__) && __STDCPP_FLOAT16_T__
+        #include <stdfloat>
+        using half = std::float16_t;
+        #define HAS_FLOAT16 1
+    #else 
+        #define HAS_FLOAT16 0 
+        struct half_placeholder { float value; };
+        using half = half_placeholder;
+    #endif
+#endif
+
 
 namespace {
 
@@ -62,26 +74,27 @@ status launchActvKernel(const tensor_t* src, tensor_t* dst, Args... args) {
     return SUCCESS;
 }        
   
-struct ReLU { 
+
+struct ReLU {
     template<class A>
-    auto operator()(A&& a) const noexcept {
+    auto operator()(A a) const noexcept {
         return std::max<A>(0, a);
-    }
+    } 
 };
 
 struct SiLU {
     template<class A>
-    auto operator()(A&& x) const noexcept {
+    auto operator()(A x) const noexcept {
         return x / (1 + std::exp(-x));
     } 
 };
 
 struct GELU {
     template<class A>
-    auto operator()(A&& x) const noexcept {
+    auto operator()(A x) const noexcept {
         const double c = std::sqrt(2.0 / M_PI);
         return static_cast<A>(0.5 * x * (1.0 + std::tanh(c * (x + 0.044715 * x * x * x))));
-    }
+    } 
 };
 
 constexpr static inline int index(type type) {
@@ -100,6 +113,9 @@ constexpr auto dispatchReLUKernel = []() {
     table[index(int16)]   = launchActvKernel<int16_t, int16_t, ReLU>;
     table[index(int32)]   = launchActvKernel<int32_t, int32_t, ReLU>;
     table[index(int64)]   = launchActvKernel<int64_t, int64_t, ReLU>; 
+#ifdef HAS_FLOAT16 
+    table[index(float16)] = launchActvKernel<half, float, ReLU>;
+#endif
     table[index(float32)] = launchActvKernel<float, float, ReLU>;
     table[index(float64)] = launchActvKernel<double, double, ReLU>;
     return table;
@@ -107,6 +123,9 @@ constexpr auto dispatchReLUKernel = []() {
 
 constexpr auto dispatchSiLUKernel = []() { 
     std::array<Kernel, index(TYPES)> table; table.fill(launchDefaultKernel);
+#ifdef HAS_FLOAT16 
+    table[index(float16)] = launchActvKernel<half, float, SiLU>;
+#endif
     table[index(float32)] = launchActvKernel<float, float, SiLU>;
     table[index(float64)] = launchActvKernel<double, double, SiLU>;
     return table;
@@ -115,6 +134,9 @@ constexpr auto dispatchSiLUKernel = []() {
 constexpr auto dispatchGELUKernel = []() { 
     std::array<Kernel, index(TYPES)> table; 
     table.fill(launchDefaultKernel);
+#ifdef HAS_FLOAT16 
+    table[index(float32)] = launchActvKernel<float, float, GELU>; 
+#endif
     table[index(float32)] = launchActvKernel<float, float, GELU>;
     table[index(float64)] = launchActvKernel<double, double, GELU>;
     return table;

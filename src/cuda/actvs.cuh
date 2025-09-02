@@ -9,7 +9,7 @@
 
 using namespace tannic;
 
-namespace cuda {
+namespace cuda::nn {
 
 status relu(const tensor_t*, tensor_t*, stream_t);
 status silu(const tensor_t*, tensor_t*, stream_t); 

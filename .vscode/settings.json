@@ -113,6 +113,7 @@
         "target": "cpp",
         "__availability": "cpp",
         "coroutine": "cpp",
-        "expected": "cpp"
+        "expected": "cpp",
+        "stdfloat": "cpp"
     }
 }
