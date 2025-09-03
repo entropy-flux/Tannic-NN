@@ -13,22 +13,32 @@
         struct half_placeholder { float value; };
         using half = half_placeholder;
     #endif
-#endif
-
+#endif 
 
 namespace {
 
 template<typename S, typename D, class Actv>
-void scalarActvKernel(
+void singletonActvKernel(
     const S* src_ptr, D* dst_ptr, Actv fn
 ) {
     *dst_ptr = fn(*src_ptr);
 }    
 
+
 template<typename S, typename D, class Actv>
-void batchedActvKernel( 
+void contiguousActvKernel(
+    const S* src_ptr, D* dst_ptr, size_t ne, Actv fn
+) {
+    for (size_t i = 0; i < ne; ++i) {
+        dst_ptr[i] = static_cast<D>(fn(src_ptr[i]));
+    }
+} 
+
+
+template<typename S, typename D, class Actv>
+void stridedActvKernel( 
     const S* src_ptr, const shape_t& src_shape, const strides_t& src_strides,           
-    D* dst_ptr, const shape_t& dst_shape, const strides_t& dst_strides, 
+    D* dst_ptr, const shape_t& dst_shape, 
     uint8_t rank, size_t ne, Actv fn
 ) {  
     size_t cnt[8] = {0};
@@ -52,26 +62,45 @@ template<typename S, typename D, class Actv, class ... Args>
 status launchActvKernel(const tensor_t* src, tensor_t* dst, Args... args) {
     Actv fn(std::forward<Args>(args)...);
 
-    if (src->rank == 0) {
-        scalarActvKernel<S, D, Actv>(
+    if (src->layout == SINGLETON) {
+        singletonActvKernel<S, D, Actv>(
             (const S*)(src->address), 
             (D*)(dst->address), fn
         ); 
-    } 
-    
-    else {    
-        size_t ne = 1;
-        for (uint8_t dim = 0; dim < src->rank; ++dim) {
-            ne *= dst->shape.sizes[dim];
-        }
+        return SUCCESS;
+    }  
 
-        batchedActvKernel<S, D, Actv>(
-            (const S*)(src->address), src->shape, src->strides,
-            (D*)(dst->address), dst->shape, dst->strides,
-            src->rank, ne, fn
+    else if (src->layout == CONTIGUOUS) { 
+        size_t ne = dst->size;
+        contiguousActvKernel<S, D, Actv>(
+            (const S*)(src->address),
+            (D*)(dst->address),
+            ne,
+            fn
         ); 
+        return SUCCESS;
     } 
-    return SUCCESS;
+
+    else {
+        size_t ne = dst->size;
+        shape_t src_shape; 
+        strides_t src_strides; 
+        shape_t dst_shape;
+
+        for (int dim = 0; dim < src->rank; ++dim) {
+            src_shape.sizes[dim] = dst->shape.sizes[dim];
+            src_strides.sizes[dim] = src->strides.sizes[dim];
+            dst_shape.sizes[dim] = dst->shape.sizes[dim];
+        } 
+        
+        stridedActvKernel<S, D, Actv>(
+            (const S*)(src->address), src_shape, src_strides,
+            (D*)(dst->address), dst_shape, 
+            src->rank, ne,
+            fn
+        );
+        return SUCCESS;
+    }   
 }        
   
 

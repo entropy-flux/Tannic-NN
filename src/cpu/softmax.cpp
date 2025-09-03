@@ -151,9 +151,7 @@ status launchSoftmax(const tensor_t* src, tensor_t* dst, uint8_t dim) {
     return SUCCESS;
 }
 
-} // anonymous namespace
-
-namespace cpu::nn {
+} namespace cpu::nn {
 
 status softmax(const tensor_t* src, tensor_t* dst, uint8_t dim) {
     switch (src->dtype) { 

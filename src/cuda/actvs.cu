@@ -49,48 +49,43 @@ status launchActvKernel(const tensor_t* src, tensor_t* dst, stream_t stream, Arg
 
     size_t ne = dst->size; 
     size_t blockSize = 256;
-    size_t gridSize = (ne + blockSize - 1) / blockSize;
+    size_t gridSize = (ne + blockSize - 1) / blockSize; 
 
-    switch (src->layout) {
-        case SINGLETON: {
-            singletonActvKernel<S, D, Op><<<1, 1, 0, cudaStream>>>(
-                (const S*)(src->address),
-                (D*)(dst->address),
-                op
-            ); 
-            return SUCCESS;
-        }
+    if (src->layout == SINGLETON) {
+        singletonActvKernel<S, D, Op><<<1, 1, 0, cudaStream>>>(
+            (const S*)(src->address),
+            (D*)(dst->address),
+            op
+        ); 
+        return SUCCESS;
+    }
 
-        case CONTIGUOUS: {
-            contiguousActvKernel<S, D, Op><<<gridSize, blockSize, 0, cudaStream>>>(
-                (const S*)(src->address),
-                (D*)(dst->address),
-                ne,
-                op
-            );
-            return SUCCESS;
-        }
-
-        case STRIDED: {  
-            strides_t strides{0};
-            shape_t resets{0};
-            for (int dim = 0; dim < src->rank; ++dim) {
-                resets.sizes[dim] = dst->shape.sizes[dim] * src->strides.sizes[dim];
-                strides.sizes[dim] = src->strides.sizes[dim];
-            } 
-            
-            stridedActvKernel<S, D, Op><<<gridSize, blockSize, 0, cudaStream>>>(
-                (const S*)(src->address), strides,
-                (D*)(dst->address), resets,
-                src->rank, ne,
-                op
-            );
-            return SUCCESS;
-        }
-
-        default:
-            return ERROR;
-    } 
+    else if (src->layout == CONTIGUOUS) {
+        contiguousActvKernel<S, D, Op><<<gridSize, blockSize, 0, cudaStream>>>(
+            (const S*)(src->address),
+            (D*)(dst->address),
+            ne,
+            op
+        );
+        return SUCCESS;
+    }
+    
+    else {
+        strides_t strides{0};
+        shape_t resets{0};
+        for (int dim = 0; dim < src->rank; ++dim) {
+            resets.sizes[dim] = dst->shape.sizes[dim] * src->strides.sizes[dim];
+            strides.sizes[dim] = src->strides.sizes[dim];
+        } 
+        
+        stridedActvKernel<S, D, Op><<<gridSize, blockSize, 0, cudaStream>>>(
+            (const S*)(src->address), strides,
+            (D*)(dst->address), resets,
+            src->rank, ne,
+            op
+        );
+        return SUCCESS;
+    }
 }    
 
 struct ReLU {
