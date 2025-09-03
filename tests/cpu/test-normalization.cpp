@@ -2,8 +2,64 @@
 #include <vector>
 #include <cmath>
 #include <cstring>
-#include <tannic.hpp>
-#include "normalization.hpp"
+#include <tannic.hpp> 
+#include "parameters.hpp"
+#include "modules.hpp"
+
+namespace tannic::nn { 
+    
+struct RMS : public Module { 
+    Parameter weight;
+    float epsilon;
+
+    constexpr RMS(type dtype, size_t dimension, float epsilon) 
+    :   weight(dtype, {dimension}) 
+    ,   epsilon(epsilon){}  
+
+    Tensor forward(Tensor const& input) const { 
+        auto norm = input * rsqrt(mean(input*input, -1, true), epsilon);
+        return weight * norm;
+    }
+
+    void initialize(std::string const& name, Parameters& parameters) const {
+        weight.initialize(name, parameters);
+    }
+}; 
+
+struct LayerNorm : public Module {
+    Parameter weight;
+    Parameter bias;
+    float epsilon;
+    Shape shape; 
+ 
+    constexpr LayerNorm(type dtype, Shape shape, float epsilon = 1e-5f)
+    :   weight(dtype, shape)
+    ,   bias(dtype, shape)
+    ,   epsilon(epsilon)
+    ,   shape(shape) { 
+    }
+
+    constexpr LayerNorm(type dtype, size_t dimension, float epsilon = 1e-5f)
+    :   LayerNorm(dtype, Shape(dimension), epsilon) { 
+    } 
+
+    Tensor forward(Tensor const& input) const { 
+        auto mu = mean(input, -shape.rank(), true); 
+        auto centered = input - mu;           
+        auto squared = centered * centered;  
+        auto variance = mean(squared, -shape.rank(), true);  
+        auto normalized = centered * rsqrt(variance, epsilon);    
+        return normalized * weight + bias; 
+    }
+
+    void initialize(std::string const& name, Parameters& parameters) const {
+        weight.initialize(name + ".weight", parameters);
+        bias.initialize(name + ".bias", parameters);
+    }
+};
+
+}
+
 
 using namespace tannic;  
 TEST(TestNormalization, TestRMS) { 
