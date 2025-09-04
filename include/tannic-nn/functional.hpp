@@ -47,22 +47,22 @@ struct Softmax {
     void operator()(Tensor const&, Tensor&) const;
 };  
  
-template<Expression Aggregation>
+template<Composable Aggregation>
 constexpr auto relu(Aggregation&& aggregation) {
     return Function<ReLU, Aggregation>({}, std::forward<Aggregation>(aggregation));
 } 
 
-template<Expression Aggregation>
+template<Composable Aggregation>
 constexpr auto silu(Aggregation&& aggregation) {
     return Function<SiLU, Aggregation>({}, std::forward<Aggregation>(aggregation));
 } 
 
-template<Expression Aggregation>
+template<Composable Aggregation>
 constexpr auto gelu(Aggregation&& aggregation) {
     return Function<GELU, Aggregation>({}, std::forward<Aggregation>(aggregation));
 } 
 
-template<Expression Aggregation>
+template<Composable Aggregation>
 constexpr auto softmax(Aggregation&& aggregation, int axis) {
     return Function<Softmax, Aggregation>({indexing::normalize(axis, aggregation.shape().rank())}, std::forward<Aggregation>(aggregation));
 }  

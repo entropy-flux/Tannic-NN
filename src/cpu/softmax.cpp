@@ -9,14 +9,13 @@
 #ifndef HAS_FLOAT16
     #if defined(__STDCPP_FLOAT16_T__) && __STDCPP_FLOAT16_T__
         #include <stdfloat>
-        using half = std::float16_t;
+        using half  = std::float16_t;
+        using bhalf = std::bfloat16_t;
         #define HAS_FLOAT16 1
     #else 
         #define HAS_FLOAT16 0 
-        struct half_placeholder { float value; };
-        using half = half_placeholder;
     #endif
-#endif
+#endif 
 
 namespace {
  
@@ -156,7 +155,8 @@ status launchSoftmax(const tensor_t* src, tensor_t* dst, uint8_t dim) {
 status softmax(const tensor_t* src, tensor_t* dst, uint8_t dim) {
     switch (src->dtype) { 
 #ifdef HAS_FLOAT16 
-        case float16: return launchSoftmax<half, half> (src, dst, dim);
+        case float16:  return launchSoftmax<half, half> (src, dst, dim);
+        case bfloat16: return launchSoftmax<bhalf, bhalf> (src, dst, dim);
 #endif
         case float32: return launchSoftmax<float, float>(src, dst, dim);
         case float64: return launchSoftmax<double, double>(src, dst, dim);

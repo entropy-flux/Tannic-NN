@@ -3,13 +3,13 @@
     #if defined(__STDCPP_FLOAT16_T__) && __STDCPP_FLOAT16_T__
         #include <stdfloat>
         using half = std::float16_t;
+        using bhalf = std::bfloat16_t;
         #define HAS_FLOAT16 1
     #else 
         #define HAS_FLOAT16 0 
-        struct half_placeholder { float value; };
-        using half = half_placeholder;
     #endif
-#endif
+#endif 
+
 
 namespace {
 
@@ -64,7 +64,8 @@ status embed(const tensor_t* src_indices, const tensor_t* embedding_matrix, tens
     }
     switch (embedding_matrix->dtype) {
 #ifdef HAS_FLOAT16 
-        case float16: return launchEmbeddingKernel<half> (src_indices, embedding_matrix, dst);
+        case float16 : return launchEmbeddingKernel<half>  (src_indices, embedding_matrix, dst);
+        case bfloat16: return launchEmbeddingKernel<bhalf> (src_indices, embedding_matrix, dst);
 #endif
         case float32: return launchEmbeddingKernel<float> (src_indices, embedding_matrix, dst);
         case float64: return launchEmbeddingKernel<double>(src_indices, embedding_matrix, dst);
