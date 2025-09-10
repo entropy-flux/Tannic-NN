@@ -26,7 +26,8 @@ TEST(EmbeddingTest, TestEmbeddings) {
     W[3,2] = 7; 
     W[3,3] = 8;  
 
-    Tensor X = W(0, 3);
+    Tensor tokens(int64, {2}); tokens.initialize({0,3});
+    Tensor X = W(tokens);
 
     ASSERT_EQ(X.shape(), Shape(2,4));
     ASSERT_EQ((X[0,0] == 1),true);
@@ -52,3 +53,15 @@ TEST(EmbeddingTest, TestEmbeddings) {
     ASSERT_EQ((X[1,2] == 7),true);
     ASSERT_EQ((X[1,3] == 8),true); 
 }
+
+/*
+TEST(EmbeddingsTests, TestEmbeddings) {
+    nn::Parameters parameters; parameters.initialize("../data/dev-embd");
+    nn::Embedding embeddings(float32, 128, 64);
+
+    Tensor tokens(int64, {2, 6}); tokens.initialize({
+        {19, 51, 25, 88, 115, 83},
+        {55, 69, 126, 70, 99, 61}
+    });  
+}
+    */

@@ -34,22 +34,38 @@ public:
     :   weight_(dtype, Shape(lenght, dimension)) 
     {}
 
-    void initialize(std::string const& name, Parameters& parameters) const { 
-        weight_.initialize(name, parameters);
+    void initialize(Parameters& parameters) const { 
+        weight_.initialize("weight", parameters);
         environment_ = parameters.environment();
-    }
+    } 
 
-    template<class... Indexes>
-    Tensor forward(Indexes... indexes) const {     
-        std::vector<int64_t> lookup{ static_cast<int64_t>(indexes)... }; 
-        Tensor result(dtype(), Shape(sizeof...(indexes), weight_.shape().back())); 
-        forward(result, lookup);
-        return result;
-    }
 
-    Tensor forward(Tensor const& indexes) const { 
-        assert(indexes.rank() == 1 && "Indexes should be a vector"); 
-        Tensor result(dtype(), Shape(indexes.shape().front(), weight_.shape().back())); 
+    void initialize(std::string const& name, Parameters& parameters) const { 
+        weight_.initialize(name + ".weight", parameters);
+        environment_ = parameters.environment();
+    } 
+
+    /*
+    
+    Tensor forward(Tensor const& indexes) const {
+    // Allow any rank >= 0
+    auto input_shape = indexes.shape();
+    
+    // Compute the output shape: append embedding dimension
+    std::vector<int64_t> output_shape(input_shape.begin(), input_shape.end());
+    output_shape.push_back(weight_.shape().back());
+
+    Tensor result(dtype(), Shape(output_shape));
+    forward(result, indexes);  // Use your existing helper
+    return result;
+}
+
+    
+    */
+
+    Tensor forward(Tensor const& indexes) const {  
+        Shape shape(indexes.shape().begin(), indexes.shape().end());  shape.expand(weight_.shape().back());
+        Tensor result(dtype(), shape); 
         forward(result, indexes);
         return result;
     }

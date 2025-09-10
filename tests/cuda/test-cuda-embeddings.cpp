@@ -25,9 +25,10 @@ TEST(EmbeddingCUDATest, TestCUDAEmbeddings) {
     W[3,0] = 5;
     W[3,1] = 6; 
     W[3,2] = 7; 
-    W[3,3] = 8;  
+    W[3,3] = 8;   
 
-    Tensor X = W(0, 3);
+    Tensor tokens(int64, {2}); tokens.initialize({0,3}, Device());
+    Tensor X = W(tokens);
 
     ASSERT_EQ(X.shape(), Shape(2,4));
     ASSERT_EQ((X[0,0] == 1),true);
