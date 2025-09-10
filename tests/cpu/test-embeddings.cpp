@@ -52,16 +52,4 @@ TEST(EmbeddingTest, TestEmbeddings) {
     ASSERT_EQ((X[1,1] == 6),true);
     ASSERT_EQ((X[1,2] == 7),true);
     ASSERT_EQ((X[1,3] == 8),true); 
-}
-
-/*
-TEST(EmbeddingsTests, TestEmbeddings) {
-    nn::Parameters parameters; parameters.initialize("../data/dev-embd");
-    nn::Embedding embeddings(float32, 128, 64);
-
-    Tensor tokens(int64, {2, 6}); tokens.initialize({
-        {19, 51, 25, 88, 115, 83},
-        {55, 69, 126, 70, 99, 61}
-    });  
-}
-    */
+} 
