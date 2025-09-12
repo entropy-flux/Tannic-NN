@@ -109,28 +109,24 @@ file(GLOB_RECURSE TEST_FILES tests/*.cpp)
 
 if(TEST_FILES)
     enable_testing()
-    add_executable(tannic-nn-tests ${TEST_FILES})
-    target_include_directories(tannic-nn-tests PRIVATE 
-        include
-        "${CMAKE_SOURCE_DIR}/external/tannic/include"
-        "${CMAKE_SOURCE_DIR}/external/tannic/include/tannic"
-    )
-    target_link_libraries(tannic-nn-tests PRIVATE tannic-nn)
 
-    if(CUDA_ENABLED)
-        set_target_properties(tannic-nn-tests PROPERTIES
-            CUDA_SEPARABLE_COMPILATION ON
-            CUDA_STANDARD 20
-        )
-        target_link_libraries(tannic-nn-tests PRIVATE CUDA::cudart)
-    endif()
+    foreach(filename ${TEST_FILES})
+        file(RELATIVE_PATH relpath ${CMAKE_SOURCE_DIR}/tests ${filename})
+        string(REPLACE "/" "-" testname ${relpath})
+        string(REPLACE ".cpp" "" testname ${testname})
 
-    if(GTest_FOUND)
-        target_link_libraries(tannic-nn-tests PRIVATE GTest::gtest_main)
-    else()
-        target_link_libraries(tannic-nn-tests PRIVATE gtest_main)
-    endif()
+        add_executable(${testname} ${filename})
+        target_include_directories(${testname} PRIVATE include)
+        target_link_libraries(${testname} PRIVATE tannic-nn GTest::gtest_main)
 
-    include(GoogleTest)
-    gtest_discover_tests(tannic-nn-tests)
-endif()
+        if(CUDA_ENABLED)
+            set_target_properties(${testname} PROPERTIES
+                CUDA_SEPARABLE_COMPILATION ON
+                CUDA_STANDARD 20
+            )
+            target_link_libraries(${testname} PRIVATE CUDA::cudart)
+        endif()
+
+        add_test(NAME ${testname} COMMAND ${testname})
+    endforeach()
+endif() 
