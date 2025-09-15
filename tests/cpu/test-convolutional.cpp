@@ -11,9 +11,9 @@ TEST(TestConvolutional, ForwardNoBias) {
     nn::Parameters parameters;
     parameters.initialize(dsizeof(float32) * 100);
     conv.initialize("conv2d_no_bias", parameters);
- 
-    auto* w = reinterpret_cast<float*>(conv.weight.forward().bytes());
-    for (size_t i = 0; i < conv.weight.forward().nbytes() /dsizeof(float32); ++i) {
+    Context context{};
+    auto* w = reinterpret_cast<float*>(conv.weight.forward(context).bytes());
+    for (size_t i = 0; i < conv.weight.forward(context).nbytes() /dsizeof(float32); ++i) {
         w[i] = 1.0f;
     }
  
@@ -44,13 +44,13 @@ TEST(TestConvolutional, ForwardWithBias) {
     nn::Parameters parameters;
     parameters.initialize(dsizeof(float32) * 100);
     conv.initialize("conv2d_bias", parameters);
- 
-    auto* w = reinterpret_cast<float*>(conv.weight.forward().bytes());
+    Context context{};
+    auto* w = reinterpret_cast<float*>(conv.weight.forward(context).bytes());
     for (size_t i = 0; i < conv.weight.nbytes() / dsizeof(float32); ++i) {
         w[i] = 1.0f;
     }
  
-    auto* b = reinterpret_cast<float*>(conv.bias->forward().bytes());
+    auto* b = reinterpret_cast<float*>(conv.bias->forward(context).bytes());
     b[0] = 1.0f;
  
     Tensor X(float32, {1,1,3,3});

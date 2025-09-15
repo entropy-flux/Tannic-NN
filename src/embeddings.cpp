@@ -18,11 +18,13 @@ namespace tannic::nn {
 
 void Embedding::forward(Tensor& result, Tensor const& indexes) const {      
     Callback callback(cpu::nn::embed, cuda::nn::embed);
-    callback(indexes, weight_.forward(), result);
+    Context context{};
+    callback(indexes, weight_.forward(context), result);
 }
 
 void Embedding::forward(Tensor& result, std::vector<int64_t> const& lookup) const {     
-    Tensor weight = weight_.forward();
+    Context context{};
+    Tensor weight = weight_.forward(context);
     Tensor indexes(int64, {lookup.size()});  
     indexes.initialize(weight.environment()); 
 

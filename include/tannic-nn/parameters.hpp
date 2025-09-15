@@ -24,15 +24,17 @@
 #include <stdexcept> 
 #include <unordered_map>
 #include <tannic.hpp>  
+#include <tannic/context.hpp>
 #include <tannic/slices.hpp>
 #include <tannic/views.hpp>
 #include <tannic/serialization.hpp>
   
 namespace tannic::nn {
 
+using tannic::Context;
 using tannic::expression::Slice;
 using tannic::expression::Transpose;
- 
+
 class Parameter; 
 
 class Parameters {
@@ -130,7 +132,7 @@ public:
         return nbytes_;
     }
  
-    Tensor forward() const {
+    Tensor forward(Context const& context) const {
         return Tensor(dtype_, shape_, strides_, offset_, *(std::shared_ptr<Buffer>*)(buffer_ptr_));
     }
 
