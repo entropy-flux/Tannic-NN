@@ -92,10 +92,7 @@ void Parameters::initialize(std::string const& filename, Environment environment
             throw std::runtime_error("Failed to read tensor data into host buffer.");
         }
 
-        device_t dvc{
-            .id = resource.id(), 
-            .traits = resource.blocking() ? SYNC : ASYNC
-        };
+        device_t dvc{ .id = resource.id() };
         std::cout << "[DEBUG] Copying data from host to device id=" << resource.id() << "\n";
         cuda::nn::copyFromHost(&dvc, buffer.data(), buffer_->address(), header.nbytes); 
         std::cout << "[DEBUG] Data copied to device memory.\n";

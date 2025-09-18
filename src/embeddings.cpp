@@ -34,7 +34,7 @@ void Embedding::forward(Tensor& result, std::vector<int64_t> const& lookup) cons
 
     else {
         Device const& resource = std::get<Device>(indexes.environment());
-        device_t dvc{.id = resource.id(), .traits = resource.blocking() ? SYNC : ASYNC}; 
+        device_t dvc{.id = resource.id()}; 
         cuda::nn::copyFromHost(&dvc, static_cast<const void*>(lookup.data()), static_cast<void*>(indexes.bytes()), indexes.nbytes()); 
     }
 
